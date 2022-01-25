@@ -1,0 +1,1 @@
+Translated using Google Translate. Translations are not 100% accurate. Contact me via Twitter (@r4isen1920) if you found errors or suggestions for your native language, if listed.

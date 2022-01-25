@@ -1,0 +1,36 @@
+
+ # 1.16.100: try to avoid using animation controllers to run commands
+ # use events through the item.json instead when the item is used (consumed or eaten)
+ # hide compass items in creative inventory if possible
+ # implement black compass
+ ~~# remove lodestone block placement when setting a waypoint. create a custom waypoint block instead.~~
+ 
+
+ - Beam connector: make it disc instead of box; reduce particle size a bit
+ - Space connector: reduce radius to 0.6; change color to its respective compass waypoint; reduce height a bit
+ - RGB beam connector: remove; show void_emitter particle instead
+ - Fix light gray and gray beam connectors not showing up: check spelling
+ - Add a particle that emits color depending on the color change of the waypoint
+ - Add particle and sound effects when a compass is linked
+ 
+ 
+ - Add player functions:
+ 
+ [ Waypoint ]
+ - Use the respective waypoint compass & stay still for at least 3 seconds to commence teleportation;
+ - Teleportation takes longer the farther you are away from the waypoint (up to 60 seconds):
+    a. within 126 blocks => 5 seconds
+    b. within 256 blocks => 10 seconds
+    c. within 1024 blocks => 20 seconds
+    d. within 4096 blocks => 30 seconds
+    e. 4097 blocks or higher => 60 seconds
+ - Moving while the teleportation is commencing will cancel the entire process and you have to do it from the start once again.
+ - Cancelling the process will have a 50% chance of destroying the compass.
+ 
+ [ Compass of the Void ]
+ - Obtained by combining a Dragon Head and a compass through crafting
+ - Activate the compass' power by using it and waiting for 20 seconds and staying still;
+ - Upon respawn, it will immediately take you to the place where you've last died;
+ - Once teleported, the compass' power will fade away;
+ - You cannot activate the Compass of the Void for yourself if another player in your world has the compass activated.
+ 

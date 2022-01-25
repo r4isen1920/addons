@@ -1,0 +1,148 @@
+1UU:  | element_energy
+2UU:  | element_life
+3UU:  | element_water
+4UU:  | element_light
+5UU:  | element_sorcery
+6UU:  | subelement_lightning
+7UU:  | subelement_alchemy
+8UU:  | subelement_ice
+9UU:  | subelement_atom
+10U:  | subelement_dark
+11U:  | rank_novice
+12U:  | rank_student
+13U:  | rank_advanced
+14U:  | rank_master
+15U:  | rank_god
+16U:  | rank_unknown
+17U:  | crosshair_test
+18U:  | 
+19U:  | 
+20U:  | 
+21U:  | 
+22U:  | 
+23U:  | 
+24U:  | 
+25U:  | 
+26U:  | 
+27U:  | 
+28U:  | 
+29U:  | 
+30U:  | 
+31U:  | ui_manabar
+32U:  | ui_cooldown
+33U:  | ui_chargelv
+34U:  | ui_manabar_empty
+35U:  | ui_manabar_half
+36U:  | ui_manabar_full
+37U:  | ui_manabar_anti
+38U:  | 
+39U:  | 
+40U:  | 
+41U:  | 
+42U:  | 
+43U:  | 
+44U:  | ui_cooldown_empty
+45U:  | ui_cooldown_half
+46U:  | ui_cooldown_full
+47U:  | 
+48U:  | 
+49U:  | 
+50U:  | 
+51U:  | 
+52U:  | 
+53U:  | 
+54U:  | ui_chargelv_empty
+55U:  | ui_chargelv_half
+56U:  | ui_chargelv_full
+57U:  | 
+58U:  | 
+59U:  | [C4E8CAF3-8F80-43BD-84F5-C3434AB7164A_4_5005_c](https://user-images.githubusercontent.com/12781303/99871017-f152df00-2c09-11eb-8e34-cd4ccdebe311.jpeg)|
+60U:  | [3B865279-0041-4E78-BF9E-24AF11C268E0_4_5005_c](https://user-images.githubusercontent.com/12781303/99871020-f748c000-2c09-11eb-82c1-863004b4c224.jpeg)|
+61U:  | [2FEA658B-3436-4BFA-A056-D6B3997F9A97_4_5005_c](https://user-images.githubusercontent.com/12781303/99871021-fdd73780-2c09-11eb-9379-7bb73c3f7f97.jpeg)|
+62U:  | [E3E7B54D-1AF3-4501-9917-34C6D41F431D_4_5005_c](https://user-images.githubusercontent.com/12781303/99871023-03348200-2c0a-11eb-963f-9e20afc082ee.jpeg)|
+63U:  | [4A401992-E1AE-4E27-900D-699B12292285_4_5005_c](https://user-images.githubusercontent.com/12781303/99871030-0a5b9000-2c0a-11eb-8420-c9dd8b671046.jpeg)|
+64U:  | [AB429BB0-C9AC-4A45-8E74-995DCB3708F2_4_5005_c](https://user-images.githubusercontent.com/12781303/99871034-10517100-2c0a-11eb-8a2c-4ba4ff0808e2.jpeg)|
+65U:  | [090D1D1D-644C-42DB-A0DF-D298C44D2B7D_4_5005_c](https://user-images.githubusercontent.com/12781303/99871041-16dfe880-2c0a-11eb-9da5-7ca3176da7b5.jpeg)|
+66U:  | [1FF98974-6752-415B-8DF9-41F5376060CF_4_5005_c](https://user-images.githubusercontent.com/12781303/99871049-1e9f8d00-2c0a-11eb-8b37-156c8597f833.jpeg)|
+67U:  | [3DC4C28B-F80B-4796-83B9-FC9DC69394BB_4_5005_c](https://user-images.githubusercontent.com/12781303/99871052-252e0480-2c0a-11eb-8323-3b09225fcef2.jpeg)|
+68U:  | [164041FA-6F1B-478B-A0EF-31B7755ED483_4_5005_c](https://user-images.githubusercontent.com/12781303/99871083-5c9cb100-2c0a-11eb-8e75-762fe881e168.jpeg)|
+69U:  | [EF538106-D9AA-4C44-86ED-B96550B39B56_4_5005_c](https://user-images.githubusercontent.com/12781303/99871090-63c3bf00-2c0a-11eb-8ce8-4bb526d90f44.jpeg)|
+70U:  | [B9A79064-356E-4CF0-8CB8-7BCAC844BF7D_4_5005_c](https://user-images.githubusercontent.com/12781303/99871091-69b9a000-2c0a-11eb-9c10-fd6c48732f92.jpeg)|
+71U:  | [5CF63259-B379-4231-A1A3-D104B9D2806D_4_5005_c](https://user-images.githubusercontent.com/12781303/99871106-8655d800-2c0a-11eb-82b7-4ac0c3153e44.jpeg)|
+72U:  | [2394D768-EDCA-4008-B32D-8194AA983DDD_4_5005_c](https://user-images.githubusercontent.com/12781303/99871111-8d7ce600-2c0a-11eb-921e-d35c770db76e.jpeg)|
+73U:  | [B352597C-8885-4381-9107-B99504885419_4_5005_c](https://user-images.githubusercontent.com/12781303/99871115-940b5d80-2c0a-11eb-9a0e-f8c58d87c9d5.jpeg)|
+74U:  | [AEC2DD54-44AD-42B8-A0DD-954EC26EC6CA_4_5005_c](https://user-images.githubusercontent.com/12781303/99871120-9a99d500-2c0a-11eb-91b4-e6469add8f7a.jpeg)|
+75U:  | [9D11F67F-D265-432F-BC08-D67020D48FDF_4_5005_c](https://user-images.githubusercontent.com/12781303/99871123-9ff71f80-2c0a-11eb-9d57-4d146cd06159.jpeg)|
+76U:  | [278EC8B8-1600-4D81-A9BF-BE91DFDDBB6D_4_5005_c](https://user-images.githubusercontent.com/12781303/99871126-a5546a00-2c0a-11eb-98f8-17732e456062.jpeg)|
+77U:  | [68370EAD-5820-4975-BA38-E08F7EC363AE_4_5005_c](https://user-images.githubusercontent.com/12781303/99871128-abe2e180-2c0a-11eb-9540-6e60b5d6dedc.jpeg)|
+78U:  | [905E05D1-580C-4C2D-9A29-CDF757F007E9_4_5005_c](https://user-images.githubusercontent.com/12781303/99871134-b1402c00-2c0a-11eb-96b8-76a3926120e0.jpeg)|
+79U:  | [721C5542-0156-4CF9-BB8D-6C0DD3D0E7A7_4_5005_c](https://user-images.githubusercontent.com/12781303/99871136-b7cea380-2c0a-11eb-8349-8a17aae118ee.jpeg)|
+80U:  | [24BE0412-6A60-424A-A6F0-97D4D90B13F4_4_5005_c](https://user-images.githubusercontent.com/12781303/99871140-bdc48480-2c0a-11eb-8a2f-029dd4b9cba6.jpeg)|
+81U:  | [40A5F433-AD4B-4F94-B4D9-910C1515FA2B_4_5005_c](https://user-images.githubusercontent.com/12781303/99871142-c452fc00-2c0a-11eb-8cfd-8be57937d595.jpeg)|
+82U:  | [C990D380-B5D2-446F-8F69-DE37C25D5433_4_5005_c](https://user-images.githubusercontent.com/12781303/99871143-cae17380-2c0a-11eb-8861-89aadb018cc2.jpeg)|
+83U:  | [F43E5A1C-C9DA-447E-BF84-2349822C71B1_4_5005_c](https://user-images.githubusercontent.com/12781303/99871147-d03ebe00-2c0a-11eb-890f-71e3a26ac344.jpeg)|
+84U:  | [002E3540-4FB8-4E53-89F3-6EFC511C7E2E_4_5005_c](https://user-images.githubusercontent.com/12781303/99871152-d6cd3580-2c0a-11eb-89c7-69d2b83873af.jpeg)|
+85U:  | [ED9B7911-3386-4954-A113-39F041EE72C7_4_5005_c](https://user-images.githubusercontent.com/12781303/99871155-db91e980-2c0a-11eb-9961-d664c8e9f87a.jpeg)|
+86U:  | [D7F3477E-438A-43F9-8CA3-0B308247C790_4_5005_c](https://user-images.githubusercontent.com/12781303/99871162-e187ca80-2c0a-11eb-8782-185206d7943e.jpeg)|
+87U:  | [13A22170-6B96-4C5B-BD4B-CF9BCB2E2A3E_4_5005_c](https://user-images.githubusercontent.com/12781303/99871178-f6645e00-2c0a-11eb-8827-6fe4bc529217.jpeg)|
+88U:  | [99B96C42-33E7-4CC8-95F5-0E9C6985A03C_4_5005_c](https://user-images.githubusercontent.com/12781303/99871180-fcf2d580-2c0a-11eb-95d5-9fc20c6f5902.jpeg)|
+89U:  | [59E8C853-5895-47C6-AF67-2BAB8D6C4D0C_4_5005_c](https://user-images.githubusercontent.com/12781303/99871186-0419e380-2c0b-11eb-9435-9a108bda27ba.jpeg)|
+90U:  | [52062485-20F7-4323-AF54-0F3BE58B5C56_4_5005_c](https://user-images.githubusercontent.com/12781303/99871190-0c721e80-2c0b-11eb-8d6a-8c38974ae816.jpeg)|
+91U:  | [7052AA3F-F993-4580-B334-0711A2C05D65_4_5005_c](https://user-images.githubusercontent.com/12781303/99871203-20b61b80-2c0b-11eb-9210-50b492710c9c.jpeg)|
+92U:  | [B5418F84-B540-4EC6-9D7C-367A7564722F_4_5005_c](https://user-images.githubusercontent.com/12781303/99871205-27449300-2c0b-11eb-903e-f385236835b7.jpeg)|
+93U:  | [1953572C-B2B7-4CEE-9A2A-92D0B86BEC43_4_5005_c](https://user-images.githubusercontent.com/12781303/99871209-2e6ba100-2c0b-11eb-94ad-379b799e32df.jpeg)|
+94U:  | [48186860-D425-4B45-AA6F-FC651232A59E_4_5005_c](https://user-images.githubusercontent.com/12781303/99871218-36c3dc00-2c0b-11eb-8b0e-347a7b321b6c.jpeg)|
+95U:  | [753AF121-1D1D-44D3-BFBB-E04DBB8BB5EA_4_5005_c](https://user-images.githubusercontent.com/12781303/99871222-3d525380-2c0b-11eb-9b09-53c42570545e.jpeg)|
+96U:  | [E9E6C003-5D0D-4D40-9A18-AA316FEA0A31_4_5005_c](https://user-images.githubusercontent.com/12781303/99871225-417e7100-2c0b-11eb-96b2-7cdef9c7d7bf.jpeg)|
+97U:  | [615AFBF3-BBD4-4222-8A3F-1B521B8C378B_4_5005_c](https://user-images.githubusercontent.com/12781303/99871237-607d0300-2c0b-11eb-95d3-320b33641b97.jpeg)|
+98U:  | [54170256-754A-4E6E-A188-8DA106EEAD23_4_5005_c](https://user-images.githubusercontent.com/12781303/99871241-6672e400-2c0b-11eb-8644-00a07e43e6c5.jpeg)|
+99U:  | [56447B2A-C547-47F8-BC49-0B8D7D732BDC_4_5005_c](https://user-images.githubusercontent.com/12781303/99871245-6a9f0180-2c0b-11eb-84ae-e24fa864d180.jpeg)|
+100:  | [212E144C-75C5-43B6-9507-042D49101CCD_4_5005_c](https://user-images.githubusercontent.com/12781303/99871251-7094e280-2c0b-11eb-9639-61bccbe53dae.jpeg)|
+101:  | [F5129C63-D7AB-4F98-9962-918C907C9A7E_4_5005_c](https://user-images.githubusercontent.com/12781303/99871257-75f22d00-2c0b-11eb-93d9-b1ca93f1a041.jpeg)|
+102:  | [2F494C32-3D7B-4E44-8991-7730B7A0A41A_4_5005_c](https://user-images.githubusercontent.com/12781303/99871259-7be80e00-2c0b-11eb-8150-71c529a9162b.jpeg)|
+103:  | [5CF1E01E-B469-4768-A769-35307CF8555F_4_5005_c](https://user-images.githubusercontent.com/12781303/99871261-80acc200-2c0b-11eb-86e6-9efe742829fe.jpeg)|
+104:  | [48EB11C0-80C2-4358-AE6B-33FE76FDDE69_4_5005_c](https://user-images.githubusercontent.com/12781303/99871275-873b3980-2c0b-11eb-939a-8383883cc8fb.jpeg)|
+105:  | [188D525A-0417-4292-BFBA-3C18FAB0C151_4_5005_c](https://user-images.githubusercontent.com/12781303/99871276-8c988400-2c0b-11eb-8d50-f84e5d4768c3.jpeg)|
+106:  | [761EFDF3-EDBD-4582-ABB4-F197DFCB2446_4_5005_c](https://user-images.githubusercontent.com/12781303/99871278-928e6500-2c0b-11eb-8abe-4ae2495b203b.jpeg)|
+107:  | [bee_nest_front_honey](https://user-images.githubusercontent.com/12781303/100518006-7cf7dd00-31c1-11eb-90c6-3ddb5a2cfce7.png)|
+108:  | [beehive_front_honey](https://user-images.githubusercontent.com/12781303/100518031-a3b61380-31c1-11eb-8c2b-3213d49b4155.png)|
+109:  | [acacia_sign](https://user-images.githubusercontent.com/12781303/100518048-bc262e00-31c1-11eb-8c75-cbefc4abb1cf.png)|
+110:  | [small](https://user-images.githubusercontent.com/12781303/100518067-d8c26600-31c1-11eb-89a2-a4a2c8c55960.png)|
+111:  | [bell_item](https://user-images.githubusercontent.com/12781303/100518081-e972dc00-31c1-11eb-92d1-b0c86b43d033.png)|
+112:  | [beetroot_soup](https://user-images.githubusercontent.com/12781303/100518087-f7286180-31c1-11eb-8aef-851137c64e46.png)|
+113:  | [bamboo](https://user-images.githubusercontent.com/12781303/100518106-060f1400-31c2-11eb-9786-b0c5c7ec180b.png)|
+114:  | [book_and_quill](https://user-images.githubusercontent.com/12781303/100518114-145d3000-31c2-11eb-9740-c0434bd14cfd.png)|
+115:  | [book](https://user-images.githubusercontent.com/12781303/100518118-1c1cd480-31c2-11eb-90b9-30bf5ac282b1.png)|
+116:  | [black_dye](https://user-images.githubusercontent.com/12781303/100518126-3bb3fd00-31c2-11eb-96ee-e6bdc8f623a0.png)|
+117:  | [blue_dye](https://user-images.githubusercontent.com/12781303/100518127-3d7dc080-31c2-11eb-9536-a6d78158a30d.png)|
+118:  | [brown_dye](https://user-images.githubusercontent.com/12781303/100518138-58503500-31c2-11eb-959b-e27c3977177a.png)|
+119:  | [bundle](https://user-images.githubusercontent.com/12781303/100518144-64d48d80-31c2-11eb-94c6-aa69447685bd.png)|
+120:  | [campfire](https://user-images.githubusercontent.com/12781303/100518151-70c04f80-31c2-11eb-8634-1d41ed4ebdc1.png)|
+121:  | [coal](https://user-images.githubusercontent.com/12781303/100518160-7f0e6b80-31c2-11eb-9bd1-5e0a5820f40a.png)|
+122:  | [cooked_porkchop](https://user-images.githubusercontent.com/12781303/100518174-8f264b00-31c2-11eb-95d7-ffd18a1b9be9.png)|
+123:  | [diamond](https://user-images.githubusercontent.com/12781303/100518181-9b120d00-31c2-11eb-8098-6188c94a9ad8.png)|
+124:  | [elytra](https://user-images.githubusercontent.com/12781303/100518189-a49b7500-31c2-11eb-9474-5057def5a12e.png)|
+125:  | [emerald_blue](https://user-images.githubusercontent.com/12781303/100518193-b11fcd80-31c2-11eb-92c6-211f40af53d8.png)|
+126:  | [emerald_yellow](https://user-images.githubusercontent.com/12781303/100518197-b1b86400-31c2-11eb-8e2e-eca297f65bb3.png)|
+127:  | [emerald](https://user-images.githubusercontent.com/12781303/100518199-b2e99100-31c2-11eb-8652-076a85fefc06.png)|
+128:  | [enchanted_apple](https://user-images.githubusercontent.com/12781303/100518216-c72d8e00-31c2-11eb-9dcc-1e31210ab88e.png)|
+129:  | [ender_eye](https://user-images.githubusercontent.com/12781303/100518225-d7456d80-31c2-11eb-8577-8baf79e50414.png)|
+130:  | [ender_pearl](https://user-images.githubusercontent.com/12781303/100518230-df9da880-31c2-11eb-82cc-e6977023e8b4.png)|
+131:  | [experience_bottle](https://user-images.githubusercontent.com/12781303/100518269-225f8080-31c3-11eb-8272-383408a457f8.png)|
+132:  | [fire_charge](https://user-images.githubusercontent.com/12781303/100518271-24c1da80-31c3-11eb-9b9a-032d5d1e6b62.png)|
+133:  | [glass_bottle](https://user-images.githubusercontent.com/12781303/100518277-2ab7bb80-31c3-11eb-9d00-668f716c7bec.png)|
+134:  | [glowstone_dust](https://user-images.githubusercontent.com/12781303/100518280-2db2ac00-31c3-11eb-89b0-b54dec6eef24.png)|
+135:  | [gold_nugget](https://user-images.githubusercontent.com/12781303/100518284-31463300-31c3-11eb-9a83-b85a3e459b54.png)|
+136:  | [golden_helmet](https://user-images.githubusercontent.com/12781303/100518308-533fb580-31c3-11eb-89dd-5d6bca1a5a81.png)|
+137:  | [green_dye](https://user-images.githubusercontent.com/12781303/100518310-55a20f80-31c3-11eb-9435-9046e11260f2.png)|
+138:  | [honey_bottle](https://user-images.githubusercontent.com/12781303/100518311-589d0000-31c3-11eb-9886-49d2a5eff60d.png)|
+139:  | [iron_nugget](https://user-images.githubusercontent.com/12781303/100518315-5b97f080-31c3-11eb-8305-b553b39bfea2.png)|
+140:  | [lantern](https://user-images.githubusercontent.com/12781303/100518336-779b9200-31c3-11eb-98aa-42589c2b32f4.png)|
+141:  | [light_blue_dye](https://user-images.githubusercontent.com/12781303/100518339-7d917300-31c3-11eb-85ba-95b849b72488.png)|
+142:  | [light_gray_dye](https://user-images.githubusercontent.com/12781303/100518341-7f5b3680-31c3-11eb-8de3-1a57ff655bd0.png)|
+143:  | [magma_cream](https://user-images.githubusercontent.com/12781303/100518343-81bd9080-31c3-11eb-99c7-803f896e3ee0.png)|
+144:  | [shield](https://user-images.githubusercontent.com/12781303/100518451-22ac4b80-31c4-11eb-9c7d-ab2e09eb27d6.png)|
+145:  | [shears](https://user-images.githubusercontent.com/12781303/100518453-24760f00-31c4-11eb-802d-066070464644.png)|
+146:  | [slime_ball](https://user-images.githubusercontent.com/12781303/100518454-2770ff80-31c4-11eb-811a-2eaa070b36dc.png)|
+147:  | [soul_torch_item](https://user-images.githubusercontent.com/12781303/100518456-2a6bf000-31c4-11eb-87be-3a69abcdfa38.png)|
+148:  | [torch_item](https://user-images.githubusercontent.com/12781303/100518460-2e980d80-31c4-11eb-97f7-dadae6299984.png)|

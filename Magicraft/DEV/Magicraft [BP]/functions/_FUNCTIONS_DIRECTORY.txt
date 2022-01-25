@@ -1,0 +1,15 @@
+
+ functions/..   - root 
+          /0    - spells root
+          /0/0  - novice spells
+          /0/1  - apprentice spells
+          /0/2  - advanced spells
+          /0/3  - master spells
+          
+          /1/.. - reserved
+          
+          /2/.. - ui & hud
+          
+ 
+ <file>   /0    - player runtime
+ <file>   /1    - spell projectile runtime

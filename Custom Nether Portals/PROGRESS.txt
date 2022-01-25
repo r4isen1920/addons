@@ -1,0 +1,27 @@
+
+ ###########################====----
+ ## Custom Nether Portals
+ ## 
+ ## Create and customize your own portal shape, and then light it up the way you want!
+ ## Much better than those rectangular-shaped Nether portals!
+ ##########===-----
+  
+
+ # summons an armor_stand to places that met the following conditions:
+  - has a fire_block
+  - the fire_block has at least 4 (crying) obsidian placed in each axis within a 16-block radius
+   ^ prioritise z-axis detection
+   
+ # execute the armor_stand to do the following commands: 
+  - [/1] detect environment if the portal is placed in z or x axis, prioritising z-axis first
+   -> use execute detect to detect obsidian blocks from at least 1 to maximum 16 in all sides in a vertical orientation
+  - [/2] pathfinds the armor_stand to detect a valid portal, leaving another temporary armor_stand to where it teleports to
+   -> go up: 
+    ->> if it's an air block & has not been scanned
+   -> go left:
+    ->> if it's an air block & has not been scanned
+   -> go down:
+    ->> if it's an air block & has not been scanned
+   -> go right:
+    ->> if it's an air block & has not been scanned
+   

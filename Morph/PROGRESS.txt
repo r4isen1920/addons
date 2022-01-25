@@ -1,0 +1,16 @@
+
+ # Morph: allows the player to take form of another block, (entity) or mob, and take their traits and characteristics as well
+  ^ You can freely morph in creative mode
+  ^ In survival mode, you'd have to met certain criterias to morph into that specific mob you want to morph to;
+   - To morph as a block, simply sneak while standing on that block for a certain amount of time. Although if you move too much, your block morph will wear off.
+   - Kill that type of mob a certain amount of times (varies depending on the mob's rarity) and increase your metamorphosis level;
+      LV 1: physically morph into its appearance
+      LV 2: ability to copy its traits when morphed
+      LV 3: physically & mentally morph into its appearance (other mobs wont be able to tell that its a player)
+      LV 4: ability to copy its traits even when you're not morphed as that mob
+      
+ # Sneak for a few seconds, then a UI would appear; press the sneak button to toggle between the choices; punch to select.
+  ^ You can morph to any mob while in creative mode, all choices are be available
+  ^ Choices would appear in survival provided that you have met the requirements to unlock it
+  
+  

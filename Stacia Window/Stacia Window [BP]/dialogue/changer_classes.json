@@ -1,0 +1,38 @@
+{
+  "format_version":"1.14",
+  "minecraft:npc_dialogue":{
+    "scenes":[
+      {
+        "scene_tag": "test_stack_buttons",
+        "npc_name": "system",
+        "text": "buttons",
+        "buttons": [
+          {
+            "name": "Anti-Grief tools",
+            "commands": [ "/say agt" ]
+          },
+          {
+            "name": "Miscellaneous tools",
+            "commands": [ "/say misc" ]
+          },
+          {
+            "name": "Warn Player",
+            "commands": [ "/say warn" ]
+          },
+          {
+            "name": "Kick Player",
+            "commands": [ "/say kick" ]
+          },
+          {
+            "name": "Ban Player",
+            "commands": [ "/say ban" ]
+          },
+          {
+            "name": "About Stacia Window",
+            "commands": [ "/say about" ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+
+ SKILLCRAFT
+ 
+ An add-on that greatly affects the core gameplay, focusing on improving skills,
+ gaining abilities, to progress further.
+
+
+ I. SPECIAL STATS - is one's basic stat more to improve what the player currently has
+
+ II. SKILLS - are special traits that has been honed to an extent where it is powerful
+  > Skills (Common) is what the player has (e.g health, to mine, to breathe)
+  > Extra Skills (Epic) are more powerful skills which can only be obtained when one's particular skill is honed to a greater extent
+  > Unique Skills (Legendary) are extremely rare skills such is only obtaineable by a single user per world
+  
+ III. ABILITIES - defines one's power to do things which can be obtained through the use of honed skills 
+ 
+ 
+ SPECIAL STATS
+
+  S [STR] Strength - defines the attack damage dealt to entities (Extra Skill: Merciless - instantly kills all nearby entities having 25% or below out of their max HP for the next 4 seconds)
+  P [PTN] Perception - the will to see things deeply, to mine faster (Extra Skill: Clairvoyance - creates a guide made out of light, leading to rarest possible ores or chests beyond the walls within 14 blocks of range)
+  E [END] Endurance - increases someone's will with more hearts and swim through deeper than ever (Extra Skill: Pain Nullification - receive no fall damage whatsoever; temporarily (for 4 seconds) nullifies all damage - bypassing even the 'Merciless' skill - when a fatal damage is received. Can only be triggered once every 180s)
+  C [CMA] Charisma - an individual able to capture anyone's heart to which action is better than just words (Extra Skill: Love Hypnosis - tames nearby (within 14 blocks) hostile mobs to become friendly)
+  I [INT] Intelligence - it is the one's epitome of wisdom, progressing efficiently and faster than ever (Extra Skill: Sage - shows information about the item the player is holding when crouching or sneaking)
+  A [AGI] Agility - focusing on one's movement speed (Extra Skill: Flash - becomes one with the light through speeds, gradually increasing speed when sprinting and turning invisible when fast enough; also becomes immune to lightning damage)
+  L [LCK] Luck - improves an individual's gain when doing their daily lives (Extra Skill: Blessing - randomly teleports you to a safe place when a fatal damage is received)
+
+[S] Strength (increased attack damage)
+ * 10 levels ( +1 strength effect per every level )
+ > Slay the Ender Dragon for a total of 1, 5, 10, 20, 30, 40, 60, 80, 100, 150 times respectively to get to the proceeding level.
+
+[P] Perception (faster mining speed)
+ *  9 levels ( +1 haste effect per every level )
+ > Mine blocks using any pickaxe 100, 200, 400, 800, 1000, 2000, 4000, 8000, 16000 times respectively to get to the proceeding level.
+
+[E] Endurance (more HP, more breathing)
+ * 8 levels ( +2 HP (+1 ♡) per every level, +1 water breathing effect per every level )
+ > Receive a total of 60 HP, 120 HP, 240 HP, 480 HP, 960 HP, 1920 HP, 3840 HP, 7680 HP worth of damage
+ 
+[C] Charisma (faster attack speed)
+ * 7 levels ( + )
+ > Spend a total of 120, 240, 480, 960, 1920, 3840, 7680 real-life minutes with players at least 60 blocks close in radius respectively to get to the proceeding level.
+
+[I] Intelligence (more XP)
+ * 6 levels ( +10% chance of 3L XP gained for every level )
+ > Reach 100, 200, 400, 800, 1000, 1500 levels at least once to get to the proceeding level respectively.
+
+[A] Agility (faster movement speed)
+ * 5 levels ( +1 speed effect per every level )
+ > Sprint on the ground for a total of 60, 240, 960,  3840, 7680 real-life minutes respectively to get to the proceeding level.
+
+[L] Luck (increases luck)
+ * 4 levels ( +1 tier of luck per every level )
+ > Eat Enchanted Golden Apples for a total of 10, 20, 30, 40 times respectively to get to the next level.
+ 
+  [LUCK TIER]
+  	1: 10% chance of an extra diamond to spawn when mining diamonds
+  	2: 20% chance of an extra diamond to spawn when mining diamonds; 5% chance to get a random enchantment for the item used
+  	3: 30% chance of an extra diamond to spawn when mining diamonds; 15% chance to get a random enchantment for the item used; 1% chance to get a random positive status effect for 1 second when walking
+  	4: 40% chance of an extra diamond to spawn when mining diamonds; 20% chance to get a random enchantment for the item used; 2% chance to get a random positive status effect for 2 seconds when walking
+  
+  > There is a 15-second cooldown before the luck re-rolls again if it happens, except for the walking luck.
+  
+[!] Ability-Unlock Trait
+ > Unlock 3 traits > "Sleeper" ability: when a player with this ability sleeps in a multiplayer session, it instantly skips to dawn
+ > Unlock 7 traits > "Daydream" ability: allows the player to return where he last slept, regardless if the bed was broken; also heals the player completely after sleeping
+ > Max out 3 traits > "Recall" ability: teleports the player where they were 30 seconds ago
+ > Max out 7 traits > "Nullify" ability: an ability that nullifies an entity's existence once, tap on a mob or player to make them disappear. Can be used for up to 4 times, once used up will reset all of your traits back to level 0.
+ 
+ 

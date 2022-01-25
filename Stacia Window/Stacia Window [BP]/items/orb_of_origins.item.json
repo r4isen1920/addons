@@ -1,0 +1,17 @@
+{
+  "format_version":"1.10",
+  "minecraft:item":{
+    "description":{
+      "identifier":"origins:orb_of_origins"
+    },
+    
+    "components":{
+      "minecraft:max_stack_size": 64,
+      "minecraft:foil": true,
+      "minecraft:hand_equipped": false,
+      "minecraft:food": {
+        "can_always_eat": true  
+      }
+    }
+  }
+}

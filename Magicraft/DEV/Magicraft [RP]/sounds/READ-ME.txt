@@ -1,0 +1,7 @@
+
+ # Sounds obtained from Java Resource Files
+ # Owned by Mojang / Microsoft 
+ 
+ # Sounds obtained from Electroblob's Wizardry Mod 
+ # Owned by Electroblob
+ 

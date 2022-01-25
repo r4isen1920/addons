@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "origins:resignation_paper",
+      "category": "Equipment"
+    },
+
+    "components": {
+      "minecraft:icon": "resignation_paper"
+    }
+  }
+}

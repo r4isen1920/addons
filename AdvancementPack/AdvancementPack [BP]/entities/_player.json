@@ -1,0 +1,834 @@
+// (c) Raisenくん- 2021 [Version 3.0]
+{
+  "format_version":"1.17.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier":"minecraft:player",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false,
+      "scripts": {
+        "animate":[
+          "dynamic_load", // [Root] Runs commands on first tick
+          "runtimes", // [Root] Runs commands every tick
+          "item", // [Detect] Item queries
+          "armor", // [Detect] Queries worn equipment(s)
+          "ranged", // [Detect] Item queries for 'chargeable' items
+          "netherWalk", // [Detect] Counts distance difference every tick when the player entered the nether portal
+          "biomes", // [Detect] Checks biome tags the player is in, sorts them into biomes, and saves it as a tag
+          "shulkerY", // [Detect] Counts distance difference every tick as soon as the player levitates off the ground
+          "sleep", // [Detect] Queries if the player is sleeping
+          "consumeFood", // [Detect] Item queries for food items
+          "consumeTime", // [Detect] Checks if the food item is fully consumed
+          "minecart" // [Detect] Detects for how far the player has traveled by minecart
+        ]
+        /*
+        "initialize":[
+          // Dummy Components: [q.is_baby -> is_in_nether] | [q.is_chested -> is_riding_minecart]
+          "v.x_position = (q.is_baby ? q.position(0) : 0.0);",
+          "v.y_position = (q.is_levitating ? q.position(1) : 0.0);",
+          "v.z_position = (q.is_baby ? q.position(2) : 0.0);",
+          "v.is_consuming_food_item = 0.0;"
+        ]
+        */
+      },
+      "animations": {
+        "dynamic_load":"controller.animation.adv.root.dynamic_load",
+        "runtimes":"controller.animation.adv.root.runtimes",
+        "item":"controller.animation.adv.item",
+        "armor":"controller.animation.adv.armor",
+        "ranged":"controller.animation.adv.ranged",
+        "netherWalk":"controller.animation.adv.netherWalk",
+        "biomes":"controller.animation.adv.biomes",
+        "shulkerY":"controller.animation.adv.shulkerY",
+        "sleep":"controller.animation.adv.sleep",
+        "consumeFood":"controller.animation.adv.consumeFood",
+        "consumeTime":"controller.animation.adv.consumeTime",
+        "minecart": "controller.animation.adv.minecart",
+        // Depricated use, may be available or changed later:
+        "toast_sfx":"controller.animation.adv.toast_sfx",
+        "flexibleTest":"controller.animation.adv.flexibleTest"
+      }
+    },
+
+    "component_groups": {
+      "minecraft:add_bad_omen": {
+        "minecraft:spell_effects": {
+          "add_effects": [
+            {
+              "effect":"bad_omen",
+              "duration": 6000,
+              "display_on_screen_animation": true
+            }
+          ]
+        },
+        "minecraft:timer": {
+          "time": [ 0.0, 0.0 ],
+          "looping": false,
+          "time_down_event": {
+            "event":"minecraft:clear_add_bad_omen",
+            "target":"self"
+          }
+        }
+      },
+      "minecraft:clear_bad_omen_spell_effect": {
+        "minecraft:spell_effects": {
+        }
+      },
+      "minecraft:raid_trigger": {
+        "minecraft:raid_trigger": {
+          "triggered_event": {
+            "event":"minecraft:remove_raid_trigger",
+            "target":"self"
+          }
+        },
+        "minecraft:spell_effects": {
+          "remove_effects":"bad_omen"
+        }
+      },
+      
+      "advancement:in_nether": {
+        "minecraft:is_baby":{}
+      },
+      "advancement:is_riding_minecart": {
+        "minecraft:is_chested":{}
+      },
+      "advancement:toast_sfx": {
+        "minecraft:is_saddled":{},
+        "minecraft:timer": {
+          "time": [ 6.4, 6.4 ],
+          "looping": false,
+          "time_down_event": {
+            "event":"advancement:clear_toast_sfx",
+            "target":"self"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death":"Math.Min(query.player_level * 7, 100)"
+      },
+      "minecraft:type_family": {
+        "family": [ "player" ]
+      },
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:loot": {
+        "table":"loot_tables/empty.json"
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {"test":"in_lava", "subject":"self", "operator":"==", "value": true },
+            "cause":"lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 1
+      },
+      "minecraft:player.saturation": {
+        "value": 20
+      },
+      "minecraft:player.exhaustion": {
+        "value": 0,
+        "max": 4
+      },
+      "minecraft:player.level": {
+        "value": 0,
+        "max": 24791
+      },
+      "minecraft:player.experience": {
+        "value": 0,
+        "max": 1
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": -1,
+        "inhale_time": 3.75,
+        "generates_bubbles": false
+      },
+      "minecraft:nameable": {
+        "always_show": true,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:insomnia": {
+        "days_until_insomnia": 3
+      },
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "family_types": [
+          "parrot_tame"
+        ],
+        "pull_in_entities": true,
+        "seats": [
+          {
+            "position": [ 0.4, -0.2, -0.1 ],
+            "min_rider_count": 0,
+            "max_rider_count": 0,
+            "lock_rider_rotation": 0
+          },
+          {
+            "position": [ -0.4, -0.2, -0.1 ],
+            "min_rider_count": 1,
+            "max_rider_count": 2,
+            "lock_rider_rotation": 0
+          }
+        ]
+      },
+      "minecraft:scaffolding_climber": {},
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "on_damage": {
+            "filters": {
+              "all_of": [
+                { 
+                  "any_of": [
+                    {"test":"has_equipment","domain":"any","value":"totem"},
+                    {"test":"has_equipment","domain":"any","value":"totem_of_undying"}
+                  ]
+                },
+                {"test":"has_damage","value":"fatal"},
+                {"test":"has_tag","operator":"!=","value":"adv60"}
+              ]
+            },
+            "event":"advancement:adv60"
+          }
+        }
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_mob_effect","value":"bad_omen"},
+                  {"test":"is_in_village","value": true}
+                ]
+              },
+            "event":"minecraft:trigger_raid"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","operator":"!=","value":"adv11"},
+                  {"test":"in_nether","value": true},
+                  {"test":"is_moving","value": true}
+                ]
+              },
+            "event":"advancement:adv11"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","operator":"!=","value":"adv16"},
+                  {"test":"has_biome_tag","value":"the_end"},
+                  {"test":"is_moving","value": true}
+                ]
+              },
+            "event":"advancement:adv16"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","operator":"!=","value":"adv25"},
+                  {"test":"is_riding","value": true},
+                  {"test":"has_equipment","domain":"hand","value":"warped_fungus_on_a_stick"},
+                  {"test":"is_family","subject":"other","value":"strider"}
+                ]
+              },
+            "event":"advancement:adv25"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","operator":"!=","value":"adv30"},
+                  {"test":"has_equipment","domain":"hand","value":"skull:1"}
+                ]
+              },
+            "event":"advancement:adv30"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","value":"biome_basalt_deltas"},
+                  {"test":"has_tag","value":"biome_crimson_forest"},
+                  {"test":"has_tag","value":"biome_nether_wastes"},
+                  {"test":"has_tag","value":"biome_soulsand_valley"},
+                  {"test":"has_tag","value":"biome_warped_forest"},
+                  {"test":"has_tag","operator":"!=","value":"adv33"},
+                  {"test":"in_nether","value": true}
+                ]
+              },
+            "event":"advancement:adv33"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {
+                    "any_of":[
+                      {"test":"has_equipment","domain":"hand","value":"potion"}, 
+                      {"test":"has_equipment","domain":"hand","value":"splash_potion"}, 
+                      {"test":"has_equipment","domain":"hand","value":"lingering_potion"}
+                    ]
+                  },
+                  {"test":"has_tag","operator":"!=","value":"adv35"}
+                ]
+              },
+            "event":"advancement:adv35"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_mob_effect","value":"fire_resistance"},
+                  {"test":"has_mob_effect","value":"invisibility"},
+                  {"test":"has_mob_effect","value":"jump_boost"},
+                  {"test":"has_mob_effect","value":"night_vision"},
+                  {"test":"has_mob_effect","value":"poison"},
+                  {"test":"has_mob_effect","value":"regeneration"},
+                  {"test":"has_mob_effect","value":"resistance"},
+                  {"test":"has_mob_effect","value":"slow_falling"},
+                  {"test":"has_mob_effect","value":"slowness"},
+                  {"test":"has_mob_effect","value":"speed"},
+                  {"test":"has_mob_effect","value":"strength"},
+                  {"test":"has_mob_effect","value":"water_breathing"},
+                  {"test":"has_mob_effect","value":"weakness"},
+                  {"test":"has_tag","operator":"!=","value":"adv37"}
+                ]
+              },
+            "event":"advancement:adv37"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_mob_effect","value":"absorption"},
+                  {"test":"has_mob_effect","value":"bad_omen"},
+                  {"test":"has_mob_effect","value":"blindness"},
+                  {"test":"has_mob_effect","value":"conduit_power"},
+                  {"test":"has_mob_effect","value":"fire_resistance"},
+                  {"test":"has_mob_effect","value":"haste"},
+                  {"test":"has_mob_effect","value":"hunger"},
+                  {"test":"has_mob_effect","value":"invisibility"},
+                  {"test":"has_mob_effect","value":"jump_boost"},
+                  {"test":"has_mob_effect","value":"levitation"},
+                  {"test":"has_mob_effect","value":"mining_fatigue"},
+                  {"test":"has_mob_effect","value":"nausea"},
+                  {"test":"has_mob_effect","value":"night_vision"},
+                  {"test":"has_mob_effect","value":"poison"},
+                  {"test":"has_mob_effect","value":"regeneration"},
+                  {"test":"has_mob_effect","value":"resistance"},
+                  {"test":"has_mob_effect","value":"slow_falling"},
+                  {"test":"has_mob_effect","value":"slowness"},
+                  {"test":"has_mob_effect","value":"speed"},
+                  {"test":"has_mob_effect","value":"strength"},
+                  {"test":"has_mob_effect","value":"village_hero"},
+                  {"test":"has_mob_effect","value":"water_breathing"},
+                  {"test":"has_mob_effect","value":"weakness"},
+                  {"test":"has_mob_effect","value":"wither"},
+                  {"test":"has_tag","operator":"!=","value":"adv39"}
+                ]
+              },
+            "event":"advancement:adv39"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {
+                    "any_of":[
+                      {"test":"has_tag","value":"killed_blaze"},
+                      {"test":"has_tag","value":"killed_cave_spider"},
+                      {"test":"has_tag","value":"killed_creeper"},
+                      {"test":"has_tag","value":"killed_drowned"},
+                      {"test":"has_tag","value":"killed_elder_guardian"},
+                      {"test":"has_tag","value":"killed_ender_dragon"},
+                      {"test":"has_tag","value":"killed_enderman"},
+                      {"test":"has_tag","value":"killed_endermite"},
+                      {"test":"has_tag","value":"killed_evocation_illager"},
+                      {"test":"has_tag","value":"killed_ghast"},
+                      {"test":"has_tag","value":"killed_guardian"},
+                      {"test":"has_tag","value":"killed_husk"},
+                      {"test":"has_tag","value":"killed_magma_cube"},
+                      {"test":"has_tag","value":"killed_phantom"},
+                      {"test":"has_tag","value":"killed_piglin"},
+                      {"test":"has_tag","value":"killed_piglin_brute"},
+                      {"test":"has_tag","value":"killed_pillager"},
+                      {"test":"has_tag","value":"killed_ravager"},
+                      {"test":"has_tag","value":"killed_shulker"},
+                      {"test":"has_tag","value":"killed_silverfish"},
+                      {"test":"has_tag","value":"killed_skeleton"},
+                      {"test":"has_tag","value":"killed_slime"},
+                      {"test":"has_tag","value":"killed_stray"},
+                      {"test":"has_tag","value":"killed_spider"},
+                      {"test":"has_tag","value":"killed_vex"},
+                      {"test":"has_tag","value":"killed_vindicator"},
+                      {"test":"has_tag","value":"killed_witch"},
+                      {"test":"has_tag","value":"killed_wither_skeleton"},
+                      {"test":"has_tag","value":"killed_wither"},
+                      {"test":"has_tag","value":"killed_zombie_pigman"},
+                      {"test":"has_tag","value":"killed_zombie_villager"},
+                      {"test":"has_tag","value":"killed_zombie"}                    
+                    ]
+                  },
+                  {"test":"has_tag","operator":"!=","value":"adv51"}
+                ]
+              },
+            "event":"advancement:adv51"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","operator":"!=","value":"adv56"},
+                  {"test":"has_mob_effect","value":"village_hero"},
+                  {"test":"is_in_village","value": true}
+                ]
+              },
+            "event":"advancement:adv56"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","value":"killed_blaze"},
+                  {"test":"has_tag","value":"killed_cave_spider"},
+                  {"test":"has_tag","value":"killed_creeper"},
+                  {"test":"has_tag","value":"killed_drowned"},
+                  {"test":"has_tag","value":"killed_elder_guardian"},
+                  {"test":"has_tag","value":"killed_ender_dragon"},
+                  {"test":"has_tag","value":"killed_enderman"},
+                  {"test":"has_tag","value":"killed_endermite"},
+                  {"test":"has_tag","value":"killed_evocation_illager"},
+                  {"test":"has_tag","value":"killed_ghast"},
+                  {"test":"has_tag","value":"killed_guardian"},
+                  {"test":"has_tag","value":"killed_husk"},
+                  {"test":"has_tag","value":"killed_magma_cube"},
+                  {"test":"has_tag","value":"killed_phantom"},
+                  {"test":"has_tag","value":"killed_piglin"},
+                  {"test":"has_tag","value":"killed_piglin_brute"},
+                  {"test":"has_tag","value":"killed_pillager"},
+                  {"test":"has_tag","value":"killed_ravager"},
+                  {"test":"has_tag","value":"killed_shulker"},
+                  {"test":"has_tag","value":"killed_silverfish"},
+                  {"test":"has_tag","value":"killed_skeleton"},
+                  {"test":"has_tag","value":"killed_slime"},
+                  {"test":"has_tag","value":"killed_stray"},
+                  {"test":"has_tag","value":"killed_spider"},
+                  {"test":"has_tag","value":"killed_vex"},
+                  {"test":"has_tag","value":"killed_vindicator"},
+                  {"test":"has_tag","value":"killed_witch"},
+                  {"test":"has_tag","value":"killed_wither_skeleton"},
+                  {"test":"has_tag","value":"killed_wither"},
+                  {"test":"has_tag","value":"killed_zombie_pigman"},
+                  {"test":"has_tag","value":"killed_zombie_villager"},
+                  {"test":"has_tag","value":"killed_zombie"},
+                  {"test":"has_tag","operator":"!=","value":"adv59"}
+                ]
+              },
+            "event":"advancement:adv59"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","value":"biome_bamboo_jungle"},
+                  {"test":"has_tag","value":"biome_bamboo_jungle_hills"},
+                  {"test":"has_tag","value":"biome_beach"},
+                  {"test":"has_tag","value":"biome_birch_forest"},
+                  {"test":"has_tag","value":"biome_birch_forest_hills"},
+                  {"test":"has_tag","value":"biome_birch_forest_hills_mutated"},
+                  {"test":"has_tag","value":"biome_birch_forest_mutated"},
+                  {"test":"has_tag","value":"biome_cold_beach"},
+                  {"test":"has_tag","value":"biome_cold_ocean"},
+                  {"test":"has_tag","value":"biome_cold_taiga"},
+                  {"test":"has_tag","value":"biome_cold_taiga_hills"},
+                  {"test":"has_tag","value":"biome_cold_taiga_mutated"},
+                  {"test":"has_tag","value":"biome_deep_cold_ocean"},
+                  {"test":"has_tag","value":"biome_deep_frozen_ocean"},
+                  {"test":"has_tag","value":"biome_deep_lukewarm_ocean"},
+                  {"test":"has_tag","value":"biome_deep_ocean"},
+                  {"test":"has_tag","value":"biome_deep_warm_ocean"},
+                  {"test":"has_tag","value":"biome_desert"},
+                  {"test":"has_tag","value":"biome_desert_hills"},
+                  {"test":"has_tag","value":"biome_desert_mutated"},
+                  {"test":"has_tag","value":"biome_extreme_hills"},
+                  {"test":"has_tag","value":"biome_extreme_hills_edge"},
+                  {"test":"has_tag","value":"biome_extreme_hills_forest"},
+                  {"test":"has_tag","value":"biome_extreme_hills_mutated"},
+                  {"test":"has_tag","value":"biome_extreme_hills_mutated_forest"},
+                  {"test":"has_tag","value":"biome_flower_forest"},
+                  {"test":"has_tag","value":"biome_forest"},
+                  {"test":"has_tag","value":"biome_forest_hills"},
+                  {"test":"has_tag","value":"biome_frozen_ocean"},
+                  {"test":"has_tag","value":"biome_frozen_river"},
+                  {"test":"has_tag","value":"biome_ice_mountains"},
+                  {"test":"has_tag","value":"biome_ice_plains"},
+                  {"test":"has_tag","value":"biome_ice_plains_spikes"},
+                  {"test":"has_tag","value":"biome_jungle"},
+                  {"test":"has_tag","value":"biome_jungle_edge"},
+                  {"test":"has_tag","value":"biome_jungle_edge_mutated"},
+                  {"test":"has_tag","value":"biome_jungle_hills"},
+                  {"test":"has_tag","value":"biome_jungle_mutated"},
+                  {"test":"has_tag","value":"biome_lukewarm_ocean"},
+                  {"test":"has_tag","value":"biome_mega_spruce_taiga"},
+                  {"test":"has_tag","value":"biome_mega_spruce_taiga_hills"},
+                  {"test":"has_tag","value":"biome_mega_taiga"},
+                  {"test":"has_tag","value":"biome_mega_taiga_hills"},
+                  {"test":"has_tag","value":"biome_mesa"},
+                  {"test":"has_tag","value":"biome_mesa_bryce"},
+                  {"test":"has_tag","value":"biome_mesa_plateau"},
+                  {"test":"has_tag","value":"biome_mesa_plateau_mutated"},
+                  {"test":"has_tag","value":"biome_mesa_plateau_stone"},
+                  {"test":"has_tag","value":"biome_mesa_plateau_stone_mutated"},
+                  {"test":"has_tag","value":"biome_mushroom_island"},
+                  {"test":"has_tag","value":"biome_mushroom_island_shore"},
+                  {"test":"has_tag","value":"biome_ocean"},
+                  {"test":"has_tag","value":"biome_plains"},
+                  {"test":"has_tag","value":"biome_river"},
+                  {"test":"has_tag","value":"biome_roofed_forest"},
+                  {"test":"has_tag","value":"biome_roofed_forest_mutated"},
+                  {"test":"has_tag","value":"biome_savanna"},
+                  {"test":"has_tag","value":"biome_savanna_mutated"},
+                  {"test":"has_tag","value":"biome_savanna_plateau"},
+                  {"test":"has_tag","value":"biome_savanna_plateau_mutated"},
+                  {"test":"has_tag","value":"biome_stone_beach"},
+                  {"test":"has_tag","value":"biome_swamp"},
+                  {"test":"has_tag","value":"biome_swamp_mutated"},
+                  {"test":"has_tag","value":"biome_taiga"},
+                  {"test":"has_tag","value":"biome_taiga_hills"},
+                  {"test":"has_tag","value":"biome_taiga_mutated"},
+                  {"test":"has_tag","value":"biome_warm_ocean"},
+                  {"test":"has_tag","operator":"!=","value":"adv65"}
+                ]
+              },
+            "event":"advancement:adv65"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  { 
+                    "any_of":[
+                      {"test":"has_tag","value":"tamed_cat_white"},
+                      {"test":"has_tag","value":"tamed_cat_tuxedo"},
+                      {"test":"has_tag","value":"tamed_cat_red"},
+                      {"test":"has_tag","value":"tamed_cat_siamese"},
+                      {"test":"has_tag","value":"tamed_cat_british"},
+                      {"test":"has_tag","value":"tamed_cat_calico"},
+                      {"test":"has_tag","value":"tamed_cat_persian"},
+                      {"test":"has_tag","value":"tamed_cat_ragdoll"},
+                      {"test":"has_tag","value":"tamed_cat_tabby"},
+                      {"test":"has_tag","value":"tamed_cat_black"},
+                      {"test":"has_tag","value":"tamed_cat_jellie"},
+                      {"test":"has_tag","value":"tamed_donkey"},
+                      {"test":"has_tag","value":"tamed_horse"},
+                      {"test":"has_tag","value":"tamed_llama"},
+                      {"test":"has_tag","value":"tamed_mule"},
+                      {"test":"has_tag","value":"tamed_ocelot"},
+                      {"test":"has_tag","value":"tamed_parrot"},
+                      {"test":"has_tag","value":"tamed_wolf"}
+                    ]
+                  },
+                  {"test":"has_tag","operator":"!=","value":"adv72"}
+                ]
+              },
+            "event":"advancement:adv72"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","value":"tamed_cat_white"},
+                  {"test":"has_tag","value":"tamed_cat_tuxedo"},
+                  {"test":"has_tag","value":"tamed_cat_red"},
+                  {"test":"has_tag","value":"tamed_cat_siamese"},
+                  {"test":"has_tag","value":"tamed_cat_british"},
+                  {"test":"has_tag","value":"tamed_cat_calico"},
+                  {"test":"has_tag","value":"tamed_cat_persian"},
+                  {"test":"has_tag","value":"tamed_cat_ragdoll"},
+                  {"test":"has_tag","value":"tamed_cat_tabby"},
+                  {"test":"has_tag","value":"tamed_cat_black"},
+                  {"test":"has_tag","value":"tamed_cat_jellie"},
+                  {"test":"has_tag","operator":"!=","value":"adv77"}
+                ]
+              },
+            "event":"advancement:adv77"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","value":"consumed_apple"},
+                  {"test":"has_tag","value":"consumed_baked_potato"},
+                  {"test":"has_tag","value":"consumed_beetroot"},
+                  {"test":"has_tag","value":"consumed_beetroot_soup"},
+                  {"test":"has_tag","value":"consumed_bread"},
+                  {"test":"has_tag","value":"consumed_carrot"},
+                  {"test":"has_tag","value":"consumed_chorus_fruit"},
+                  {"test":"has_tag","value":"consumed_cooked_chicken"},
+                  {"test":"has_tag","value":"consumed_cooked_cod"},
+                  {"test":"has_tag","value":"consumed_cooked_mutton"},
+                  {"test":"has_tag","value":"consumed_cooked_porkchop"},
+                  {"test":"has_tag","value":"consumed_cooked_rabbit"},
+                  {"test":"has_tag","value":"consumed_cooked_salmon"},
+                  {"test":"has_tag","value":"consumed_cookie"},
+                  {"test":"has_tag","value":"consumed_dried_kelp"},
+                  {"test":"has_tag","value":"consumed_enchanted_golden_apple"},
+                  {"test":"has_tag","value":"consumed_glow_berries"},
+                  {"test":"has_tag","value":"consumed_golden_apple"},
+                  {"test":"has_tag","value":"consumed_golden_carrot"},
+                  {"test":"has_tag","value":"consumed_honey_bottle"},
+                  {"test":"has_tag","value":"consumed_melon_slice"},
+                  {"test":"has_tag","value":"consumed_mushroom_stew"},
+                  {"test":"has_tag","value":"consumed_poisonous_potato"},
+                  {"test":"has_tag","value":"consumed_potato"},
+                  {"test":"has_tag","value":"consumed_pufferfish"},
+                  {"test":"has_tag","value":"consumed_pumpkin_pie"},
+                  {"test":"has_tag","value":"consumed_rabbit_stew"},
+                  {"test":"has_tag","value":"consumed_raw_beef"},
+                  {"test":"has_tag","value":"consumed_raw_chicken"},
+                  {"test":"has_tag","value":"consumed_raw_cod"},
+                  {"test":"has_tag","value":"consumed_raw_mutton"},
+                  {"test":"has_tag","value":"consumed_raw_porkchop"},
+                  {"test":"has_tag","value":"consumed_raw_rabbit"},
+                  {"test":"has_tag","value":"consumed_raw_salmon"},
+                  {"test":"has_tag","value":"consumed_rotten_flesh"},
+                  {"test":"has_tag","value":"consumed_spider_eye"},
+                  {"test":"has_tag","value":"consumed_steak"},
+                  {"test":"has_tag","value":"consumed_suspicious_stew"},
+                  {"test":"has_tag","value":"consumed_sweet_berries"},
+                  {"test":"has_tag","value":"consumed_tropical_fish"},   
+                  {"test":"has_tag","operator":"!=","value":"adv79"}
+                ]
+              },
+            "event":"advancement:adv79"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","operator":"!=","value":"adv86"},
+                  {"test":"is_riding","value": true},
+                  {"test":"is_family","subject":"other","value":"boat"},
+                  {"test":"has_tag","subject":"other","value":"has_goat_rider"}
+                ]
+              },
+            "event":"advancement:adv86"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","operator":"!=","value":"ach16"},
+                  {"test":"is_riding","value": true},
+                  {"test":"is_family","subject":"other","value":"pig"},
+                  {"test":"has_damage","subject":"other","value":"fall"}
+                ]
+              },
+            "event":"advancement:ach16"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","value":"killed_wither"},
+                  {"test":"has_tag","operator":"!=","value":"ach30"}
+                ]
+              },
+            "event":"advancement:ach30"
+          },
+          {
+            "filters": {
+              "all_of": [
+                  {"test":"has_tag","value":"consumed_enchanted_golden_apple"},
+                  {"test":"has_tag","operator":"!=","value":"ach34"}
+                ]
+              },
+            "event":"advancement:ach34"
+          },
+          
+          {"filters": {"all_of": [{"test":"has_tag","operator":"!=","value":"in_nether"},{"test":"in_nether","value": true}]},"event":"testfor:in_nether"},
+          {"filters": {"all_of": [{"test":"has_tag","operator":"!=","value":"out_nether"},{"test":"in_nether","value": false}]},"event":"testfor:out_nether"},
+          {"filters": {"all_of": [{"test":"has_tag","operator":"!=","value":"in_the_end"},{"test":"has_biome_tag","value":"the_end"}]},"event":"testfor:in_the_end"},
+          {"filters": {"all_of": [{"test":"has_tag","operator":"!=","value":"out_the_end"},{"test":"has_biome_tag","operator":"!=","value":"the_end"}]},"event":"testfor:out_the_end"},
+          {"filters": {"all_of": [{"test":"has_tag","operator":"!=","value":"is_riding_minecart"},{"test":"is_riding","value":true},{"test":"is_family","subject":"other","value":"minecart"}]},"event":"testfor:is_riding_minecart"},
+          {"filters": {"all_of": [{"test":"has_tag","value":"is_riding_minecart"},{"test":"is_riding","value":false}]},"event":"testfor:clear_is_riding_minecart"}
+        ]
+      }
+    },
+
+    "events": {
+      "minecraft:gain_bad_omen": {"add": {"component_groups": ["minecraft:add_bad_omen"]},"run_command":{"command":["execute @s[tag=!adv50] ~~~ function advancement/grant/adventure/voluntary_exile"]}},
+      "minecraft:clear_add_bad_omen": {"remove": {"component_groups": ["minecraft:add_bad_omen"]},"add": {"component_groups": ["minecraft:clear_bad_omen_spell_effect"]}},
+      "minecraft:trigger_raid": {"add": {"component_groups": [ "minecraft:raid_trigger" ]}},
+      "minecraft:remove_raid_trigger": {"remove": {"component_groups": [ "minecraft:raid_trigger" ]}},
+
+      "testfor:in_nether": {"add":{"component_groups":["advancement:in_nether"]},"run_command":{"command":["tag @s add in_nether","tag @s remove out_nether"]}},
+      "testfor:out_nether": {"remove":{"component_groups":["advancement:in_nether"]},"run_command":{"command":["tag @s add out_nether","tag @s remove in_nether"]}},
+      "testfor:in_the_end":{"run_command":{"command":["tag @s add in_the_end","tag @s remove out_the_end"]}},
+      "testfor:out_the_end":{"run_command":{"command":["tag @s add out_the_end","tag @s remove in_the_end"]}},
+      "testfor:is_riding_minecart":{"add":{"component_groups":["advancement:is_riding_minecart"]},"run_command":{"command":["tag @s add is_riding_minecart"]}},
+      "testfor:clear_is_riding_minecart":{"remove":{"component_groups":["advancement:is_riding_minecart"]},"run_command":{"command":["tag @s remove is_riding_minecart"]}},
+
+      "advancement:toast_sfx": {"add":{"component_groups":["advancement:toast_sfx"]}},
+      "advancement:clear_toast_sfx": {"remove":{"component_groups":["advancement:toast_sfx"]}},
+
+      "advancement:adv11":{"run_command":{"command":["function advancement/grant/story/_11"]}},
+      "advancement:adv16":{"run_command":{"command":["function advancement/grant/story/_16"]}},
+      "advancement:adv18":{"run_command":{"command":["function advancement/grant/nether/return_to_sender"]}},
+      "advancement:adv24":{"run_command":{"command":["function advancement/grant/nether/distract_piglin"]}},
+      "advancement:adv25":{"run_command":{"command":["function advancement/grant/nether/ride_strider"]}},
+      "advancement:adv26":{"run_command":{"command":["function advancement/grant/nether/uneasy_alliance"]}},
+      "advancement:adv30":{"run_command":{"command":["function advancement/grant/nether/get_wither_skull"]}},
+      "advancement:adv33":{"run_command":{"command":["function advancement/grant/nether/explore_nether"]}},
+      "advancement:adv35":{"run_command":{"command":["function advancement/grant/nether/brew_potion"]}},
+      "advancement:adv37":{"run_command":{"command":["function advancement/grant/nether/all_potions"]}},
+      "advancement:adv39":{"run_command":{"command":["function advancement/grant/nether/all_effects"]}},
+      "advancement:adv51":{"run_command":{"command":["function advancement/grant/adventure/kill_a_mob"]}},
+      "advancement:adv56":{"run_command":{"command":["function advancement/grant/adventure/hero_of_the_village"]}},
+      "advancement:adv59":{"run_command":{"command":["function advancement/grant/adventure/kill_all_mobs"]}},
+      "advancement:adv60":{"run_command":{"command":["function advancement/grant/adventure/totem_of_undying"]}},
+      "advancement:adv63":{"run_command":{"command":["function advancement/grant/adventure/whos_the_pillager_now"]}},
+      "advancement:adv65":{"run_command":{"command":["function advancement/grant/adventure/adventuring_time"]}},
+      "advancement:adv67":{"run_command":{"command":["function advancement/grant/adventure/sniper_duel"]}},
+      "advancement:adv72":{"run_command":{"command":["function advancement/grant/husbandry/tame_an_animal"]}},
+      "advancement:adv77":{"run_command":{"command":["function advancement/grant/husbandry/complete_catalogue"]}},
+      "advancement:adv79":{"run_command":{"command":["function advancement/grant/husbandry/balanced_diet"]}},
+      "advancement:adv86":{"run_command":{"command":["function advancement/grant/husbandry/ride_a_boat_with_a_goat"]}},
+      "advancement:adv91":{"run_command":{"command":["function advancement/grant/husbandry/kill_axolotl_target"]}},
+      "advancement:ach16":{"run_command":{"command":["function achievement/give/flyPig"]}},
+      "advancement:ach30":{"run_command":{"command":["function achievement/give/killWither"]}},
+      "advancement:ach34":{"run_command":{"command":["function achievement/give/overpowered"]}},
+
+      "testfor:slain_blaze":{"run_command":{"command":["tag @s add killed_blaze"]}},
+      "testfor:slain_cave_spider":{"run_command":{"command":["tag @s add killed_cave_spider"]}},
+      "testfor:slain_creeper":{"run_command":{"command":["tag @s add killed_creeper"]}},
+      "testfor:slain_drowned":{"run_command":{"command":["tag @s add killed_drowned"]}},
+      "testfor:slain_elder_guardian":{"run_command":{"command":["tag @s add killed_elder_guardian"]}},
+      "testfor:slain_ender_dragon":{"run_command":{"command":["tag @s add killed_ender_dragon"]}},
+      "testfor:slain_enderman":{"run_command":{"command":["tag @s add killed_enderman"]}},
+      "testfor:slain_endermite":{"run_command":{"command":["tag @s add killed_endermite"]}},
+      "testfor:slain_evocation_illager":{"run_command":{"command":["tag @s add killed_evocation_illager"]}},
+      "testfor:slain_ghast":{"run_command":{"command":["tag @s add killed_ghast"]}},
+      "testfor:slain_guardian":{"run_command":{"command":["tag @s add killed_guardian"]}},
+      "testfor:slain_husk":{"run_command":{"command":["tag @s add killed_husk"]}},
+      "testfor:slain_magma_cube":{"run_command":{"command":["tag @s add killed_magma_cube"]}},
+      "testfor:slain_phantom":{"run_command":{"command":["scoreboard players add @s[tag=!killed_phantom] phantomAtk 1","tag @s add killed_phantom"]}},
+      "testfor:slain_piglin":{"run_command":{"command":["tag @s add killed_piglin"]}},
+      "testfor:slain_piglin_brute":{"run_command":{"command":["tag @s add killed_piglin_brute"]}},
+      "testfor:slain_pillager":{"run_command":{"command":["tag @s add killed_pillager"]}},
+      "testfor:slain_pillager_2":{"run_command":{"command":["tag @s add unique_pillager","function advancement/grant/adventure/whos_the_pillager_now"]}},
+      "testfor:slain_pillager_3":{"run_command":{"command":["tag @s add unique_pillager","function advancement/grant/adventure/whos_the_pillager_now","tag @s add killed_pillager"]}},
+      "testfor:slain_ravager":{"run_command":{"command":["tag @s add killed_ravager"]}},
+      "testfor:slain_shulker":{"run_command":{"command":["tag @s add killed_shulker"]}},
+      "testfor:slain_silverfish":{"run_command":{"command":["tag @s add killed_silverfish"]}},
+      "testfor:slain_skeleton":{"run_command":{"command":["tag @s add killed_skeleton"]}},
+      "testfor:slain_skeleton_2a":{"run_command":{"command":["function advancement/grant/adventure/sniper_duel"]}},
+      "testfor:slain_skeleton_3a":{"run_command":{"command":["function advancement/grant/adventure/sniper_duel","tag @s add killed_skeleton"]}},
+      "testfor:slain_skeleton_2b":{"run_command":{"command":["tag @s add unique_skeleton","function advancement/grant/adventure/sniper_duel"]}},
+      "testfor:slain_skeleton_3b":{"run_command":{"command":["tag @s add unique_skeleton","function advancement/grant/adventure/sniper_duel","tag @s add killed_skeleton"]}},
+      "testfor:slain_slime":{"run_command":{"command":["tag @s add killed_slime"]}},
+      "testfor:slain_stray":{"run_command":{"command":["tag @s add killed_stray"]}},
+      "testfor:slain_spider":{"run_command":{"command":["tag @s add killed_spider"]}},
+      "testfor:slain_vex":{"run_command":{"command":["tag @s add killed_vex"]}},
+      "testfor:slain_vindicator":{"run_command":{"command":["tag @s add killed_vindicator"]}},
+      "testfor:slain_witch":{"run_command":{"command":["tag @s add killed_witch"]}},
+      "testfor:slain_wither_skeleton":{"run_command":{"command":["tag @s add killed_wither_skeleton"]}},
+      "testfor:slain_wither":{"run_command":{"command":["tag @s add killed_wither"]}},
+      "testfor:slain_zombie_pigman":{"run_command":{"command":["tag @s add killed_zombie_pigman"]}},
+      "testfor:slain_zombie_villager":{"run_command":{"command":["tag @s add killed_zombie_villager"]}},
+      "testfor:slain_zombie":{"run_command":{"command":["tag @s add killed_zombie"]}},
+
+      "atkCount:unique_axolotl":{"run_command":{"command":["scoreboard players add @s[tag=!unique_axolotl] uniqueAtk 1","tag @s add unique_axolotl"]}},
+      "atkCount:unique_bat":{"run_command":{"command":["scoreboard players add @s[tag=!unique_bat] uniqueAtk 1","tag @s add unique_bat"]}},
+      "atkCount:unique_bee":{"run_command":{"command":["scoreboard players add @s[tag=!unique_bee] uniqueAtk 1","tag @s add unique_bee"]}},
+      "atkCount:unique_cat":{"run_command":{"command":["scoreboard players add @s[tag=!unique_cat] uniqueAtk 1","tag @s add unique_cat"]}},
+      "atkCount:unique_chicken":{"run_command":{"command":["scoreboard players add @s[tag=!unique_chicken] uniqueAtk 1","tag @s add unique_chicken"]}},
+      "atkCount:unique_cow":{"run_command":{"command":["scoreboard players add @s[tag=!unique_cow] uniqueAtk 1","tag @s add unique_cow"]}},
+      "atkCount:unique_donkey":{"run_command":{"command":["scoreboard players add @s[tag=!unique_donkey] uniqueAtk 1","tag @s add unique_donkey"]}},
+      "atkCount:unique_fish":{"run_command":{"command":["scoreboard players add @s[tag=!unique_fish] uniqueAtk 1","tag @s add unique_fish"]}},
+      "atkCount:unique_fox":{"run_command":{"command":["scoreboard players add @s[tag=!unique_fox] uniqueAtk 1","tag @s add unique_fox"]}},
+      "atkCount:unique_glow_squid":{"run_command":{"command":["scoreboard players add @s[tag=!unique_glow_squid] uniqueAtk 1","tag @s add unique_glow_squid"]}},
+      "atkCount:unique_goat":{"run_command":{"command":["scoreboard players add @s[tag=!unique_goat] uniqueAtk 1","tag @s add unique_goat"]}},
+      "atkCount:unique_iron_golem":{"run_command":{"command":["scoreboard players add @s[tag=!unique_iron_golem] uniqueAtk 1","tag @s add unique_iron_golem"]}},
+      "atkCount:unique_hoglin":{"run_command":{"command":["scoreboard players add @s[tag=!unique_hoglin] uniqueAtk 1","tag @s add unique_hoglin"]}},
+      "atkCount:unique_horse":{"run_command":{"command":["scoreboard players add @s[tag=!unique_horse] uniqueAtk 1","tag @s add unique_horse"]}},
+      "atkCount:unique_llama":{"run_command":{"command":["scoreboard players add @s[tag=!unique_llama] uniqueAtk 1","tag @s add unique_llama"]}},
+      "atkCount:unique_mooshroom":{"run_command":{"command":["scoreboard players add @s[tag=!unique_mooshroom] uniqueAtk 1","tag @s add unique_mooshroom"]}},
+      "atkCount:unique_mule":{"run_command":{"command":["scoreboard players add @s[tag=!unique_mule] uniqueAtk 1","tag @s add unique_mule"]}},
+      "atkCount:unique_ocelot":{"run_command":{"command":["scoreboard players add @s[tag=!unique_ocelot] uniqueAtk 1","tag @s add unique_ocelot"]}},
+      "atkCount:unique_pig":{"run_command":{"command":["scoreboard players add @s[tag=!unique_pig] uniqueAtk 1","tag @s add unique_pig"]}},
+      "atkCount:unique_polar_bear":{"run_command":{"command":["scoreboard players add @s[tag=!unique_polar_bear] uniqueAtk 1","tag @s add unique_polar_bear"]}},
+      "atkCount:unique_pufferfish":{"run_command":{"command":["scoreboard players add @s[tag=!unique_pufferfish] uniqueAtk 1","tag @s add unique_pufferfish"]}},
+      "atkCount:unique_rabbit":{"run_command":{"command":["scoreboard players add @s[tag=!unique_rabbit] uniqueAtk 1","tag @s add unique_rabbit"]}},
+      "atkCount:unique_salmon":{"run_command":{"command":["scoreboard players add @s[tag=!unique_salmon] uniqueAtk 1","tag @s add unique_salmon"]}},
+      "atkCount:unique_sheep":{"run_command":{"command":["scoreboard players add @s[tag=!unique_sheep] uniqueAtk 1","tag @s add unique_sheep"]}},
+      "atkCount:unique_skeleton_horse":{"run_command":{"command":["scoreboard players add @s[tag=!unique_skeleton_horse] uniqueAtk 1","tag @s add unique_skeleton_horse"]}},
+      "atkCount:unique_squid":{"run_command":{"command":["scoreboard players add @s[tag=!unique_squid] uniqueAtk 1","tag @s add unique_squid"]}},
+      "atkCount:unique_strider":{"run_command":{"command":["scoreboard players add @s[tag=!unique_strider] uniqueAtk 1","tag @s add unique_strider"]}},
+      "atkCount:unique_tropicalfish":{"run_command":{"command":["scoreboard players add @s[tag=!unique_tropicalfish] uniqueAtk 1","tag @s add unique_tropicalfish"]}},
+      "atkCount:unique_turtle":{"run_command":{"command":["scoreboard players add @s[tag=!unique_turtle] uniqueAtk 1","tag @s add unique_turtle"]}},
+      "atkCount:unique_villager":{"run_command":{"command":["scoreboard players add @s[tag=!unique_villager] uniqueAtk 1","tag @s add unique_villager"]}},
+      "atkCount:unique_wandering_trader":{"run_command":{"command":["scoreboard players add @s[tag=!unique_wandering_trader] uniqueAtk 1","tag @s add unique_wandering_trader"]}},
+      "atkCount:unique_wolf":{"run_command":{"command":["scoreboard players add @s[tag=!unique_wolf] uniqueAtk 1","tag @s add unique_wolf"]}},
+      "atkCount:unique_zoglin":{"run_command":{"command":["scoreboard players add @s[tag=!unique_zoglin] uniqueAtk 1","tag @s add unique_zoglin"]}},
+
+      "atkCount:unique_blaze":{"run_command":{"command":["scoreboard players add @s[tag=!unique_blaze] uniqueAtk 1","tag @s add unique_blaze","tag @s add killed_blaze"]}},
+      "atkCount:unique_cave_spider":{"run_command":{"command":["scoreboard players add @s[tag=!unique_cave_spider] uniqueAtk 1","tag @s add unique_cave_spider","tag @s add killed_cave_spider"]}},
+      "atkCount:unique_creeper":{"run_command":{"command":["scoreboard players add @s[tag=!unique_creeper] uniqueAtk 1","tag @s add unique_creeper","tag @s add killed_creeper"]}},
+      "atkCount:unique_drowned":{"run_command":{"command":["scoreboard players add @s[tag=!unique_drowned] uniqueAtk 1","tag @s add unique_drowned","tag @s add killed_drowned"]}},
+      "atkCount:unique_elder_guardian":{"run_command":{"command":["scoreboard players add @s[tag=!unique_elder_guardian] uniqueAtk 1","tag @s add unique_elder_guardian","tag @s add killed_guardian"]}},
+      "atkCount:unique_enderman":{"run_command":{"command":["scoreboard players add @s[tag=!unique_enderman] uniqueAtk 1","tag @s add unique_enderman","tag @s add killed_enderman"]}},
+      "atkCount:unique_endermite":{"run_command":{"command":["scoreboard players add @s[tag=!unique_endermite] uniqueAtk 1","tag @s add unique_endermite","tag @s add killed_endermite"]}},
+      "atkCount:unique_evocation_illager":{"run_command":{"command":["scoreboard players add @s[tag=!unique_evocation_illager] uniqueAtk 1","tag @s add unique_evocation_illager","tag @s add killed_evocation_illager"]}},
+      "atkCount:unique_ghast":{"run_command":{"command":["scoreboard players add @s[tag=!unique_ghast] uniqueAtk 1","tag @s add unique_ghast","tag @s add killed_ghast"]}},
+      "atkCount:unique_guardian":{"run_command":{"command":["scoreboard players add @s[tag=!unique_guardian] uniqueAtk 1","tag @s add unique_guardian","tag @s add killed_guardian"]}},
+      "atkCount:unique_husk":{"run_command":{"command":["scoreboard players add @s[tag=!unique_husk] uniqueAtk 1","tag @s add unique_husk","tag @s add killed_husk"]}},
+      "atkCount:unique_magma_cube":{"run_command":{"command":["scoreboard players add @s[tag=!unique_magma_cube] uniqueAtk 1","tag @s add unique_magma_cube","tag @s add killed_magma_cube"]}},
+      "atkCount:unique_piglin":{"run_command":{"command":["scoreboard players add @s[tag=!unique_piglin] uniqueAtk 1","tag @s add unique_piglin","tag @s add killed_piglin"]}},
+      "atkCount:unique_piglin_brute":{"run_command":{"command":["scoreboard players add @s[tag=!unique_piglin_brute] uniqueAtk 1","tag @s add unique_piglin_brute","tag @s add killed_piglin_brute"]}},
+      "atkCount:unique_ravager":{"run_command":{"command":["scoreboard players add @s[tag=!unique_ravager] uniqueAtk 1","tag @s add unique_ravager","tag @s add killed_ravager"]}},
+      "atkCount:unique_shulker":{"run_command":{"command":["scoreboard players add @s[tag=!unique_shulker] uniqueAtk 1","tag @s add unique_shulker","tag @s add killed_shulker"]}},
+      "atkCount:unique_silverfish":{"run_command":{"command":["scoreboard players add @s[tag=!unique_silverfish] uniqueAtk 1","tag @s add unique_silverfish","tag @s add killed_silverfish"]}},
+      "atkCount:unique_slime":{"run_command":{"command":["scoreboard players add @s[tag=!unique_slime] uniqueAtk 1","tag @s add unique_slime","tag @s add killed_slime"]}},
+      "atkCount:unique_stray":{"run_command":{"command":["scoreboard players add @s[tag=!unique_stray] uniqueAtk 1","tag @s add unique_stray","tag @s add killed_stray"]}},
+      "atkCount:unique_spider":{"run_command":{"command":["scoreboard players add @s[tag=!unique_spider] uniqueAtk 1","tag @s add unique_spider","tag @s add killed_spider"]}},
+      "atkCount:unique_vex":{"run_command":{"command":["scoreboard players add @s[tag=!unique_vex] uniqueAtk 1","tag @s add unique_vex","tag @s add killed_vex"]}},
+      "atkCount:unique_vindicator":{"run_command":{"command":["scoreboard players add @s[tag=!unique_vindicator] uniqueAtk 1","tag @s add unique_vindicator","tag @s add killed_vindicator"]}},
+      "atkCount:unique_witch":{"run_command":{"command":["scoreboard players add @s[tag=!unique_witch] uniqueAtk 1","tag @s add unique_witch","tag @s add killed_witch"]}},
+      "atkCount:unique_wither_skeleton":{"run_command":{"command":["scoreboard players add @s[tag=!unique_wither_skeleton] uniqueAtk 1","tag @s add unique_wither_skeleton","tag @s add killed_wither_skeleton"]}},
+      "atkCount:unique_wither":{"run_command":{"command":["scoreboard players add @s[tag=!unique_wither] uniqueAtk 1","tag @s add unique_wither","tag @s add killed_wither"]}},
+      "atkCount:unique_zombie_pigman":{"run_command":{"command":["scoreboard players add @s[tag=!unique_zombie_pigman] uniqueAtk 1","tag @s add unique_zombie_pigman","tag @s add killed_zombie_pigman"]}},
+      "atkCount:unique_zombie_villager":{"run_command":{"command":["scoreboard players add @s[tag=!unique_zombie_villager] uniqueAtk 1","tag @s add unique_zombie_villager","tag @s add killed_zombie_villager"]}},
+      "atkCount:unique_zombie":{"run_command":{"command":["scoreboard players add @s[tag=!unique_zombie] uniqueAtk 1","tag @s add unique_zombie","tag @s add killed_zombie"]}},
+      "atkCount:phantom":{"run_command":{"command":["scoreboard players add @s phantomAtk 1","scoreboard players add @s[tag=!unique_phantom] uniqueAtk 1","tag @s add unique_phantom","tag @s add killed_phantom"]}},
+      "atkCount:reset":{"run_command":{"command":["scoreboard players set @s phantomAtk 0","scoreboard players set @s uniqueAtk 0"]}},
+
+      "interact:tame_cat_white":{"run_command":{"command":["tag @s add tamed_cat_white"]}},
+      "interact:tame_cat_tuxedo":{"run_command":{"command":["tag @s add tamed_cat_tuxedo"]}},
+      "interact:tame_cat_red":{"run_command":{"command":["tag @s add tamed_cat_red"]}},
+      "interact:tame_cat_siamese":{"run_command":{"command":["tag @s add tamed_cat_siamese"]}},
+      "interact:tame_cat_british":{"run_command":{"command":["tag @s add tamed_cat_british"]}},
+      "interact:tame_cat_calico":{"run_command":{"command":["tag @s add tamed_cat_calico"]}},
+      "interact:tame_cat_persian":{"run_command":{"command":["tag @s add tamed_cat_persian"]}},
+      "interact:tame_cat_ragdoll":{"run_command":{"command":["tag @s add tamed_cat_ragdoll"]}},
+      "interact:tame_cat_tabby":{"run_command":{"command":["tag @s add tamed_cat_tabby"]}},
+      "interact:tame_cat_black":{"run_command":{"command":["tag @s add tamed_cat_black"]}},
+      "interact:tame_cat_jellie":{"run_command":{"command":["tag @s add tamed_cat_jellie"]}},
+      "interact:tame_donkey":{"run_command":{"command":["tag @s add tamed_donkey"]}},
+      "interact:tame_horse":{"run_command":{"command":["tag @s add tamed_horse"]}},
+      "interact:tame_llama":{"run_command":{"command":["tag @s add tamed_llama"]}},
+      "interact:tame_mule":{"run_command":{"command":["tag @s add tamed_mule"]}},
+      "interact:tame_ocelot":{"run_command":{"command":["tag @s add tamed_ocelot"]}},
+      "interact:tame_parrot":{"run_command":{"command":["tag @s add tamed_parrot"]}},
+      "interact:tame_wolf":{"run_command":{"command":["tag @s add tamed_wolf"]}}
+    }
+  }
+}

@@ -1,0 +1,165 @@
+
+  - workaround:
+   * structure detection:
+     * none
+  
+  - xp rewards on advancements:
+    1. Return to Sender - 50 XP
+    2. Subspace Bubble - 100 XP
+    3. Uneasy Alliance - 100 XP 
+    4. Cover Me in Debris - 100 XP
+    5. Hot Tourist Destinations - 500 XP
+    6. A Furious Cocktail - 100 XP
+    7. How Did We Get Here? - 1000 XP
+    8. Great View From Up Here - 50 XP
+    9. Hero of the Village - 100 XP
+    10. Monsters Hunted - 100 XP
+    11. Two Birds, One Arrow - 65 XP
+    12. Arbalistic - 85 XP
+    13. Adventuring Time - 500 XP
+    14. Sniper Duel - 50 XP
+    15. Bullseye - 50 XP
+    16. Two by Two - 100 XP
+    17. Complete Catalouge - 50 XP
+    18. A Balanced Diet - 100 XP
+    19. Serious Dedication - 100 XP
+
+
+Variant No. Advancement Name - In-game Description - Unlocking Requirements
+
+[ Minecraft ]
+1. Minecraft - The heart and story of the game - Have a Crafting Table in your inventory.
+2. Stone Age - Mine stone with your new pickaxe - Have a Cobblestone or Blackstone in your inventory.
+3. Getting an Upgrade - Construct a better pickaxe - Have a Stone Pickaxe in your inventory.
+4. Acquire Hardware - Smelt an iron ingot - Have an Iron Ingot in your inventory.
+5. Suit Up - Protect yourself with a piece of iron armor - Have any type of iron armor in your inventory..
+6. Hot Stuff - Fill a bucket with lava- Have a Lava Bucket in your inventory.
+7. Isn't it Iron Pick - Upgrade your pickaxe - Have an Iron Pickaxe in your inventory.
+8. Not Today, Thank you - Deflect a projectile with a shield - Deflect any projectile with a shield.
+9. Ice Bucket Challenge - Obtain a block of obsidian - Have a block of obsidian in your inventory.
+10. Diamonds! - Acquire diamonds - Have a diamond in your inventory.
+11. We Need to Go Deeper - Build, light and enter a Nether portal - Enter the Nether dimension.
+12. Cover Me With Diamonds - Diamond armor saves lives - Have any type of diamond armor in your inventory.
+13. Enchanter - Enchant an item at the Enchanting Table - 
+14. Zombie Doctor - Weaken and then cure a Zombie Villager - Throw a splash potion of Weakness at a zombie villager, feed it a golden apple, and wait for it to be cured.
+15. Eye Spy - Follow an Eye of Ender - Enter a stronghold.
+16. The End? - Enter the End Portal - Enter the End dimension.
+
+[ Nether ]
+17. Nether - Bring summer clothes - Enter the Nether dimension.
+18. Return to Sender - Destroy a Ghast with fireball - Kill a Ghast using a ghast fireball.
+19. Those Were the Days - Enter a bastion remnant - 
+20. Hidden in the Depths - Obtain Ancient Debris - Have Ancient Debris in your inventory.
+21. Subspace Bubble - Use the Nether to travel 7km in the Overworld - Use the Nether to travel between 2 points in the Overworld with a minimum horizontal distance of 7000 blocks between each other, 875 blocks in the Nether.
+22. A Terrible Fortress - Break your way into a Nether Fortress - Enter a Nether fortress.
+23. Who is Cutting Onions? - Obtain Crying Obsidian - Have a crying obsidian in your inventory.
+24. Oh Shiny! - Distract Piglins with Gold - Barter with a Piglin using gold ingots.
+25. This Boat has Legs - Ride a Strider with a Warped Fungus on a Stick - Boost a Strider with a Warped Fungus on a Stick.
+26. Uneasy Alliance - Rescue a Ghast from the Nether, bring it safely home to the Overworld... and then kill it - Kill a Ghast while in the Overworld.
+27. War Pigs - Loot a chest in a Bastion Remnant - Open a chest in a Bastion Remnant.
+28. Country Lode, Take me Home - Use Compass on a Lodestone - Have a Lodestone Compass in your Inventory.
+29. Cover Me in Debris - Get a full suit of Netherite armor - Wear a full set of Netherite Armor.
+30. Spooky Scary Skeleton - Obtain a Wither Skeleton's head - Have a Wither Skeleton's skull in your inventory.
+31. Into Fire - Relieve a Blaze of its rod - Have a blaze rod in your inventory.
+32. Not Quite "Nine" Lives - Charge a Respawn Anchor to the maximum - 
+33. Hot Tourist Destinations - Explore all Nether Biomes - Visit all of these 5 biomes. The advancement is only for Nether biomes. Other biomes, if any, may also be visited, but are ignored for this advancement.
+34. Withering Heights - Summon the Wither -
+35. Local Brewery - Brew a potion - Pick up an item from a brewing stand potion slot. This does not need to be a potion. Water bottles or even glass bottles can also trigger this advancement.
+36. Bring Home the Beacon - Construct and place a beacon -
+37. A Furious Cocktail - Have every potion effect applied at the same time -
+38. Beaconator - Bring a Beacon to full power - 
+39. How Did We Get Here? - Have every effect applied at the same time -
+
+[ The End ]
+40. The End - Or the Beginning? - Enter the End dimension.
+41. Free the End - Good luck - Kill the Ender Dragon.
+42. The Next Generation - Hold the Dragon Egg - Have a Dragon Egg in your inventory.
+43. Remote Getaway - Escape the Island - Throw an ender pearl through or walk into an end gateway.
+44. The End... Again... - Respawn the Ender Dragon - Summon an Ender Dragon using Ender Crystals.
+45. You Need a Mint - Collect dragon's breath in a glass bottle - Have a dragon's breath in your inventory.
+46. The City at the End of the Game - Go on in, what could happen? - Enter an End City.
+47. Sky's the Limit - Find Elytra - Have Elytra in your inventory.
+48. Great View From Up Here - Levitate 50 blocks up from attacks of Shulker - Move a distance of 50 blocks with the Levitation effect applied.
+
+[ Adventure ]
+49. Adventure - Adventure, exploration, and combat - Kill any entity, or be killed by any entity
+50. Voluntary Exile - Kill a raid captain. Maybe consider staying away from villages for the time being... - 
+-81. Is It A Bird? - Look at a parrot through a spyglass - 
+51. Monster Hunter - Kill any hostile monster - Kill an entity with a 'monster' family
+52. What a Deal! - Successfully trade with a Villager - Take an item from a villager or wandering trader's trading output slot, and put it in your inventory.
+53. Sticky Situation - Jump into a Honey Block to break your fall - Collide on a horizontal side of a honey block when in air.
+54. Ol' Betsy - Shoot a Crossbow -
+-82. Surge Protector - Protect a villager from an undesired shock without starting a fire - 
+-83. Light as a Rabbit - Walk on powder snow... without sinking in it - 
+55. Sweet Dreams - Sleep in a bed to change your respawn point - Lie down in a bed. The advancement is granted as soon as the player is in the bed, even if the player does not successfully sleep.
+56. Hero of the Village - Successfully defend a Village from a raid -
+-84. Is It a Balloon? - Look at a ghast through a spyglass -
+57. A Throwaway Joke - Throw a trident at something. Note: Throwing away your only weapon is not a good idea. - Hit an entity with a thrown trident.
+58. Take Aim - Shoot something with an arrow - Using a bow or crossbow, shoot any entity with any kind of arrow.
+59. Monsters Hunted - Kill one of every hostile monster - Kill each of these 34 mobs. Other mobs, if any, may be killed, but are ignored for this advancement.
+60. Postmortal - Use a Totem of Undying to cheat death - Activate a totem of undying by taking fatal damage.
+61. Hired Help - Summon an Iron Golem to help defend a Village - 
+62. Two Birds, One Arrow - Kill Phantoms with a piercing arrow - Use a crossbow enchanted with Piercing to kill two phantoms.
+63. Who's the Pillager Now? - Give a Pillager a taste of their own medicine - Kill a pillager with a crossbow.
+64. Arbalistic - Kill five unique mobs with one crossbow shot -
+65. Adventuring Time - Discover every biome - Visit all of these 42 biomes. The advancement is only for Overworld biomes. Other biomes, if any, may also be visited, but are ignored for this advancement.
+-85. Is It a Plane? - Look at the Ender Dragon through a spyglass - 
+66. Very Very Frightening - Strike a Villager with lightning - Hit a villager with lightning created by a trident with the Channeling enchantment.
+67. Sniper Duel - Kill a Skeleton from at least 50 meters away - Kill a skeleton with a projectile while being at least 50 blocks away horizontally.
+68. Hit the bullseye of a Target block from at least 30 meters away - Shoot the center of a target with a projectile from at least 30 blocks away horizontally.
+
+[ Husbandry ]
+69. Husbandry - The world is full of friends and food - Eat anything that can be eaten.
+70. Bee Our Guest - Use a Campfire to collect Honey from a Beehive using a Bottle without aggravating the bees - 
+71. The Parrots and the Bats - Breed two animals together -
+-86. Whatever Floats Your Goat! - Get in a Boat and float with a Goat - 
+72. Best Friends Forever - Tame an animal -
+-87. Glow and Behold! - Make the text of a sign glow -
+73. Fishy Bussiness - Catch a fish - Use a Fishing Rod to catch a fish.
+74. Total Beelocation - Move a Bee Nest, with three bees inside, using Silk Touch - 
+75. A Seedy Place - Plant a seed, and watch it grow - Plant one of these 5 crops. Other crops and plants, if any, can be planted, but are ignored for this advancement.
+-88. Wax On - Apply Wax to a Copper block! - 
+76. Two by Two - Breed all the animals! - 
+77. A Complete Catalouge - Tame all cat variants! - Tame each of these 11 cat variants. Other cat variants, if any, can be tamed, but are ignored for this advancement.
+78. Tactical Fishing - Catch a fish... without a fishing rod! - Have a bucket of fish in your inventory.
+79. A Balanced Diet - Eat everything that is edible, even if it's not good for you - Eat each of these 39 foods. Other foods, if any, can be eaten, but are ignored for this advancement.
+80. Serious Dedication - Use a Netherite ingot to upgrade a hoe, and then reevaluate your life choices - Have a netherite hoe in your inventory.
+-89. Wax Off - Scrape Wax off of a Copper block! -
+-90. The Cutest Predator - Catch an axolotl in a bucket -
+-91. The Healing Power of Friendship! - Team up with an axolotl and win a fight - 
+
+[ Achievements ]
+1. Taking Inventory	- Press 'E' to open your inventory -
+2. Getting Wood	- Attack a tree until a block of wood pops out - 
+3. Benchmarking	- Craft a workbench with four blocks of planks - 
+4. Time to Mine! - Use planks and sticks to make a pickaxe - 
+5. Hot Topic - Construct a furnace out of eight cobblestone blocks\Construct a furnace out of eight stone blocks - 
+6. Acquire Hardware	- Smelt an iron ingot - 
+7. Time to Farm! - Use planks and sticks to make a hoe - 
+8. Bake Bread - Turn wheat into bread - 
+9. The Lie - Wheat, sugar, milk, and eggs\Bake cake using wheat, sugar, milk, and eggs! - 
+10. Getting an Upgrade - Construct a better pickaxe - 
+11. Delicious Fish - Catch and cook a fish! - 
+12. On A Rail - Travel by minecart at least 1 km from where you started. - 
+13. Time to Strike! - Use planks and sticks to make a sword - 
+14. Monster Hunter - Attack and destroy a monster - 
+15. Cow Tipper - Harvest some leather - 
+16. When Pigs Fly - Fly a pig off a cliff - 
+17. Sniper Duel	- Kill a skeleton with an arrow from more than 50 meters -
+18. DIAMONDS! - Acquire diamonds with your iron tools - 
+19. We Need to Go Deeper - Build a portal to the Nether - 
+20. Return to Sender - Destroy a Ghast with a fireball - 
+21. Into Fire - Relieve a Blaze of its rod - 
+22. Local Brewery - Brew a potion - 
+23. The End? - Locate the End - 
+24. The End. - Defeat the Ender Dragon - 
+25. Enchanter - Use a book, obsidian and diamonds to construct an enchantment table - 
+26. Overkill - Deal nine hearts of damage in a single hit - 
+27. Librarian - Build some bookshelves to improve your enchantment table - 
+28. Adventuring Time - Discover all biomes. - 
+29. The Beginning? - Spawn the Wither -
+30. The Beginning. - Kill the Wither - 
+31. Beaconator - Create a full beacon - 
+32. Repopulation - Breed two cows with wheat - 
+33. Diamonds to you! - Throw diamonds at another player - 
+34. Overpowered	- Craft/Eat the Notch apple - 

@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "origins:orb_of_origins",
+      "category": "Equipment"
+    },
+
+    "components": {
+      "minecraft:icon": "orb_of_origins"
+    }
+  }
+}

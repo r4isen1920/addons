@@ -1,0 +1,202 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:ender_dragon",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "dragon_sitting": {
+        "minecraft:behavior.dragonlanding": {
+          "priority": 0
+        },
+        "minecraft:behavior.dragonflaming": {
+          "priority": 1
+        },
+        "minecraft:behavior.dragonscanning": {
+          "priority": 2
+        }
+      },
+      "dragon_flying": {
+        "minecraft:behavior.dragontakeoff": {
+          "priority": 0
+        },
+        "minecraft:behavior.dragonchargeplayer": {
+          "priority": 1
+        },
+        "minecraft:behavior.dragonstrafeplayer": {
+          "priority": 2
+        },
+        "minecraft:behavior.dragonholdingpattern": {
+          "priority": 3
+        },
+        "minecraft:shooter": {
+          "type": "dragonfireball",
+          "def": "minecraft:dragon_fireball"
+        }
+      },
+      "dragon_death": {
+        "minecraft:behavior.dragondeath": {
+          "priority": 0
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "dragon", "mob" ]
+      },
+      "minecraft:health": {
+        "value": 200,
+        "max": 200
+      },
+      "minecraft:boss": {
+        "should_darken_sky": false,
+        "hud_range": 125
+      },
+      "minecraft:collision_box": {
+        "width": 13,
+        "height": 4
+      },
+      "minecraft:movement": {
+        "value": 0.3
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:knockback_resistance": {
+        "value": 100,
+        "max": 100
+      },
+      "minecraft:flying_speed": {
+        "value": 0.6
+      },
+      "minecraft:attack": {
+        "damage": 3
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "all_of": [
+                  {"test": "has_damage","value": "fatal"},
+                  {"test": "is_family","subject": "other","value": "player"},
+                  {"test": "has_tag","subject": "other","operator": "!=","value": "killed_ender_dragon"}
+                ]
+              },
+              "event": "testfor:slain_ender_dragon",
+              "target": "other"
+            }
+          },
+          {
+            "cause": "fall",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:lookat": {
+        "search_radius": 128.0,
+        "set_target": false,
+        "look_cooldown": 0.0,
+        "allow_invulnerable": false,
+        "filters": {
+          "all_of": [
+            {"test": "is_family","subject": "other","value": "player"},
+            {"test": "has_tag","subject": "other","value": "is_using_spyglass"},
+            {"test": "has_tag","subject": "other","value": "scanplayer"}
+          ]
+        },
+        "look_event": {
+          "event": "testfor:is_lookat",
+          "target": "self"
+        }
+      },
+      "minecraft:on_start_landing": {
+        "event": "minecraft:start_land",
+        "target": "self"
+      },
+      "minecraft:on_start_takeoff": {
+        "event": "minecraft:start_fly",
+        "target": "self"
+      },
+      "minecraft:on_death": {
+        "event": "minecraft:start_death",
+        "target": "self"
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "remove": {
+        },
+        "add": {
+          "component_groups": [
+            "dragon_flying"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "execute @a[tag=adv41,r=255,tag=in_the_end] ~~~ execute @e[type=ender_dragon,c=1] ~~~ execute @a[tag=!adv44,r=255,tag=in_the_end] ~~~ function advancement/grant/end/respawn_dragon"
+          ]
+        }
+      },
+      "minecraft:start_land": {
+        "remove": {
+          "component_groups": [
+            "dragon_flying"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "dragon_sitting"
+          ]
+        }
+      },
+      "minecraft:start_fly": {
+        "remove": {
+          "component_groups": [
+            "dragon_sitting"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "dragon_flying"
+          ]
+        }
+      },
+      "minecraft:start_death": {
+        "remove": {
+          "component_groups": [
+            "dragon_sitting",
+            "dragon_flying"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "dragon_death"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "execute @a[tag=!adv41,r=255,tag=in_the_end] ~~~ function advancement/grant/end/kill_dragon"
+          ]
+        }
+      },
+      "testfor:is_lookat":{
+        "run_command": {
+          "command":["execute @a[c=1,tag=is_using_spyglass,tag=!adv85,tag=scanplayer] ~~~ function advancement/grant/adventure/spyglass_at_dragon"]
+        }
+      }
+    }
+  }
+}

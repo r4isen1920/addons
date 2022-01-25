@@ -1,0 +1,41 @@
+
+ - Remove the 'ore_locator' entities' passive abilities. Only spawn them when you sneak and hold, after which in a few seconds before they despawn, they will tag the player with 'Searching_[ORE]' respectively.
+ - Make the player itself summon 'ore_trackers' only when there is a nearby 'ore_pinpointer' with the same name (e.g "COAL") of the ore the player is searching for.
+ [ DONE - 5:38 PM FEBRUARY 4 2020 ]
+ 
+ #
+ 
+ - Make the 'ore_trackers' last longer so that the particles reach the player
+ * Summon the 'ore_trackers' from the player instead spawning it from the pinpointer
+ * Reduce the amount of 'ore_trackers' summoned at a time
+ 
+ - Tweak particles: show 'ore_identifiers' when holding the Ore Locator on its respective ore search tag
+ * 'Ore Identifiers' will be displayed on top of your head, where the 'ore_trackers' are comming from
+ 
+ - Tweak action button: teleport the 'changer_ore_locator' entities to the player for more precision and convenience
+ * These entities will now be required to be 'summonable' to be able to use in command syntax, otherwise, we'll assign a name using the [.lang] and track them via their name instead.
+ 
+ - Sound effects: add sound effects for 'ore_trackers' or for the 'ore_pinpointers' to help know the exact spot
+ * 'Ore_pinpointers' will playsound a high-pitched alarm to its location for the next 10 seconds
+ 
+ - Fix 'Wealthy Emerald' item
+ * 'Village_hero' syntax
+ 
+ - Good luck!
+ [ DONE - 8:50 AM FEBRUARY 10 2020 ]
+ 
+ 
+ - Make 'ore_pinpointers' despawn only when the player changes its ore search mode, or when it unholds the ore locator
+ - Fix missing particles
+ - Stopsound those hurt sounds, its annoying!
+ [ DONE - 3:28 PM FEBRUARY 10 2020 ]
+ 
+ 
+ 
+ - Change particles for different types of Ores
+ - Tweak particles, and make them more unique
+ - Do not kill 'ore_pinpointers' even if the player founds it and no longer holds the ore detector. Instead, only when the ore is destroyed.
+ [ DONE - 6:43 AM FEBRUARY 15 2020 ]
+
+ 
+  

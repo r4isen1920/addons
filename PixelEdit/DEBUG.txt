@@ -1,0 +1,16 @@
+
+ # MoLang queries for the controls are working as intended; 
+ # just add the functions for it.
+ 
+ # Item texture is mis-aligned from the player's hand;
+ # try tweaking the item texture itself. Making it 3D is optional
+ 
+ # Changed player's family from 'virus' to 'player
+ 
+ # Floating blocks' interact query is still not working;
+ # try checking filters
+ 
+ # Added 'sleep_time' for particles
+ 
+ 
+ > 10:36 PM - May 16 2020

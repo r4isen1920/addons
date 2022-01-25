@@ -1,0 +1,11 @@
+
+ - Removed random speed boosts
+ - Fixed an issue that crashes the game when sleeping on bed
+ - Hunters now respawn on world spawn, or in bed if there is– instead of respawning near the speedrunner
+ - Multiple speedrunners: punch to select, punch again to unselect the player; game cannot start if there is no hunter
+
+ - Add Juggernaut mode:
+ [ JUGGERNAUT MODE ]
+ - Hunters will be given full diamond armor and a diamond sword
+ - Longer headstart for the speedrunner (40 seconds)
+ 

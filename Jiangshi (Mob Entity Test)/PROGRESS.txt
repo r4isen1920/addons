@@ -1,0 +1,20 @@
+
+
+ > If the mob is trying to stiffen, run an animation that makes them float (hold on to last frame: jump)
+
+ [ STIFFEN ]
+ > Becomes immune from several damage causes
+ > Show's a red glint when in this state
+ > Play the thorns sound effect when the mob is hurt
+ > Activates when the mob's health falls down by a certain amount
+ > Lasts 10 seconds. When the effect ends, triggers the REPRODUCE skill
+ > If attack/projectile/fatal damage is received while in this state, interrupts and cancels the skill - being unable to heal but additionally dealing knockback damage in return.
+ > Skill can be triggered only after 25 seconds
+ 
+ [ REPRODUCE ]
+ > Takes effect when STIFFEN is not interrupted
+ > Heals the mob by 4-16 HP every 20 seconds, until the mob reaches full health
+ > Shows a green glint when in this state
+ > Is a passive skill, but taking damage will end this effect
+ > Play a sound per every HP healed
+ 

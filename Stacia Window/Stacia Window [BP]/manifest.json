@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Administrate your world with the Stacia Window. Useful for servers, and realms.",
+        "name": "§7[v1.1]§r Stacia Window [BP]",
+        "uuid": "4b1d1e04-3993-4e8d-a74f-4fef6560d6e3", 
+        "version": [0, 1, 1],
+        "min_engine_version": [1, 17, 0]
+    },
+    "modules": [
+        {
+            "description": "Created by r4isen. Do not distribute unfairly. ",
+            "type": "data",
+            "uuid": "ce06a967-90ad-4235-88f4-caf32336f845", 
+            "version": [0, 1, 1]
+         }
+     ],
+     "dependencies": [
+        {
+            "uuid": "25e293be-5776-4c18-860b-391443332bc4", 
+            "version": [0, 1, 1]
+        }
+    ]
+ }

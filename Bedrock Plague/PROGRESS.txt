@@ -1,0 +1,12 @@
+
+ + Addition
+ [ Resilience III ] : reduces virulence down rate.
+ 
++ Changes / Bug Fixes
+ - Infected mobs now teleport within a range in order to prevent despawning
+  > Infected underwater will be given Resistance 4 to prolong life.
+ - You can no longer use the 4th hotbar slot to obtain creative items
+ - Compass will now track the nearby uninfected mobs. Uses 2 DNA Points per use. Punch in the air to use.
+ - Updated world join message
+ - Support for 1.16 mobs
+ 
