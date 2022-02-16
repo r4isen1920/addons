@@ -1,0 +1,701 @@
+{
+  "namespace": "origin",
+  
+  "none@common.empty_panel": {},
+  "random@common.empty_panel": {},
+  
+  "avian": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "tailwind@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.tailwind.name",
+          "$trait_description": "origins.trait.tailwind.description"
+        }
+      },
+      {
+        "slow_falling@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.slow_falling.name",
+          "$trait_description": "origins.trait.slow_falling.description"
+        }
+      },
+      {
+        "vegetarian@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.vegetarian.name",
+          "$trait_description": "origins.trait.vegetarian.description"
+        }
+      },
+      {
+        "fresh_air@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.fresh_air.name",
+          "$trait_description": "origins.trait.fresh_air.description"
+        }
+      }
+    ]
+  },
+  
+  "arachnid": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "webbing@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.webbing.name",
+          "$trait_description": "origins.trait.webbing.description"
+        }
+      },
+      {
+        "poison_protection@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.poison_protection.name",
+          "$trait_description": "origins.trait.poison_protection.description"
+        }
+      },
+      {
+        "climbing@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.climbing.name",
+          "$trait_description": "origins.trait.climbing.description"
+        }
+      },
+      {
+        "carnivore@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.carnivore.name",
+          "$trait_description": "origins.trait.carnivore.description"
+        }
+      },
+      {
+        "fragile@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.fragile.name",
+          "$trait_description": "origins.trait.fragile.description"
+        }
+      }
+    ]
+  },
+  
+  "elytrian": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "launch_into_air@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.launch_into_air.name",
+          "$trait_description": "origins.trait.launch_into_air.description"
+        }
+      },
+      {
+        "elytra@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.elytra.name",
+          "$trait_description": "origins.trait.elytra.description"
+        }
+      },
+      {
+        "aerial_combatant@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.aerial_combatant.name",
+          "$trait_description": "origins.trait.aerial_combatant.description"
+        }
+      },
+      {
+        "light_armor@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.light_armor.name",
+          "$trait_description": "origins.trait.light_armor.description"
+        }
+      },
+      {
+        "claustrophobia@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.claustrophobia.name",
+          "$trait_description": "origins.trait.claustrophobia.description"
+        }
+      },
+      {
+        "more_kinetic_damage@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.more_kinetic_damage.name",
+          "$trait_description": "origins.trait.more_kinetic_damage.description"
+        }
+      }
+    ]
+  },
+  
+  "shulk": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "shulker_conversion@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.shulker_conversion.name",
+          "$trait_description": "origins.trait.shulker_conversion.description"
+        }
+      },
+      {
+        "tough_shell@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.tough_shell.name",
+          "$trait_description": "origins.trait.tough_shell.description"
+        }
+      },
+      {
+        "natural_armor@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.natural_armor.name",
+          "$trait_description": "origins.trait.natural_armor.description"
+        }
+      },
+      {
+        "strong_arms@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.strong_arms.name",
+          "$trait_description": "origins.trait.strong_arms.description"
+        }
+      },
+      {
+        "more_exhaustion@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.more_exhaustion.name",
+          "$trait_description": "origins.trait.more_exhaustion.description"
+        }
+      },
+      {
+        "heavy_shell@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.heavy_shell.name",
+          "$trait_description": "origins.trait.heavy_shell.description"
+        }
+      }
+    ]
+  },
+  
+  "feline": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "fall_immunity@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.fall_immunity.name",
+          "$trait_description": "origins.trait.fall_immunity.description"
+        }
+      },
+      {
+        "sprint_jump@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.sprint_jump.name",
+          "$trait_description": "origins.trait.sprint_jump.description"
+        }
+      },
+      {
+        "cat_vision@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.cat_vision.name",
+          "$trait_description": "origins.trait.cat_vision.description"
+        }
+      },
+      {
+        "scare_creepers@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.scare_creepers.name",
+          "$trait_description": "origins.trait.scare_creepers.description"
+        }
+      },
+      {
+        "nine_lives@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.nine_lives.name",
+          "$trait_description": "origins.trait.nine_lives.description"
+        }
+      },
+      {
+        "weak_arms@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.weak_arms.name",
+          "$trait_description": "origins.trait.weak_arms.description"
+        }
+      }
+    ]
+  },
+  
+  "enderian": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "throw_ender_pearl@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.throw_ender_pearl.name",
+          "$trait_description": "origins.trait.throw_ender_pearl.description"
+        }
+      },
+      {
+        "hyperspace_immunity@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.hyperspace_immunity.name",
+          "$trait_description": "origins.trait.hyperspace_immunity.description"
+        }
+      },
+      {
+        "familiar_face@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.familiar_face.name",
+          "$trait_description": "origins.trait.familiar_face.description"
+        }
+      },
+      {
+        "water_vulnerability@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.water_vulnerability.name",
+          "$trait_description": "origins.trait.water_vulnerability.description"
+        }
+      },
+      {
+        "pumpkin_hate@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.pumpkin_hate.name",
+          "$trait_description": "origins.trait.pumpkin_hate.description"
+        }
+      }
+    ]
+  },
+  
+  "merling": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "aqua_affinity@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.aqua_affinity.name",
+          "$trait_description": "origins.trait.aqua_affinity.description"
+        }
+      },
+      {
+        "water_vision@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.water_vision.name",
+          "$trait_description": "origins.trait.water_vision.description"
+        }
+      },
+      {
+        "swim_speed@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.swim_speed.name",
+          "$trait_description": "origins.trait.swim_speed.description"
+        }
+      },
+      {
+        "like_water@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.like_water.name",
+          "$trait_description": "origins.trait.like_water.description"
+        }
+      },
+      {
+        "water_breathing@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.water_breathing.name",
+          "$trait_description": "origins.trait.water_breathing.description"
+        }
+      }
+    ]
+  },
+  
+  "blazeborn": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "fireball@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.fireball.name",
+          "$trait_description": "origins.trait.fireball.description"
+        }
+      },
+      {
+        "fire_immunity@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.fire_immunity.name",
+          "$trait_description": "origins.trait.fire_immunity.description"
+        }
+      },
+      {
+        "nether_spawn@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.nether_spawn.name",
+          "$trait_description": "origins.trait.nether_spawn.description"
+        }
+      },
+      {
+        "water_vulnerability@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.water_vulnerability.name",
+          "$trait_description": "origins.trait.water_vulnerability.description"
+        }
+      }
+    ]
+  },
+  
+  "phantom": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "phantomize@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.phantomize.name",
+          "$trait_description": "origins.trait.phantomize.description"
+        }
+      },
+      {
+        "invisibility@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.invisibility.name",
+          "$trait_description": "origins.trait.invisibility.description"
+        }
+      },
+      {
+        "hunger_over_time@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.hunger_over_time.name",
+          "$trait_description": "origins.trait.hunger_over_time.description"
+        }
+      },
+      {
+        "burn_in_daylight@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.burn_in_daylight.name",
+          "$trait_description": "origins.trait.burn_in_daylight.description"
+        }
+      }
+    ]
+  },
+  
+  "kitsune": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "camouflage@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.camouflage.name",
+          "$trait_description": "origins.trait.camouflage.description"
+        }
+      },
+      {
+        "fast_footed@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.fast_footed.name",
+          "$trait_description": "origins.trait.fast_footed.description"
+        }
+      },
+      {
+        "pounce@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.pounce.name",
+          "$trait_description": "origins.trait.pounce.description"
+        }
+      },
+      {
+        "mighty_mouth@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.mighty_mouth.name",
+          "$trait_description": "origins.trait.mighty_mouth.description"
+        }
+      },
+      {
+        "berry_craver@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.berry_craver.name",
+          "$trait_description": "origins.trait.berry_craver.description"
+        }
+      },
+      {
+        "retreat@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.retreat.name",
+          "$trait_description": "origins.trait.retreat.description"
+        }
+      },
+      {
+        "fall_immunity@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.fall_immunity.name",
+          "$trait_description": "origins.trait.fall_immunity.description"
+        }
+      },
+      {
+        "smaller_heart@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.smaller_heart.name",
+          "$trait_description": "origins.trait.smaller_heart.description"
+        }
+      },
+      {
+        "hungry_boi@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.hungry_boi.name",
+          "$trait_description": "origins.trait.hungry_boi.description"
+        }
+      }
+    ]
+  },
+  
+  "slimecican": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "bouncy@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.bouncy.name",
+          "$trait_description": "origins.trait.bouncy.description"
+        }
+      },
+      {
+        "high_jump@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.high_jump.name",
+          "$trait_description": "origins.trait.high_jump.description"
+        }
+      },
+      {
+        "fragmentation@origin.origin_trait_container_template": {
+          "$trait_type": "equal",
+          "$trait_name": "origins.trait.fragmentation.name",
+          "$trait_description": "origins.trait.fragmentation.description"
+        }
+      }
+    ]
+  },
+  
+  "starborne": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "star_beam@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.star_beam.name",
+          "$trait_description": "origins.trait.star_beam.description"
+        }
+      },
+      {
+        "explosion@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.explosion.name",
+          "$trait_description": "origins.trait.explosion.description"
+        }
+      },
+      {
+        "star_jump@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.star_jump.name",
+          "$trait_description": "origins.trait.star_jump.description"
+        }
+      },
+      {
+        "cosmic_gift@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.cosmic_gift.name",
+          "$trait_description": "origins.trait.cosmic_gift.description"
+        }
+      },
+      {
+        "immobile@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.immobile.name",
+          "$trait_description": "origins.trait.immobile.description"
+        }
+      },
+      {
+        "burning@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.burning.name",
+          "$trait_description": "origins.trait.burning.description"
+        }
+      }
+    ]
+  },
+  
+  "inchling": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "tiny@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.tiny.name",
+          "$trait_description": "origins.trait.tiny.description"
+        }
+      },
+      {
+        "nimble@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.nimble.name",
+          "$trait_description": "origins.trait.nimble.description"
+        }
+      },
+      {
+        "hyper_active@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.hyper_active.name",
+          "$trait_description": "origins.trait.hyper_active.description"
+        }
+      },
+      {
+        "bite_sized@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.bite_sized.name",
+          "$trait_description": "origins.trait.bite_sized.description"
+        }
+      }
+    ]
+  },
+  
+  "bee": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    
+    "controls": [
+      {
+        "death@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.death.name",
+          "$trait_description": "origins.trait.death.description"
+        }
+      },
+      {
+        "poisonous@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.poisonous.name",
+          "$trait_description": "origins.trait.poisonous.description"
+        }
+      },
+      {
+        "bloom@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.bloom.name",
+          "$trait_description": "origins.trait.bloom.description"
+        }
+      },
+      {
+        "flight@origin.origin_trait_container_template": {
+          "$trait_type": "plus",
+          "$trait_name": "origins.trait.flight.name",
+          "$trait_description": "origins.trait.flight.description"
+        }
+      },
+      {
+        "nighttime@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.nighttime.name",
+          "$trait_description": "origins.trait.nighttime.description"
+        }
+      },
+      {
+        "lifespan@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.lifespan.name",
+          "$trait_description": "origins.trait.lifespan.description"
+        }
+      },
+      {
+        "nectar_diet@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.nectar_diet.name",
+          "$trait_description": "origins.trait.nectar_diet.description"
+        }
+      },
+      {
+        "rain_vulnerability@origin.origin_trait_container_template": {
+          "$trait_type": "minus",
+          "$trait_name": "origins.trait.rain_vulnerability.name",
+          "$trait_description": "origins.trait.rain_vulnerability.description"
+        }
+      }
+    ]
+  },
+  
+  "origin_trait_container_template": {
+    "type": "panel",
+    "size": [ "100%", "100%c - 3px" ],
+    "clips_children": true,
+    
+    "$trait_name|default": "trait_name",
+    "$trait_type|default": "plus",
+    "$trait_description|default": "trait_description",
+    "controls": [
+      { 
+        "scroller_control@common.button": {
+          "size": [ "100%", 1 ],
+          "sound_volume": 0.0,
+          "$pressed_button_name": "unset"
+        } 
+      },
+      {
+        "trait_type": {
+          "type": "image",
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 3 ],
+          "size": [ 25, 11 ],
+          "texture": "('textures/origins/traits/' + $trait_type)"
+        }
+      },
+      {
+        "content_title": {
+          "type": "label",
+          "color": "$body_text_color",
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 26, 4 ],
+          "size": [ "100% - 26px", "default" ],
+          "shadow": true,
+          "text": "$trait_name",
+          "localize": true
+        }
+      },
+      {
+        "content_description": {
+          "type": "label",
+          "color": "$7_color_format",
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ "2% + 2px", 16 ],
+          "size": [ "98% - 2px", "default" ],
+          "shadow": true,
+          "text": "$trait_description",
+          "localize": true
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "format_version":"1.14",
+  "minecraft:npc_dialogue":{
+    "scenes":[
+      {
+        "scene_tag": "gui_origin_dialogue_empty",
+        "npc_name": "system",
+        "text": "origin.empty",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.ok" } ] },
+            "commands": [ "/tag @initiator add show_gui", "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_human" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_random",
+        "npc_name": "system",
+        "text": "origin.random",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_phantom" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_random" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_human" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_human",
+        "npc_name": "system",
+        "text": "origin.human",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_random", "/tag @initiator add show_gui" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/tag @initiator add show_gui", "/event entity @initiator origins:become_human" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_avian", "/tag @initiator add show_gui" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_avian",
+        "npc_name": "system",
+        "text": "origin.avian",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_human" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_avian" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_arachnid" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_arachnid",
+        "npc_name": "system",
+        "text": "origin.arachnid",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_avian" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_arachnid" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_elytrian" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_elytrian",
+        "npc_name": "system",
+        "text": "origin.elytrian",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_arachnid" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_elytrian" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_shulk" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_shulk",
+        "npc_name": "system",
+        "text": "origin.shulk",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_elytrian" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_shulk" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_feline" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_feline",
+        "npc_name": "system",
+        "text": "origin.feline",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_shulk" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_feline" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_enderian" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_enderian",
+        "npc_name": "system",
+        "text": "origin.enderian",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_feline" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_enderian" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_merling" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_merling",
+        "npc_name": "system",
+        "text": "origin.merling",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_enderian" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_merling" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_blazeborn" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_blazeborn",
+        "npc_name": "system",
+        "text": "origin.blazeborn",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_merling" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_blazeborn" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_phantom" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_phantom",
+        "npc_name": "system",
+        "text": "origin.phantom",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_blazeborn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_phantom" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_random" ]
+          }
+        ]
+      },
+      
+      
+      {
+        "scene_tag": "gui_origin_race_kitsune",
+        "npc_name": "system",
+        "text": "origin.kitsune",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_phantom" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_kitsune" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_slimecican" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_slimecican",
+        "npc_name": "system",
+        "text": "origin.slimecican",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_kitsune" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_slimecican" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_starborne" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_starborne",
+        "npc_name": "system",
+        "text": "origin.starborne",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_slimecican" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_starborne" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_inchling" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_inchling",
+        "npc_name": "system",
+        "text": "origin.inchling",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_starborne" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_inchling" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_bee" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_race_bee",
+        "npc_name": "system",
+        "text": "origin.bee",
+        "buttons": [
+          {
+            "name": "<",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_inchling" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.select" } ] },
+            "commands": [ "/event entity @initiator origins:become_bee" ]
+          },
+          {
+            "name": ">",
+            "commands": [ "/dialogue open @e[type=npc,c=1] @initiator gui_origin_race_random" ]
+          }
+        ]
+      }
+    ]
+  }
+}

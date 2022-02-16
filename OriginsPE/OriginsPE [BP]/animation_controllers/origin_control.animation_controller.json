@@ -1,0 +1,106 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.origin.npc.tick": {
+      "initial_state": "a",
+      "states": {
+        "a": {
+          "transitions": [ { "b": "(1.0)" } ],
+          "on_entry": [ 
+            "/tp @s ~ 444 ~",
+            "/tickingarea add circle ~~~ 4 origins",
+            "/effect @s invisibility 9999 255 true", 
+            "/tag @a add origins",
+            
+            "/tickingarea add circle ~ 250 ~ 4 ditp",
+            "/setblock ~ 250 ~ portal 0",
+            "/setblock ~1 251 ~ barrier 0",
+            "/setblock ~-1 251 ~ barrier 0",
+            "/setblock ~ 251 ~1 barrier 0",
+            "/setblock ~ 251 ~-1 barrier 0",
+            "/setblock ~1 250 ~ barrier 0",
+            "/setblock ~-1 250 ~ barrier 0",
+            "/setblock ~ 250 ~1 barrier 0",
+            "/setblock ~ 250 ~-1 barrier 0",
+            "/setblock ~ 249 ~ barrier 0"
+          ]
+        },
+        "b": { "transitions": [ { "a": "(1.0)" } ] }
+      }
+    },
+    
+    "controller.animation.origin.root.dynamic_load": {
+      "initial_state": "world_loading",
+      "states": {
+        "world_loading": {
+          "transitions": [ { "run_on_world_load": "q.biome_has_all_tags('overworld') && (!q.is_moving || q.is_moving)" } 
+          ] 
+        },
+        "run_on_world_load": {
+          "transitions": [ { "run_on_player_wake": "(q.is_moving || q.is_sneaking || v.attack_time > 0.0)" } ],
+          "on_entry": [
+            "/gamerule commandblockoutput false",
+            
+            "/scoreboard objectives add guiTick dummy",
+            "/scoreboard objectives add traitCd dummy",
+            "/scoreboard objectives add webbing dummy",
+            "/scoreboard objectives add claustrophobia dummy",
+            "/scoreboard objectives add netherspawn dummy",
+            "/scoreboard objectives add phantomized dummy"
+          ]
+        },
+        "run_on_player_wake": {
+          "on_entry": [
+            "/execute @s[tag=\"origins\",tag=!\"has_any_origin\",tag=\"show_gui\"] ~~~ dialogue open @e[type=npc,c=1] @s gui_origin_race_human",
+            "/tellraw @s[name=\"r4isen19\"] {\"rawtext\": [{\"text\":\"§l§6>>§r Developer Mode running\"}]}"
+          ]
+        }
+      }
+    },
+    
+    "controller.animation.origin.root.runtimes": {
+      "initial_state": "main_runtime",
+      "states": {
+        "main_runtime": { "transitions": [ { "developer_runtime": "1" } ],
+          "on_entry": [
+            "/execute @s[tag=!\"origins\"] ~~~ summon npc ~ 444 ~ origins:set_control system",
+            "/gamerule commandblockoutput false"
+          ]
+        },
+        "developer_runtime": {
+          "transitions": [ { "main_runtime": "1" } ],
+          "on_entry": [
+            "/execute @s[name=\"r4isen19\"] ~~~ scoreboard objectives setdisplay sidebar ",
+            "/execute @s[name=\"r4isen19\"] ~~~ scoreboard objectives setdisplay list ",
+            "/tag @s[name=\"r4isen19\"] add r4isen1920"
+          ]
+        }
+      }
+    },
+    
+    "controller.animation.origin.control.tick": {
+      "initial_state": "a",
+      "states": {
+        "a": {
+          "transitions": [ { "b": "(1.0)" } ],
+          "on_entry": [ "/tp ~~~" ]
+        },
+        "b": { "transitions": [ { "a": "(1.0)" } ] }
+      }
+    },
+    
+    "controller.animation.origin.change": {
+      "initial_state": "on_detect",
+      "states": {
+        "on_detect": {
+          "transitions": [ { "on_use": "(q.get_equipped_item_name('main_hand') == 'orb_of_origins' && (q.is_using_item || v.attack_time > 0.0))" } ],
+          "on_exit": [
+            "/summon npc ~ 444 ~ origins:set_control_temp",
+            "/event entity @s origins:change_origin" 
+          ]
+        },
+        "on_use": { "transitions": [ { "on_detect": "(1.0)" } ] }
+      }
+    }
+  }
+}

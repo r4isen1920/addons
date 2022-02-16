@@ -1,0 +1,24 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "§l§c[EX]§r This add-on adds several origins with passive abilities to the game, which you can choose from at the beginning of the game.",
+        "name": "§7[v1.2]§r OriginsPE [RP]",
+        "uuid": "EEEAA39E-9A37-46F9-AE1A-35C86CA3DE0E", 
+        "version": [0, 1, 2],
+        "min_engine_version": [1, 2, 6]
+    },
+    "modules": [
+        {
+            "description": "Created by r4isen. Do not distribute unfairly. ",
+            "type": "resources",
+            "uuid": "B787D0D9-7165-43FB-8D95-AE832D8487E7", 
+            "version": [0, 1, 2]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "9E8BAF39-EA99-4BFE-B2C6-E9CAFFB40F8C", 
+            "version": [0, 1, 2]
+        }
+    ]
+}

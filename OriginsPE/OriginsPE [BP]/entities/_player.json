@@ -1,0 +1,1836 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false,
+      "scripts": { 
+        "animate": [ 
+          { "runtimea": "(1.0)" },
+          { "runtimeb": "(1.0)" },
+          { "runtimec": "(1.0)" },
+          
+          { "tailwind": "q.variant == 2" },
+          { "slow_falling": "q.variant == 2" },
+          { "fresh_air": "q.variant == 2" },
+          { "vegetarian": "q.variant == 2" },
+          { "webbing": "q.variant == 3" },
+          { "climbing": "q.variant == 3" },
+          { "carnivore": "q.variant == 3" },
+          { "launch_into_air": "q.variant == 4" },
+          { "elytra": "q.variant == 4" },
+          { "aerial_combatant": "q.variant == 4" },
+          { "claustrophobia": "q.variant == 4" },
+          { "light_armor": "q.variant == 4" },
+          { "conversion": "q.variant == 5" },
+          { "strong_arms": "q.variant == 5" },
+          { "heavy_shell": "q.variant == 5" },
+          { "sprint_jump": "q.variant == 6" },
+          { "cat_vision": "q.variant == 6" },
+          { "weak_arms": "q.variant == 6" },
+          { "throw_ender_pearl": "q.variant == 7" },
+          { "pumpkin_hate": "q.variant == 7" },
+          { "aqua_affinity": "q.variant == 8" },
+          { "nether_spawn": "q.variant == 9" },
+          { "fireball": "q.variant == 9" },
+          { "phantomized": "q.variant == 10" }
+        ] 
+      },
+      "animations": {
+        "runtimea": "controller.animation.origin.root.dynamic_load",
+        "runtimeb": "controller.animation.origin.root.runtimes",
+        "runtimec": "controller.animation.origin.change",
+        
+        "tailwind": "controller.animation.origin.traits.tailwind",
+        "slow_falling": "controller.animation.origin.traits.slow_falling",
+        "fresh_air": "controller.animation.origin.traits.fresh_air",
+        "vegetarian": "controller.animation.origin.traits.vegetarian",
+        "webbing": "controller.animation.origin.traits.webbing",
+        "climbing": "controller.animation.origin.traits.climbing",
+        "carnivore": "controller.animation.origin.traits.carnivore",
+        "launch_into_air": "controller.animation.origin.traits.launch_into_air",
+        "elytra": "controller.animation.origin.traits.elytra",
+        "aerial_combatant": "controller.animation.origin.traits.aerial_combatant",
+        "claustrophobia": "controller.animation.origin.traits.claustrophobia",
+        "light_armor": "controller.animation.origin.traits.light_armor",
+        "conversion": "controller.animation.origin.traits.conversion",
+        "strong_arms": "controller.animation.origin.traits.strong_arms",
+        "heavy_shell": "controller.animation.origin.traits.heavy_shell",
+        "sprint_jump": "controller.animation.origin.traits.sprint_jump",
+        "cat_vision": "controller.animation.origin.traits.cat_vision",
+        "weak_arms": "controller.animation.origin.traits.weak_arms",
+        "throw_ender_pearl": "controller.animation.origin.traits.throw_ender_pearl",
+        "pumpkin_hate": "controller.animation.origin.traits.pumpkin_hate",
+        "aqua_affinity": "controller.animation.origin.traits.aqua_affinity",
+        "nether_spawn": "controller.animation.origin.traits.nether_spawn",
+        "fireball": "controller.animation.origin.traits.fireball",
+        "phantomized": "controller.animation.origin.traits.phantomized"
+      }
+    },
+
+    "component_groups": {
+      "origins:race_none": {
+        "minecraft:variant": {
+          "value": 0
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "any",
+              "deals_damage": false
+            },
+            { "cause": "contact", "deals_damage": true },
+            { "cause": "fly_into_wall", "deals_damage": true },
+            { "cause": "fall", "deals_damage": true },
+            { "cause": "projectile", "deals_damage": true },
+            { "cause": "fire", "deals_damage": true },
+            { "cause": "fire_tick", "deals_damage": true },
+            { "cause": "lava", "deals_damage": true }
+          ]
+        },
+        "minecraft:health": {
+          "value": 20,
+          "max": 20
+        },
+        "minecraft:attack": {
+          "damage": 1
+        },
+        "minecraft:player.exhaustion": {
+          "value": 0,
+          "max": 4
+        },
+        "minecraft:hurt_on_condition": {
+          "damage_conditions": [
+            {
+              "filters": { "test": "in_lava", "value": true },
+              "cause": "lava",
+              "damage_per_tick": 4
+            }
+          ]
+        },
+        "minecraft:breathable": {
+          "total_supply": 15,
+          "suffocate_time": -1,
+          "inhale_time": 3.75,
+          "generates_bubbles": false
+        },
+        "minecraft:movement": {
+          "value": 0.1
+        }
+      },
+      
+      "origins:race_human": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      
+      "origins:race_avian": {
+        "minecraft:variant": {
+          "value": 2
+        }
+      },
+      
+      "origins:race_arachnid": {
+        "minecraft:variant": {
+          "value": 3
+        },
+        "minecraft:health": {
+          "value": 14,
+          "max": 14
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "on_damage": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "any_of": [
+                        { "test": "has_mob_effect", "value": "poison" },
+                        { "test": "has_mob_effect", "value": "fatal_poison" }
+                      ]
+                    },
+                    { "test": "in_nether", "value": false }
+                  ]
+                }
+              },
+              "deals_damage": true,
+              "damage_modifier": -15
+            },
+            {
+              "on_damage": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "any_of": [
+                        { "test": "has_mob_effect", "value": "poison" },
+                        { "test": "has_mob_effect", "value": "fatal_poison" }
+                      ]
+                    },
+                    { "test": "in_nether", "value": true }
+                  ]
+                }
+              },
+              "deals_damage": true,
+              "damage_modifier": -5
+            }
+          ]
+        }
+      },
+      
+      "origins:race_elytrian": {
+        "minecraft:variant": {
+          "value": 4
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "contact",
+              "deals_damage": true,
+              "damage_multiplier": 2.0
+            },
+            {
+              "cause": "fly_into_wall",
+              "deals_damage": true,
+              "damage_multiplier": 3.0
+            },
+            {
+              "cause": "fall",
+              "deals_damage": true,
+              "damage_multiplier": 2.0
+            }
+          ]
+        }
+      },
+      
+      "origins:race_shulk": {
+        "minecraft:variant": {
+          "value": 5
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "projectile",
+              "deals_damage": false
+            },
+            {
+              "cause": "fall",
+              "deals_damage": true,
+              "damage_multiplier": 1.3
+            },
+            {
+              "cause": "any",
+              "deals_damage": true,
+              "damage_modifier": -5
+            }
+          ]
+        },
+        "minecraft:player.exhaustion": {
+          "value": 0,
+          "max": 2
+        }
+      },
+      
+      "origins:race_feline": {
+        "minecraft:variant": {
+          "value": 6
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": false
+          }
+        },
+		"minecraft:health": {
+		  "value": 18,
+		  "max": 18
+		}
+      },
+      
+      "origins:race_enderian": {
+        "minecraft:variant": {
+          "value": 7
+        },
+        "minecraft:spawn_entity": {
+          "entities": {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "spawn_entity": "origins:enderian_pearl",
+            "num_to_spawn": 1,
+            "single_use": false,
+            "filters": {
+              "all_of": [
+                { "test": "has_tag", "value": "shoot_pearl" }
+              ]
+            }
+          }
+        },
+        "minecraft:hurt_on_condition": {
+          "damage_conditions": [
+            {
+              "filters": { "test": "in_lava", "value": true },
+              "cause": "lava",
+              "damage_per_tick": 4
+            },
+            {
+              "filters": { "test": "in_contact_with_water", "value": true },
+              "cause": "drowning",
+              "damage_per_tick": 1
+            }
+          ]
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "on_damage": {
+              "filters": { 
+                "test": "has_tag", 
+                "subject": "self",
+                "value": "trait_cd"
+              }
+            },
+            "deals_damage": true,
+            "damage_modifier": -20
+          }
+        }
+      },
+      
+      "origins:race_merling": {
+        "minecraft:variant": {
+          "value": 8
+        },
+        "minecraft:buoyant": {
+          "base_buoyancy": 0.8,
+          "apply_gravity": false,
+          "simulate_waves": false,
+          "liquid_blocks": [
+            "minecraft:water",
+            "minecraft:flowing_water"
+          ]
+        },
+        "minecraft:breathable": {
+          "total_supply": 15,
+          "suffocate_time": -1,
+          "inhale_time": 1.0,
+          "breathes_air": false,
+          "breathes_water": true
+        }
+      },
+      
+      "origins:race_blazeborn": {
+        "minecraft:variant": {
+          "value": 9
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "fire",
+              "deals_damage": false
+            },
+            {
+              "cause": "fire_tick",
+              "deals_damage": false
+            },
+            {
+              "cause": "lava",
+              "deals_damage": false
+            }
+          ]
+        },
+        "minecraft:hurt_on_condition": {
+          "damage_conditions": [
+            {
+              "filters": { "test": "in_contact_with_water", "value": true },
+              "cause": "drowning",
+              "damage_per_tick": 1
+            }
+          ]
+        },
+        "minecraft:spawn_entity": {
+          "entities": {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "spawn_entity": "origins:blazeborn_fireball",
+            "num_to_spawn": 1,
+            "single_use": false,
+            "spawn_event": "minecraft:entity_spawned",
+            "filters": { "test": "has_tag", "value": "shoot_fireball" }
+          }
+        }
+      },
+      
+      "origins:race_phantom": {
+        "minecraft:variant": {
+          "value": 10
+        },
+        "minecraft:is_hidden_when_invisible": {
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "on_damage": {
+              "filters": {
+                "all_of": [
+                  { 
+                    "test": "has_damage",
+                    "operator": "!=",
+                    "value": "fall" 
+                  },
+                  { 
+                    "test": "has_tag",
+                    "value": "phantomized" 
+                  }
+                ]
+              },
+              "event": "origins:trait_ease_phantomized"
+            },
+            "deals_damage": true
+          }
+        },
+        "minecraft:breathable": {
+          "total_supply": 15,
+          "suffocate_time": -1,
+          "inhale_time": 3.75,
+          "generates_bubbles": false
+        }
+      },
+      
+      "origins:burn_in_daylight": {
+        "minecraft:burns_in_daylight": {
+        }
+      },
+      
+      "origins:race_kitsune": {
+        "minecraft:variant": {
+          "value": 11
+        }
+      },
+      
+      "origins:race_slimecican": {
+        "minecraft:variant": {
+          "value": 12
+        }
+      },
+      
+      "origins:race_starborne": {
+        "minecraft:variant": {
+          "value": 13
+        }
+      },
+      
+      "origins:race_inchling": {
+        "minecraft:variant": {
+          "value": 14
+        }
+      },
+      
+      "origins:race_bee": {
+        "minecraft:variant": {
+          "value": 15
+        }
+      },
+      
+      "minecraft:add_bad_omen": {
+        "minecraft:spell_effects": {
+          "add_effects": [
+            {
+              "effect": "bad_omen",
+              "duration": 6000,
+              "display_on_screen_animation": true
+            }
+          ]
+        },
+        "minecraft:timer": {
+          "time": [ 0.0, 0.0 ],
+          "looping": false,
+          "time_down_event": {
+            "event": "minecraft:clear_add_bad_omen",
+            "target": "self"
+          }
+        }
+      },
+      
+      "minecraft:clear_bad_omen_spell_effect": {
+        "minecraft:spell_effects": {
+        }
+      },
+      
+      "minecraft:raid_trigger": {
+        "minecraft:raid_trigger": {
+          "triggered_event": {
+            "event": "minecraft:remove_raid_trigger",
+            "target": "self"
+          }
+        },
+        "minecraft:spell_effects": {
+          "remove_effects": "bad_omen"
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "Math.Min(query.player_level * 7, 100)"
+      },
+      "minecraft:type_family": {
+        "family": [ "player" ]
+      },
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/empty.json"
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 1
+      },
+      "minecraft:player.saturation": {
+        "value": 20
+      },
+      "minecraft:player.exhaustion": {
+        "value": 0,
+        "max": 4
+      },
+      "minecraft:player.level": {
+        "value": 0,
+        "max": 24791
+      },
+      "minecraft:player.experience": {
+        "value": 0,
+        "max": 1
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": -1,
+        "inhale_time": 3.75,
+        "generates_bubbles": false
+      },
+      "minecraft:nameable": {
+        "always_show": true,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:insomnia": {
+        "days_until_insomnia": 3
+      },
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "family_types": [
+          "parrot_tame"
+        ],
+        "pull_in_entities": true,
+        "seats": [
+          {
+            "position": [ 0.4, -0.2, -0.1 ],
+            "min_rider_count": 0,
+            "max_rider_count": 0,
+            "lock_rider_rotation": 0
+          },
+          {
+            "position": [ -0.4, -0.2, -0.1 ],
+            "min_rider_count": 1,
+            "max_rider_count": 2,
+            "lock_rider_rotation": 0
+          }
+        ]
+      },
+      "minecraft:block_climber": {},
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_mob_effect", "subject": "self", "value": "bad_omen" },
+                { "test": "is_in_village", "subject": "self", "value": true }
+              ]
+            },
+            "event": "minecraft:trigger_raid"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_tag", "operator": "!=" ,"value": "has_any_origin" },
+                { "test": "has_tag", "operator": "!=" ,"value": "show_gui" }
+              ]
+            },
+            "event": "origins:show_origin_picker"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "any_of": [
+                    { "test": "has_tag", "value": "race_human" },
+                    { "test": "has_tag", "value": "race_avian" },
+                    { "test": "has_tag", "value": "race_arachnid" },
+                    { "test": "has_tag", "value": "race_elytrian" },
+                    { "test": "has_tag", "value": "race_shulk" },
+                    { "test": "has_tag", "value": "race_feline" },
+                    { "test": "has_tag", "value": "race_enderian" },
+                    { "test": "has_tag", "value": "race_merling" },
+                    { "test": "has_tag", "value": "race_blazeborn" },
+                    { "test": "has_tag", "value": "race_phantom" },
+                    { "test": "has_tag", "value": "race_kitsune" },
+                    { "test": "has_tag", "value": "race_slimecican" },
+                    { "test": "has_tag", "value": "race_starborne" },
+                    { "test": "has_tag", "value": "race_inchling" },
+                    { "test": "has_tag", "value": "race_bee" }
+                  ]
+                },
+                { "test": "has_tag", "operator": "!=" ,"value": "has_any_origin" }
+              ]
+            },
+            "event": "origins:has_any_origin"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "none_of": [
+                    { "test": "has_tag", "value": "race_human" },
+                    { "test": "has_tag", "value": "race_avian" },
+                    { "test": "has_tag", "value": "race_arachnid" },
+                    { "test": "has_tag", "value": "race_elytrian" },
+                    { "test": "has_tag", "value": "race_shulk" },
+                    { "test": "has_tag", "value": "race_feline" },
+                    { "test": "has_tag", "value": "race_enderian" },
+                    { "test": "has_tag", "value": "race_merling" },
+                    { "test": "has_tag", "value": "race_blazeborn" },
+                    { "test": "has_tag", "value": "race_phantom" },
+                    { "test": "has_tag", "value": "race_kitsune" },
+                    { "test": "has_tag", "value": "race_slimecican" },
+                    { "test": "has_tag", "value": "race_starborne" },
+                    { "test": "has_tag", "value": "race_inchling" },
+                    { "test": "has_tag", "value": "race_bee" }
+                  ]
+                },
+                { "test": "has_tag", "value": "has_any_origin" }
+              ]
+            },
+            "event": "origins:become_unknown"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "any_of": [
+                    { "test": "has_equipment", "domain": "head", "value": "iron_helmet" },
+                    { "test": "has_equipment", "domain": "torso", "value": "iron_chestplate" },
+                    { "test": "has_equipment", "domain": "leg", "value": "iron_leggings" },
+                    { "test": "has_equipment", "domain": "feet", "value": "iron_boots" },
+                    { "test": "has_equipment", "domain": "head", "value": "golden_helmet" },
+                    { "test": "has_equipment", "domain": "torso", "value": "golden_chestplate" },
+                    { "test": "has_equipment", "domain": "leg", "value": "golden_leggings" },
+                    { "test": "has_equipment", "domain": "feet", "value": "golden_boots" },
+                    { "test": "has_equipment", "domain": "head", "value": "diamond_helmet" },
+                    { "test": "has_equipment", "domain": "torso", "value": "diamond_chestplate" },
+                    { "test": "has_equipment", "domain": "leg", "value": "diamond_leggings" },
+                    { "test": "has_equipment", "domain": "feet", "value": "diamond_boots" },
+                    { "test": "has_equipment", "domain": "head", "value": "netherite_helmet" },
+                    { "test": "has_equipment", "domain": "torso", "value": "netherite_chestplate" },
+                    { "test": "has_equipment", "domain": "leg", "value": "netherite_leggings" },
+                    { "test": "has_equipment", "domain": "feet", "value": "netherite_boots" }
+                  ]
+                },
+                { "test": "has_tag", "value": "race_elytrian" },
+                { "test": "has_tag", "operator": "!=", "value": "heavy_armor" }
+              ]
+            },
+            "event": "origins:wearing_heavy_armor"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "none_of": [
+                    { "test": "has_equipment", "domain": "head", "value": "iron_helmet" },
+                    { "test": "has_equipment", "domain": "torso", "value": "iron_chestplate" },
+                    { "test": "has_equipment", "domain": "leg", "value": "iron_leggings" },
+                    { "test": "has_equipment", "domain": "feet", "value": "iron_boots" },
+                    { "test": "has_equipment", "domain": "head", "value": "golden_helmet" },
+                    { "test": "has_equipment", "domain": "torso", "value": "golden_chestplate" },
+                    { "test": "has_equipment", "domain": "leg", "value": "golden_leggings" },
+                    { "test": "has_equipment", "domain": "feet", "value": "golden_boots" },
+                    { "test": "has_equipment", "domain": "head", "value": "diamond_helmet" },
+                    { "test": "has_equipment", "domain": "torso", "value": "diamond_chestplate" },
+                    { "test": "has_equipment", "domain": "leg", "value": "diamond_leggings" },
+                    { "test": "has_equipment", "domain": "feet", "value": "diamond_boots" },
+                    { "test": "has_equipment", "domain": "head", "value": "netherite_helmet" },
+                    { "test": "has_equipment", "domain": "torso", "value": "netherite_chestplate" },
+                    { "test": "has_equipment", "domain": "leg", "value": "netherite_leggings" },
+                    { "test": "has_equipment", "domain": "feet", "value": "netherite_boots" }
+                  ]
+                },
+                { "test": "has_tag", "value": "race_elytrian" },
+                { "test": "has_tag", "value": "heavy_armor" }
+              ]
+            },
+            "event": "origins:wearing_light_armor"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "is_underground", "value": true },
+                { "test": "has_tag", "value": "race_elytrian" },
+                { "test": "has_tag", "operator": "!=", "value": "is_underground" }
+              ]
+            },
+            "event": "origins:trait_claustrophobia"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "is_underground", "value": false },
+                { "test": "has_tag", "value": "race_elytrian" },
+                { "test": "has_tag", "value": "is_underground" }
+              ]
+            },
+            "event": "origins:trait_ease_claustrophobia"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "light_level", "operator": "<=", "value": 8 },
+                { "test": "has_tag", "value": "race_feline" },
+                { "test": "has_tag", "operator": "!=", "value": "cat_vision" }
+              ]
+            },
+            "event": "origins:trait_cat_vision"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "light_level", "operator": ">", "value": 8 },
+                { "test": "has_tag", "value": "race_feline" },
+                { "test": "has_tag", "value": "cat_vision" }
+              ]
+            },
+            "event": "origins:trait_ease_cat_vision"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_mob_effect", "operator": "!=", "value": "strength" },
+                { "test": "has_tag", "value": "race_feline" },
+                { "test": "has_tag", "operator": "!=", "value": "weak_arms" }
+              ]
+            },
+            "event": "origins:trait_weak_arms"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_mob_effect", "value": "strength" },
+                { "test": "has_tag", "value": "race_feline" },
+                { "test": "has_tag", "value": "weak_arms" }
+              ]
+            },
+            "event": "origins:trait_ease_weak_arms"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "in_nether", "value": true },
+                { "test": "has_tag", "operator": "!=", "value": "nether_inhabitant" }
+              ]
+            },
+            "event": "origins:trait_nether_spawn"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_tag", "value": "race_phantom" },
+                { "test": "has_tag", "operator": "!=", "value": "phantomized" },
+                { "test": "has_tag", "operator": "!=", "value": "in_creative" }
+              ]
+            },
+            "event": "origins:trait_burn_in_daylight"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_tag", "value": "race_phantom" },
+                { "test": "has_tag", "value": "phantomized" }
+              ]
+            },
+            "event": "origins:trait_ease_burn_in_daylight"
+          }
+        ]
+      }
+    },
+
+    "events": {
+      "minecraft:gain_bad_omen": {
+        "sequence": [
+          {
+            "add": { "component_groups": [ "minecraft:add_bad_omen" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_human" },
+            "add": { "component_groups": [ "orgins:race_human" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_avian" },
+            "add": { "component_groups": [ "orgins:race_avian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_arachnid" },
+            "add": { "component_groups": [ "orgins:race_arachnid" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_elytrian" },
+            "add": { "component_groups": [ "orgins:race_elytrian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_shulk" },
+            "add": { "component_groups": [ "orgins:race_shulk" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_feline" },
+            "add": { "component_groups": [ "orgins:race_feline" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_enderian" },
+            "add": { "component_groups": [ "orgins:race_enderian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_merling" },
+            "add": { "component_groups": [ "orgins:race_merling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_blazeborn" },
+            "add": { "component_groups": [ "orgins:race_blazeborn" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_phantom" },
+            "add": { "component_groups": [ "orgins:race_phantom" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_kitsune" },
+            "add": { "component_groups": [ "orgins:race_kitsune" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_slimecican" },
+            "add": { "component_groups": [ "orgins:race_slimecican" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_starborne" },
+            "add": { "component_groups": [ "orgins:race_starborne" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_inchling" },
+            "add": { "component_groups": [ "orgins:race_inchling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_bee" },
+            "add": { "component_groups": [ "orgins:race_bee" ] }
+          }
+        ]
+      },
+      
+      "minecraft:clear_add_bad_omen": {
+        "sequence": [
+          {
+            "add": { "component_groups": [ "minecraft:clear_bad_omen_spell_effect" ] }
+          },
+          {
+            "remove": { "component_groups": [ "minecraft:add_bad_omen" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_human" },
+            "add": { "component_groups": [ "orgins:race_human" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_avian" },
+            "add": { "component_groups": [ "orgins:race_avian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_arachnid" },
+            "add": { "component_groups": [ "orgins:race_arachnid" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_elytrian" },
+            "add": { "component_groups": [ "orgins:race_elytrian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_shulk" },
+            "add": { "component_groups": [ "orgins:race_shulk" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_feline" },
+            "add": { "component_groups": [ "orgins:race_feline" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_enderian" },
+            "add": { "component_groups": [ "orgins:race_enderian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_merling" },
+            "add": { "component_groups": [ "orgins:race_merling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_blazeborn" },
+            "add": { "component_groups": [ "orgins:race_blazeborn" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_phantom" },
+            "add": { "component_groups": [ "orgins:race_phantom" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_kitsune" },
+            "add": { "component_groups": [ "orgins:race_kitsune" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_slimecican" },
+            "add": { "component_groups": [ "orgins:race_slimecican" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_starborne" },
+            "add": { "component_groups": [ "orgins:race_starborne" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_inchling" },
+            "add": { "component_groups": [ "orgins:race_inchling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_bee" },
+            "add": { "component_groups": [ "orgins:race_bee" ] }
+          }
+        ]
+      },
+      
+      "minecraft:trigger_raid": {
+        "sequence": [
+          {
+            "add": { "component_groups": [ "minecraft:raid_trigger" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_human" },
+            "add": { "component_groups": [ "orgins:race_human" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_avian" },
+            "add": { "component_groups": [ "orgins:race_avian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_arachnid" },
+            "add": { "component_groups": [ "orgins:race_arachnid" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_elytrian" },
+            "add": { "component_groups": [ "orgins:race_elytrian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_shulk" },
+            "add": { "component_groups": [ "orgins:race_shulk" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_feline" },
+            "add": { "component_groups": [ "orgins:race_feline" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_enderian" },
+            "add": { "component_groups": [ "orgins:race_enderian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_merling" },
+            "add": { "component_groups": [ "orgins:race_merling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_blazeborn" },
+            "add": { "component_groups": [ "orgins:race_blazeborn" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_phantom" },
+            "add": { "component_groups": [ "orgins:race_phantom" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_kitsune" },
+            "add": { "component_groups": [ "orgins:race_kitsune" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_slimecican" },
+            "add": { "component_groups": [ "orgins:race_slimecican" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_starborne" },
+            "add": { "component_groups": [ "orgins:race_starborne" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_inchling" },
+            "add": { "component_groups": [ "orgins:race_inchling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_bee" },
+            "add": { "component_groups": [ "orgins:race_bee" ] }
+          }
+        ]
+      },
+      
+      "minecraft:remove_raid_trigger": {
+        "sequence": [
+          {
+            "remove": { "component_groups": [ "minecraft:raid_trigger" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_human" },
+            "add": { "component_groups": [ "orgins:race_human" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_avian" },
+            "add": { "component_groups": [ "orgins:race_avian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_arachnid" },
+            "add": { "component_groups": [ "orgins:race_arachnid" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_elytrian" },
+            "add": { "component_groups": [ "orgins:race_elytrian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_shulk" },
+            "add": { "component_groups": [ "orgins:race_shulk" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_feline" },
+            "add": { "component_groups": [ "orgins:race_feline" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_enderian" },
+            "add": { "component_groups": [ "orgins:race_enderian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_merling" },
+            "add": { "component_groups": [ "orgins:race_merling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_blazeborn" },
+            "add": { "component_groups": [ "orgins:race_blazeborn" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_phantom" },
+            "add": { "component_groups": [ "orgins:race_phantom" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_kitsune" },
+            "add": { "component_groups": [ "orgins:race_kitsune" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_slimecican" },
+            "add": { "component_groups": [ "orgins:race_slimecican" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_starborne" },
+            "add": { "component_groups": [ "orgins:race_starborne" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_inchling" },
+            "add": { "component_groups": [ "orgins:race_inchling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_bee" },
+            "add": { "component_groups": [ "orgins:race_bee" ] }
+          }
+        ]
+      },
+      
+      "origins:show_origin_picker": { 
+        "run_command": { 
+          "command": [
+            "dialogue open @e[type=npc,c=1] @s[tag=\"origins\",tag=!\"has_any_origin\",tag=!\"show_gui\"] gui_origin_dialogue_empty",
+            
+            "event entity @s[tag=\"origins\",tag=!\"loaded\"] origins:become_unknown",
+            "tag @s add loaded",
+            "scoreboard players add @s[tag=!\"show_gui\"] guiTick 1",
+            "scoreboard players set @s[scores={guiTick=201}] guiTick 0",
+            
+            "tag @s[scores={guiTick=200}] add show_gui"
+          ] 
+        } 
+      },
+      
+      "origins:has_any_origin": { 
+        "sequence": [
+          {
+            "remove": { "component_groups": [ "origins:race_none" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_human" },
+            "run_command": { "command": [ "event entity @s origins:become_human" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_avian" },
+            "run_command": { "command": [ "event entity @s origins:become_avian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_arachnid" },
+            "run_command": { "command": [ "event entity @s origins:become_arachnid" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_elytrian" },
+            "run_command": { "command": [ "event entity @s origins:become_elytrian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_shulk" },
+            "run_command": { "command": [ "event entity @s origins:become_shulk" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_feline" },
+            "run_command": { "command": [ "event entity @s origins:become_feline" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_enderian" },
+            "run_command": { "command": [ "event entity @s origins:become_enderian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_merling" },
+            "run_command": { "command": [ "event entity @s origins:become_merling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_blazeborn" },
+            "run_command": { "command": [ "event entity @s origins:become_blazeborn" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_phantom" },
+            "run_command": { "command": [ "event entity @s origins:become_phantom" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_kitsune" },
+            "run_command": { "command": [ "event entity @s origins:become_kitsune" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_slimecican" },
+            "run_command": { "command": [ "event entity @s origins:become_slimecican" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_starborne" },
+            "run_command": { "command": [ "event entity @s origins:become_starborne" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_inchling" },
+            "run_command": { "command": [ "event entity @s origins:become_inchling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_bee" },
+            "run_command": { "command": [ "event entity @s origins:become_bee" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add has_any_origin",
+                "playsound ui.enchant @s"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:change_origin": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "run_command": { "command": [ "event entity @s origins:become_unknown" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_human" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_human" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_avian" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_avian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_arachnid" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_arachnid" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_elytrian" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_elytrian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_shulk" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_shulk" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_feline" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_feline" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_enderian" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_enderian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_merling" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_merling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_blazeborn" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_blazeborn" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_phantom" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_phantom" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_kitsune" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_kitsune" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_slimecican" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_slimecican" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_starborne" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_starborne" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_inchling" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_inchling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_bee" },
+            "run_command": { "command": [ "dialogue open @e[type=npc,c=1] @s gui_origin_change_bee" ] }
+          }
+        ]
+      },
+      
+      "origins:become_unknown": { 
+        "add": { "component_groups": [ "origins:race_none" ] },
+        "remove": {
+          "component_groups": [
+            "origins:race_human",
+            "origins:race_avian",
+            "origins:race_arachnid",
+            "origins:race_elytrian",
+            "origins:race_shulk",
+            "origins:race_feline",
+            "origins:race_enderian",
+            "origins:race_merling",
+            "origins:race_blazeborn",
+            "origins:race_phantom",
+            "origins:race_kitsune",
+            "origins:race_slimecican",
+            "origins:race_starborne",
+            "origins:race_inchling",
+            "origins:race_bee"
+          ]
+        },
+        "run_command": { 
+          "command": [ 
+            "replaceitem entity @s[tag=\"race_elytrian\"] slot.armor.chest 0 air",
+            "title @s actionbar hidecd",
+            
+            "tag @s remove race_human",
+            "tag @s remove race_avian",
+            "tag @s remove race_arachnid",
+            "tag @s remove race_elytrian",
+            "tag @s remove race_shulk",
+            "tag @s remove race_feline",
+            "tag @s remove race_enderian",
+            "tag @s remove race_merling",
+            "tag @s remove race_blazeborn",
+            "tag @s remove race_phantom",
+            "tag @s remove race_kitsune",
+            "tag @s remove race_slimecican",
+            "tag @s remove race_starborne",
+            "tag @s remove race_inchling",
+            "tag @s remove race_bee",
+            
+            "tag @s remove trait_cd",
+            "tag @s remove heavy_armor",
+            "tag @s remove claustrophobia",
+            "tag @s remove cat_vision",
+            "tag @s remove weak_arms",
+            "tag @s remove nether_spawn",
+            "tag @s remove nether_inhabitant",
+            "tag @s remove shoot_pearl",
+            "tag @s remove shoot_fireball",
+            "tag @s remove phantomized",
+            
+            "scoreboard players reset @s",
+            
+            "tag @s remove has_any_origin",
+            "dialogue open @e[type=npc,c=1] @s gui_origin_race_human"
+          ] 
+        }
+      },
+      
+      "origins:become_random": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "randomize": [
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_avian" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_arachnid" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_elytrian" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_shulk" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_feline" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_enderian" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_merling" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_blazeborn" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_phantom" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_kitsune" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_slimecican" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_starborne" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_inchling" ] }
+              },
+              {
+                "weight": 1,
+                "run_command": { "command": [ "event entity @s origins:become_bee" ] }
+              }
+            ]
+          }
+        ]
+      },
+      
+      "origins:become_human": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_human" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_human",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_human"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_avian": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_avian" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_avian",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_avian"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_arachnid": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_arachnid" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_arachnid",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_arachnid"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_elytrian": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_elytrian" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_elytrian",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_elytrian"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_shulk": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_shulk" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_shulk",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_shulk"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_feline": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_feline" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_feline",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_feline"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_enderian": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_enderian" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_enderian",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_enderian"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_merling": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_merling" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_merling",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_merling"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_blazeborn": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_blazeborn" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_blazeborn",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_blazeborn"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_phantom": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_phantom" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_phantom",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_phantom"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_kitsune": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_kitsune" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_kitsune",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_kitsune"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_slimecican": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_slimecican" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_slimecican",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_slimecican"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_starborne": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_starborne" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_starborne",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_starborne"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_inchling": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_inchling" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_inchling",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_inchling"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:become_bee": {
+        "sequence": [
+          {
+            "filters": { "test": "has_tag", "operator": "!=", "value": "has_any_origin" },
+            "add": { "component_groups": [ "origins:race_bee" ] }
+          },
+          {
+            "run_command": { 
+              "command": [ 
+                "tag @s add race_bee",
+                "dialogue open @e[type=npc,c=1] @s gui_origin_view_bee"
+              ] 
+            }
+          }
+        ]
+      },
+      
+      "origins:webbing_trait_cooldown": { 
+        "run_command": { 
+          "command": [
+            "tag @s add trait_cd"
+          ] 
+        } 
+      },
+      
+      "origins:wearing_heavy_armor": { 
+        "run_command": { 
+          "command": [
+            "tag @s add heavy_armor"
+          ] 
+        } 
+      },
+      
+      "origins:wearing_light_armor": { 
+        "run_command": { 
+          "command": [
+            "tag @s remove heavy_armor"
+          ] 
+        } 
+      },
+      
+      "origins:trait_claustrophobia": { 
+        "run_command": { 
+          "command": [
+            "tag @s add is_underground"
+          ] 
+        } 
+      },
+      
+      "origins:trait_ease_claustrophobia": { 
+        "run_command": { 
+          "command": [
+            "tag @s remove is_underground"
+          ] 
+        } 
+      },
+      
+      "origins:conversion_trait_cooldown": { 
+        "run_command": { 
+          "command": [
+            "tag @s add trait_cd"
+          ] 
+        } 
+      },
+      
+      "origins:trait_cat_vision": { 
+        "run_command": { 
+          "command": [
+            "tag @s add cat_vision"
+          ] 
+        } 
+      },
+      
+      "origins:trait_ease_cat_vision": { 
+        "run_command": { 
+          "command": [
+            "tag @s remove cat_vision"
+          ] 
+        } 
+      },
+      
+      "origins:trait_weak_arms": { 
+        "run_command": { 
+          "command": [
+            "tag @s add weak_arms"
+          ] 
+        } 
+      },
+      
+      "origins:trait_ease_weak_arms": { 
+        "run_command": { 
+          "command": [
+            "tag @s remove weak_arms"
+          ] 
+        } 
+      },
+      
+      "origins:trait_nether_spawn": { 
+        "run_command": { 
+          "command": [
+            "tag @s add nether_spawn"
+          ] 
+        } 
+      },
+      
+      "origins:trait_ease_phantomized": { 
+        "run_command": { 
+          "command": [
+            "tag @s add trait_cd"
+          ] 
+        } 
+      },
+      
+      "origins:trait_burn_in_daylight": {
+        "sequence": [
+          {
+            "add": { "component_groups": [ "origins:burn_in_daylight" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_human" },
+            "add": { "component_groups": [ "orgins:race_human" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_avian" },
+            "add": { "component_groups": [ "orgins:race_avian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_arachnid" },
+            "add": { "component_groups": [ "orgins:race_arachnid" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_elytrian" },
+            "add": { "component_groups": [ "orgins:race_elytrian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_shulk" },
+            "add": { "component_groups": [ "orgins:race_shulk" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_feline" },
+            "add": { "component_groups": [ "orgins:race_feline" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_enderian" },
+            "add": { "component_groups": [ "orgins:race_enderian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_merling" },
+            "add": { "component_groups": [ "orgins:race_merling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_blazeborn" },
+            "add": { "component_groups": [ "orgins:race_blazeborn" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_phantom" },
+            "add": { "component_groups": [ "orgins:race_phantom" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_kitsune" },
+            "add": { "component_groups": [ "orgins:race_kitsune" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_slimecican" },
+            "add": { "component_groups": [ "orgins:race_slimecican" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_starborne" },
+            "add": { "component_groups": [ "orgins:race_starborne" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_inchling" },
+            "add": { "component_groups": [ "orgins:race_inchling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_bee" },
+            "add": { "component_groups": [ "orgins:race_bee" ] }
+          }
+        ]
+      },
+      
+      "origins:trait_ease_burn_in_daylight": {
+        "sequence": [
+          {
+            "remove": { "component_groups": [ "origins:burn_in_daylight" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_human" },
+            "add": { "component_groups": [ "orgins:race_human" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_avian" },
+            "add": { "component_groups": [ "orgins:race_avian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_arachnid" },
+            "add": { "component_groups": [ "orgins:race_arachnid" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_elytrian" },
+            "add": { "component_groups": [ "orgins:race_elytrian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_shulk" },
+            "add": { "component_groups": [ "orgins:race_shulk" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_feline" },
+            "add": { "component_groups": [ "orgins:race_feline" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_enderian" },
+            "add": { "component_groups": [ "orgins:race_enderian" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_merling" },
+            "add": { "component_groups": [ "orgins:race_merling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_blazeborn" },
+            "add": { "component_groups": [ "orgins:race_blazeborn" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_phantom" },
+            "add": { "component_groups": [ "orgins:race_phantom" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_kitsune" },
+            "add": { "component_groups": [ "orgins:race_kitsune" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_slimecican" },
+            "add": { "component_groups": [ "orgins:race_slimecican" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_starborne" },
+            "add": { "component_groups": [ "orgins:race_starborne" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_inchling" },
+            "add": { "component_groups": [ "orgins:race_inchling" ] }
+          },
+          {
+            "filters": { "test": "has_tag", "value": "race_bee" },
+            "add": { "component_groups": [ "orgins:race_bee" ] }
+          }
+        ]
+      }
+    }
+  }
+}

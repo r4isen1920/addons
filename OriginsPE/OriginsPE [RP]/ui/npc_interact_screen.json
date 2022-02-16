@@ -1,0 +1,1147 @@
+{
+  "origin_picker_list": {
+    "type": "panel",
+    "controls": [
+      {
+        "race_human@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "human",
+          "$race_name_text": "origins.race.human.name",
+          "$race_difficulty": "none",
+          "$race_description": "origins.race.human.description",
+          "$race_traits": "origin.none",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.human') or (#dialogtext = 'vieworigin.human') or (#dialogtext = 'changeorigin.human'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_avian@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "avian",
+          "$race_name_text": "origins.race.avian.name",
+          "$race_difficulty": "easy",
+          "$race_description": "origins.race.avian.description",
+          "$race_traits": "origin.avian",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.avian') or (#dialogtext = 'vieworigin.avian') or (#dialogtext = 'changeorigin.avian'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_arachnid@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "arachnid",
+          "$race_name_text": "origins.race.arachnid.name",
+          "$race_difficulty": "easy",
+          "$race_description": "origins.race.arachnid.description",
+          "$race_traits": "origin.arachnid",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.arachnid') or (#dialogtext = 'vieworigin.arachnid') or (#dialogtext = 'changeorigin.arachnid'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_elytrian@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "elytrian",
+          "$race_name_text": "origins.race.elytrian.name",
+          "$race_difficulty": "easy",
+          "$race_description": "origins.race.elytrian.description",
+          "$race_traits": "origin.elytrian",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.elytrian') or (#dialogtext = 'vieworigin.elytrian') or (#dialogtext = 'changeorigin.elytrian'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_shulk@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "shulk",
+          "$race_name_text": "origins.race.shulk.name",
+          "$race_difficulty": "easy",
+          "$race_description": "origins.race.shulk.description",
+          "$race_traits": "origin.shulk",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.shulk') or (#dialogtext = 'vieworigin.shulk') or (#dialogtext = 'changeorigin.shulk'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_feline@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "feline",
+          "$race_name_text": "origins.race.feline.name",
+          "$race_difficulty": "medium",
+          "$race_description": "origins.race.feline.description",
+          "$race_traits": "origin.feline",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.feline') or (#dialogtext = 'vieworigin.feline') or (#dialogtext = 'changeorigin.feline'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_enderian@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "enderian",
+          "$race_name_text": "origins.race.enderian.name",
+          "$race_difficulty": "medium",
+          "$race_description": "origins.race.enderian.description",
+          "$race_traits": "origin.enderian",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.enderian') or (#dialogtext = 'vieworigin.enderian') or (#dialogtext = 'changeorigin.enderian'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_merling@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "merling",
+          "$race_name_text": "origins.race.merling.name",
+          "$race_difficulty": "hard",
+          "$race_description": "origins.race.merling.description",
+          "$race_traits": "origin.merling",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.merling') or (#dialogtext = 'vieworigin.merling') or (#dialogtext = 'changeorigin.merling'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_blazeborn@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "blazeborn",
+          "$race_name_text": "origins.race.blazeborn.name",
+          "$race_difficulty": "hard",
+          "$race_description": "origins.race.blazeborn.description",
+          "$race_traits": "origin.blazeborn",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.blazeborn') or (#dialogtext = 'vieworigin.blazeborn') or (#dialogtext = 'changeorigin.blazeborn'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_phantom@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "phantom",
+          "$race_name_text": "origins.race.phantom.name",
+          "$race_difficulty": "hard",
+          "$race_description": "origins.race.phantom.description",
+          "$race_traits": "origin.phantom",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.phantom') or (#dialogtext = 'vieworigin.phantom') or (#dialogtext = 'changeorigin.phantom'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_kitsune@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "kitsune",
+          "$race_name_text": "origins.race.kitsune.name",
+          "$race_difficulty": "hard",
+          "$race_description": "origins.race.kitsune.description",
+          "$race_traits": "origin.kitsune",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.kitsune') or (#dialogtext = 'vieworigin.kitsune') or (#dialogtext = 'changeorigin.kitsune'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_slimecican@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "slimecican",
+          "$race_name_text": "origins.race.slimecican.name",
+          "$race_difficulty": "medium",
+          "$race_description": "origins.race.slimecican.description",
+          "$race_traits": "origin.slimecican",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.slimecican') or (#dialogtext = 'vieworigin.slimecican') or (#dialogtext = 'changeorigin.slimecican'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_starborne@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "starborne",
+          "$race_name_text": "origins.race.starborne.name",
+          "$race_difficulty": "hard",
+          "$race_description": "origins.race.starborne.description",
+          "$race_traits": "origin.starborne",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.starborne') or (#dialogtext = 'vieworigin.starborne') or (#dialogtext = 'changeorigin.starborne'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_inchling@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "inchling",
+          "$race_name_text": "origins.race.inchling.name",
+          "$race_difficulty": "hard",
+          "$race_description": "origins.race.inchling.description",
+          "$race_traits": "origin.inchling",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.inchling') or (#dialogtext = 'vieworigin.inchling') or (#dialogtext = 'changeorigin.inchling'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_bee@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "bee",
+          "$race_name_text": "origins.race.bee.name",
+          "$race_difficulty": "hard",
+          "$race_description": "origins.race.bee.description",
+          "$race_traits": "origin.bee",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.bee') or (#dialogtext = 'vieworigin.bee') or (#dialogtext = 'changeorigin.bee'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "race_random@npc_interact.origin_root_panel": {
+          "$race_icon_texture": "random",
+          "$race_name_text": "origins.race.random.name",
+          "$race_difficulty": "random",
+          "$race_description": "origins.race.random.description",
+          "$race_traits": "origin.random",
+          
+          "$child_control": "npc_interact.origin_picker_screen_template",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#dialogtext = 'origin.random')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "screen_picker_empty@npc_interact.origin_root_panel": {
+          "$child_control": "npc_interact.origin_picker_screen_empty",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#dialogtext = 'origin.empty')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "screen_picker_label@npc_interact.screen_title": {
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "offset": [ 0, -101 ],
+          "layer": 3
+        }
+      },
+      {
+        "gamepad_helper_for_og_consoles@npc_interact.gamepad_helper": {
+          "anchor_to": "bottom_left",
+          "anchor_from": "bottom_left",
+          "offset": [ 20, 0 ],
+          "layer": 3
+        }
+      },
+      {
+        "dialog_background": {
+          "type": "image",
+          "allow_clipping": false,
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ 180, 200 ],
+          "offset": [ 0, 11 ],
+          "texture": "textures/origins/dialog_background",
+          "layer": 2,
+          "alpha": 1.0
+        }
+      },
+      {
+        "dialog_hover_selected": {
+          "type": "image",
+          "allow_clipping": false,
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ 188, 208 ],
+          "offset": [ 0, 11 ],
+          "texture": "textures/origins/race_selected_hover",
+          "layer": 2,
+          "alpha": "@npc_interact.anim_beat_alpha_01",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'vieworigin.human') or (#dialogtext = 'vieworigin.avian') or (#dialogtext = 'vieworigin.arachnid') or (#dialogtext = 'vieworigin.elytrian') or (#dialogtext = 'vieworigin.shulk') or (#dialogtext = 'vieworigin.feline') or (#dialogtext = 'vieworigin.enderian') or (#dialogtext = 'vieworigin.merling') or (#dialogtext = 'vieworigin.blazeborn') or (#dialogtext = 'vieworigin.phantom') or (#dialogtext = 'vieworigin.kitsune') or (#dialogtext = 'vieworigin.slimecican') or (#dialogtext = 'vieworigin.starborne') or (#dialogtext = 'vieworigin.inchling') or (#dialogtext = 'vieworigin.bee'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "screen_dirt_background": {
+          "type": "image",
+          "texture": "textures/ui/bg32",
+          "tiled": true,
+          "tiled_scale": [ 1, 1 ],
+          "allow_clipping": false,
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ "100% + 180px", "100% + 200px" ],
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "anim_beat_alpha_01": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 0.8,
+    "from": 1,
+    "to": 0.4,
+    "next": "@npc_interact.anim_beat_alpha_02"
+  },
+  
+  "anim_beat_alpha_02": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 0.2,
+    "from": 0.4,
+    "to": 1,
+    "next": "@npc_interact.anim_beat_alpha_01"
+  },
+  
+  "anim_alpha_in_bg": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1.0,
+    "from": 0.0,
+    "to": 0.4
+  },
+  
+  "scroll_box_active": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "alpha": 1.0,
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "scroll_box_active": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_light",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 3, "100%" ]
+        }
+      }
+    ]
+  },
+  
+  "scrolling_panel@common.scrolling_panel": {
+    "$scroll_track_offset": [ -14, 0 ],
+    "$scroll_track_image_control": "common.empty_panel",
+    "$scroll_box_mouse_image_control": "$scroll_box_image_control",
+    "$scroll_box_touch_image_control": "$scroll_box_image_control",
+    "controls": [
+      {
+        "scroll_base@npc_interact.scrolling_panel_base": {
+          "size": "$scrolling_pane_size",
+          "offset": "$scrolling_pane_offset"
+        }
+      }
+    ]
+  },
+  
+  "scrolling_panel_base@common.scrolling_panel_base": {
+    "controls": [
+      { 
+        "$scroll_view_name@common.scroll_view_control": {
+          "controls": [
+            {
+              "panel": {
+                "type": "panel",
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "$view_port_size|default": [ "100%", "100%" ],
+                "clips_children": true,
+                "controls": [
+                  { "viewport@npc_interact.viewport": {} },
+                  { "bar_and_track@npc_interact.bar_and_track": {} }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "$scrolling_panel_base_button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+      }
+    ]
+  },
+
+  "viewport@common.scroll_background_and_viewport": {
+    "controls": [
+      {
+        "scrolling_view_port": {
+          "layer": 1,
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": "$scroll_view_port_offset",
+          "size": "$scroll_view_port_size",
+          "controls": [
+            {
+              "scrolling_content@$scrolling_content": {
+                "layer": 2,
+                "$scrolling_content_anchor_from|default": "top_left",
+                "$scrolling_content_anchor_to|default": "top_left",
+                "anchor_from": "$scrolling_content_anchor_from",
+                "anchor_to": "$scrolling_content_anchor_to"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "bar_and_track@common.scroll_bar_and_track": {
+    "size": "$scrolling_pane_size",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "centered_panel": {
+          "type": "panel",
+          "size": "$scroll_size",
+          "anchor_from": "$bar_and_track_anchor_from",
+          "anchor_to": "$bar_and_track_anchor_to",
+          "$bar_side|default": "scroll_right",
+          "offset": "$scroll_track_offset",
+          "variables": [
+            {
+              "requires": "($bar_side = scroll_left)",
+              "$bar_and_track_anchor_from": "top_left",
+              "$bar_and_track_anchor_to": "top_left"
+            },
+            {
+              "requires": "($bar_side = scroll_right)",
+              "$bar_and_track_anchor_from": "top_right",
+              "$bar_and_track_anchor_to": "top_right"
+            }
+          ],
+          "controls": [
+            {
+              "track@common.scrollbar_track": {
+                "layer": 20,
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            },
+            {
+              "scroll_box@common.scroll_box": {
+                "layer": 25,
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "origin_description_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "layer": 1,
+    
+    "$race_description|default": "origins.race.human.description",
+    "$race_traits|default": "none",
+    "variables": [
+      {
+        "requires": "($race_traits = 'origin.none')",
+        "$race_traits_description": "origins.trait.none"
+      },
+      {
+        "requires": "($race_traits = 'origin.random')",
+        "$race_traits_description": "origins.trait.random"
+      },
+      {
+        "requires": "(not ($race_traits = 'origin.none') and not ($race_traits = 'origin.random'))",
+        "$race_traits_description": "origins.trait.has",
+        "$set_color": "$6_color_format"
+      }
+    ],
+    "controls": [
+      { 
+        "scroller_control@common.button": {
+          "size": [ "100%", 1 ],
+          "sound_volume": 0.0,
+          "$pressed_button_name": "unset"
+        } 
+      },
+      {
+        "race_brief_description": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "shadow": true,
+          "text": "$race_description",
+          "localize": true
+        }
+      },
+      { 
+        "padding": {
+          "type": "panel",
+          "size": [ "100%", 10 ] 
+        }
+      },
+      {
+        "race_traits_label": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "shadow": true,
+          "$set_color|default": "$7_color_format",
+          "color": "$set_color",
+          "text": "$race_traits_description",
+          "localize": true
+        }
+      },
+      {
+        "race_traits_list@$race_traits": {
+          "size": [ "100%", "100%c" ]
+        }
+      },
+      { 
+        "footer@common.button": {
+          "size": [ "100%", 11 ],
+          "sound_volume": 0.0,
+          "$pressed_button_name": "unset"
+        }
+      }
+    ]
+  },
+  
+  "origin_picker_screen_empty": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "offset": [ "4%", 0 ],
+    
+    "controls": [
+      {
+        "icon_image": {
+          "type": "image",
+          "size": [ 32, 32 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "texture": "textures/origins/device",
+          "alpha": 1.0
+        }
+      },
+      { 
+        "padding_0": {
+          "type": "panel",
+          "size": [ "100%", 4 ] 
+        }
+      },
+      {
+        "info_content": {
+          "type": "label",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "90%", "default" ],
+          "color": "$f_color_format",
+          "text": "origins.gui.device_info",
+          "layer": 1
+        }
+      },
+      { 
+        "padding_2": {
+          "type": "panel",
+          "size": [ "100%", 20 ] 
+        }
+      },
+      {
+        "origin_buttons": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "selection_buttons": {
+                "type": "panel",
+                "size": [ "100%", 24 ],
+                "layer": 150,
+                "controls": [
+                  {
+                    "buttons@npc_interact.student_buttons": {
+                      "anchor_from": "center",
+                      "anchor_to": "center"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "origin_picker_screen_template": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "offset": [ "4%", 0 ],
+    
+    "$race_icon_texture|default": "human",
+    "$race_name_text|default": "origins.race.human.name",
+    "$race_difficulty|default": "none",
+
+    "controls": [
+      {
+        "origin_header_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c - 14px" ],
+          "clips_children": true,
+          "$panel_base_layer": 150,
+          "controls": [
+            {
+              "origin_icon": {
+                "type": "image",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ 32, 32 ],
+                "texture": "textures/origins/race_icon_holder",
+                "layer": "$panel_base_layer",
+                "controls": [
+                  {
+                    "race_icon_image": {
+                      "type": "image",
+                      "size": [ 18, 18 ],
+                      "offset": [ 0, 0 ],
+                      "layer": "($panel_base_layer - 1)",
+                      "texture": "('textures/origins/race/' + $race_icon_texture)"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "origin_name": {
+                "type": "image",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ 135, 24 ],
+                "offset": [ 15, 0 ],
+                "texture": "textures/origins/race_name_holder",
+                "layer": "($panel_base_layer - 1)",
+                "clips_children": true,
+                "controls": [
+                  {
+                    "race_name_label": {
+                      "type": "label",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [ 20, -1 ],
+                      "font_size": "normal",
+                      "layer": "($panel_base_layer - 1)",
+                      "shadow": true,
+                      "text": "$race_name_text",
+                      "localize": true
+                    }
+                  },
+                  {
+                    "difficulty_info": {
+                      "type": "image",
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "$hover_size": [ 33, 11 ],
+                      "size": "$hover_size",
+                      "offset": [ -6, -1 ],
+                      "texture": "('textures/origins/difficulty/' + $race_difficulty)",
+                      "layer": "($panel_base_layer - 1)",
+                      "controls": [
+                        {
+                          "button@common.button": {
+                            "size": "$hover_size",
+                            "$pressed_button_name": "unset",
+                            "sound_volume": 0.0,
+                            "controls": [
+                              {
+                                "hover@common.empty_panel": {
+                                  "size": "$hover_size",
+                                  "controls": [
+                                    {  
+                                      "hover_text_image": {
+                                        "type": "image",
+                                        "allow_clipping": false,
+                                        "alpha": 1.0,
+                                        "texture": "textures/ui/purpleBorder",
+                                        "size": [ "100%c+8px", "100%c+8px" ],
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "offset": [ 19, 20 ],
+                                        "layer": "($panel_base_layer + 150)",
+                                        "controls": [
+                                          {
+                                            "hover_text_label": {
+                                              "type": "label",
+                                              "offset": [ 4, 3 ],
+                                              "anchor_from": "top_left",
+                                              "anchor_to": "top_left",
+                                              "layer": "$panel_base_layer",
+                                              "text": "$race_difficulty_text",
+                                              "$set_text_color|default": "$7_color_format",
+                                              "color": "$set_text_color",
+                                              "localize": true,
+                                              "variables": [
+                                                {
+                                                  "requires": "($race_difficulty = 'random')",
+                                                  "$race_difficulty_text": "origins.gui.impact.random",
+                                                  "$set_text_color": "$7_color_format"
+                                                },
+                                                {
+                                                  "requires": "($race_difficulty = 'easy')",
+                                                  "$race_difficulty_text": "origins.gui.impact.low",
+                                                  "$set_text_color": "$a_color_format"
+                                                },
+                                                {
+                                                  "requires": "($race_difficulty = 'medium')",
+                                                  "$race_difficulty_text": "origins.gui.impact.medium",
+                                                  "$set_text_color": "$e_color_format"
+                                                },
+                                                {
+                                                  "requires": "($race_difficulty = 'hard')",
+                                                  "$race_difficulty_text": "origins.gui.impact.high",
+                                                  "$set_text_color": "$c_color_format"
+                                                },
+                                                {
+                                                  "requires": "($race_difficulty = 'none')",
+                                                  "$race_difficulty_text": "origins.gui.impact.none",
+                                                  "$set_text_color": "$f_color_format"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "white_border_hover": {
+                                        "type": "image",
+                                        "size": "$hover_size",
+                                        "texture": "textures/origins/difficulty/hover",
+                                        "alpha": "@npc_interact.anim_beat_alpha_01",
+                                        "layer": "$panel_base_layer"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "origin_description_panel": {
+          "type": "panel",
+          "size": [ "100%", 121 ],
+          "controls": [
+            {
+              "scrollable_content@npc_interact.scrolling_panel": {
+                "$scroll_box_image_control": "npc_interact.scroll_box_active",
+                "$scroll_track_image_control": "common.empty_panel",
+                
+                "$scroll_bar_left_padding_size": [ 0, 0 ],
+                "$scroll_bar_right_padding_size": [ 0, 0 ],
+                
+                "size": [ "100%", "100%" ],
+                "offset": [ "2%", 0 ],
+                "layer": 1,
+                "$scroll_size": [ 10, 109 ],
+                "$scroll_view_port_size": [ 134, 121 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$scrolling_pane_size": [ "100%", "100%" ],
+                "$scrolling_pane_offset": [ 0, 0 ],
+                "$scrolling_content": "npc_interact.origin_description_content"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "origin_buttons": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "selection_buttons": {
+                "type": "panel",
+                "size": [ "80%", 24 ],
+                "layer": 150,
+                "controls": [
+                  {
+                    "buttons@npc_interact.student_buttons": {
+                      "offset": [ 0, -2 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "credits_button": {
+                "type": "panel",
+                "size": [ "20%", 24 ],
+                "layer": 150,
+                "controls": [
+                  {
+                    "info_icon": {
+                      "type": "image",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "offset": [ "-8% - 2px", -2 ],
+                      "texture": "textures/origins/info_button",
+                      "$hover_size": [ 15, 15 ],
+                      "size": "$hover_size",
+                      "$panel_base_layer": 150,
+                      "layer": "$panel_base_layer",
+                      "controls": [
+                        {
+                          "hover_panel@common.button": {
+                            "size": "$hover_size",
+                            "$pressed_button_name": "unset",
+                            "sound_volume": 0.0,
+                            "controls": [
+                              {
+                                "hover@common.empty_panel": {
+                                  "size": "$hover_size",
+                                  "controls": [
+                                    {  
+                                      "hover_text_image": {
+                                        "type": "image",
+                                        "allow_clipping": false,
+                                        "alpha": 1.0,
+                                        "texture": "textures/ui/purpleBorder",
+                                        "size": [ "100%c+8px", "100%c+8px" ],
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "offset": [ 19, -20 ],
+                                        "layer": "($panel_base_layer + 150)",
+                                        "controls": [
+                                          {
+                                            "hover_text_label": {
+                                              "type": "label",
+                                              "offset": [ 4, 3 ],
+                                              "anchor_from": "top_left",
+                                              "anchor_to": "top_left",
+                                              "layer": "$panel_base_layer",
+                                              "text": "© r4isen1920 ",
+                                              "localize": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "white_border_hover": {
+                                        "type": "image",
+                                        "size": "$hover_size",
+                                        "texture": "textures/origins/info_button_hover",
+                                        "alpha": "@npc_interact.anim_beat_alpha_01",
+                                        "layer": "$panel_base_layer"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "screen_title": {
+    "type": "panel",
+    "controls": [
+      {
+        "choose_origin_title@npc_interact.screen_title_template": {
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'origin.random') or (#dialogtext = 'origin.human') or (#dialogtext = 'origin.avian') or (#dialogtext = 'origin.arachnid') or (#dialogtext = 'origin.elytrian') or (#dialogtext = 'origin.shulk') or (#dialogtext = 'origin.feline') or (#dialogtext = 'origin.enderian') or (#dialogtext = 'origin.merling') or (#dialogtext = 'origin.blazeborn') or (#dialogtext = 'origin.phantom') or (#dialogtext = 'origin.kitsune') or (#dialogtext = 'origin.slimecican') or (#dialogtext = 'origin.starborne') or (#dialogtext = 'origin.inchling') or (#dialogtext = 'origin.bee'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "view_origin_title@npc_interact.screen_title_template": {
+          "$screen_title_text": "origins.gui.view_origin.title",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'vieworigin.human') or (#dialogtext = 'vieworigin.avian') or (#dialogtext = 'vieworigin.arachnid') or (#dialogtext = 'vieworigin.elytrian') or (#dialogtext = 'vieworigin.shulk') or (#dialogtext = 'vieworigin.feline') or (#dialogtext = 'vieworigin.enderian') or (#dialogtext = 'vieworigin.merling') or (#dialogtext = 'vieworigin.blazeborn') or (#dialogtext = 'vieworigin.phantom') or (#dialogtext = 'vieworigin.kitsune') or (#dialogtext = 'vieworigin.slimecican') or (#dialogtext = 'vieworigin.starborne') or (#dialogtext = 'vieworigin.inchling') or (#dialogtext = 'vieworigin.bee'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "change_origin_title@npc_interact.screen_title_template": {
+          "$screen_title_text": "origins.gui.change_origin.title",
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#dialogtext = 'changeorigin.human') or (#dialogtext = 'changeorigin.avian') or (#dialogtext = 'changeorigin.arachnid') or (#dialogtext = 'changeorigin.elytrian') or (#dialogtext = 'changeorigin.shulk') or (#dialogtext = 'changeorigin.feline') or (#dialogtext = 'changeorigin.enderian') or (#dialogtext = 'changeorigin.merling') or (#dialogtext = 'changeorigin.blazeborn') or (#dialogtext = 'changeorigin.phantom') or (#dialogtext = 'changeorigin.kitsune') or (#dialogtext = 'changeorigin.slimecican') or (#dialogtext = 'changeorigin.starborne') or (#dialogtext = 'changeorigin.inchling') or (#dialogtext = 'changeorigin.bee'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "screen_title_template": {
+    "type": "image",
+    "size": [ "100%c + 8px", "100%c + 3px" ],
+    "texture": "textures/ui/hud_tip_text_background",
+    "alpha": 0.0,
+    "$screen_title_text|default": "origins.gui.choose_origin.title",
+    "controls": [
+      {
+        "text_label": {
+          "type": "label",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "color": "$f_color_format",
+          "layer": 2,
+          "text": "$screen_title_text",
+          "localize": true,
+          "shadow": true,
+          "alpha": 1.0
+        }
+      }
+    ]
+  },
+  
+  "gamepad_helper_choose_text": {
+    "type": "label",
+    "text": "controller.buttonTip.chooseOrigin",
+    "color": "$gamepad_description_text_color"
+  },
+  
+  "gamepad_helper@common.gamepad_helper_a": {
+    "$gamepad_description": "npc_interact.gamepad_helper_choose_text"
+  },
+  
+  "origin_root_panel@common_dialogs.main_panel_no_title_no_buttons": {
+    "size": [ 180, 200 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$show_close_button": false,
+    "$fill_alpha": 0.0,
+    "clips_children": true,
+    
+    "$set_offset|default": [ 0, 11 ],
+    "$set_layer|default": 3,
+    
+    "offset": "$set_offset",
+    "layer": "$set_layer"
+  },
+  
+  "npc_screen@common.base_screen": {
+    "type": "screen",
+    "$screen_content": "npc_interact.origin_picker_list",
+    "$screen_animations": [],
+    "render_only_when_topmost": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.menu_continue",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

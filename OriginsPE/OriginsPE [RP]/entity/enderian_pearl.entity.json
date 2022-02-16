@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "origins:enderian_pearl",
+      "materials": {
+        "default": "ender_pearl"
+      },
+      "textures": {
+        "default": "textures/items/ender_pearl"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "animations": {
+        "flying": "animation.actor.billboard",
+        "particle": "controller.animation.origin.enderian_pearl.particle"
+      },
+      "scripts": {
+        "scale": "2.0",
+        "animate": [ "flying" ] 
+      },
+      "render_controllers": [ 
+        "controller.render.item_sprite" 
+      ]
+    }
+  }
+}

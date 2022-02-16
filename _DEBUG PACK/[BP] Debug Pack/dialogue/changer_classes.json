@@ -1,0 +1,37 @@
+{
+  "format_version":"1.14",
+  "minecraft:npc_dialogue":{
+    "scenes":[
+      {
+        "scene_tag": "screen_a",
+        "npc_name": "screen",
+        "text": "this is screen A",
+        "buttons": [
+          {
+            "name": "go to screen b",
+            "commands": [ "/dialogue open @s @initiator screen_b" ]
+          },
+          {
+            "name": "say hello",
+            "commands": [ "/say hello" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "screen_b",
+        "npc_name": "screen",
+        "text": "this is screen B",
+        "buttons": [
+          {
+            "name": "go to screen a",
+            "commands": [ "/dialogue open @s @initiator screen_a" ]
+          },
+          {
+            "name": "say world",
+            "commands": [ "/say world" ]
+          }
+        ]
+      }
+    ]
+  }
+}

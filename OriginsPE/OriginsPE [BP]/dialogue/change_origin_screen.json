@@ -1,0 +1,232 @@
+{
+  "format_version":"1.14",
+  "minecraft:npc_dialogue":{
+    "scenes":[
+      {
+        "scene_tag": "gui_origin_change_human",
+        "npc_name": "system",
+        "text": "changeorigin.human",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_avian",
+        "npc_name": "system",
+        "text": "changeorigin.avian",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_arachnid",
+        "npc_name": "system",
+        "text": "changeorigin.arachnid",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_elytrian",
+        "npc_name": "system",
+        "text": "changeorigin.elytrian",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_shulk",
+        "npc_name": "system",
+        "text": "changeorigin.shulk",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_feline",
+        "npc_name": "system",
+        "text": "changeorigin.feline",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_enderian",
+        "npc_name": "system",
+        "text": "changeorigin.enderian",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_merling",
+        "npc_name": "system",
+        "text": "changeorigin.merling",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_blazeborn",
+        "npc_name": "system",
+        "text": "changeorigin.blazeborn",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_phantom",
+        "npc_name": "system",
+        "text": "changeorigin.phantom",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_kitsune",
+        "npc_name": "system",
+        "text": "changeorigin.kitsune",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_slimecican",
+        "npc_name": "system",
+        "text": "changeorigin.slimecican",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_starborne",
+        "npc_name": "system",
+        "text": "changeorigin.starborne",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_inchling",
+        "npc_name": "system",
+        "text": "changeorigin.inchling",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "gui_origin_change_bee",
+        "npc_name": "system",
+        "text": "changeorigin.bee",
+        "buttons": [
+          {
+            "name": { "rawtext": [ { "translate": "gui.no" } ] },
+            "commands": [ "/event entity @s[tag=\"temporary\"] origins:instant_despawn" ]
+          },
+          {
+            "name": { "rawtext": [ { "translate": "gui.yes" } ] },
+            "commands": [ "execute @initiator ~~~ clear @s[m=!c] origins:orb_of_origins 0 1", "event entity @initiator origins:become_unknown" ]
+          }
+        ]
+      }
+    ]
+  }
+}
