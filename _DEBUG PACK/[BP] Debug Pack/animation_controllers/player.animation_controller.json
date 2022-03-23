@@ -1,0 +1,17 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.deathp.death_counter": {
+      "initial_state": "on_detect",
+      "states": {
+        "on_detect": {
+          "transitions": [{"on_death":"query.is_item_name_any(slot.weapon.mainhand,0,'minecraft:stick')"}]
+        },
+        "on_death": {
+          "transitions": [{"on_detect":"q.is_alive"}],
+          "on_entry": ["/say 1.0"]
+        }
+      }
+    }
+  }
+}
