@@ -1,0 +1,20 @@
+{
+  "ui.toast.challenge_complete": {
+    "category": "ui",
+    "sounds": [
+     {
+        "name": "sounds/ui/toast/challenge_complete",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "ui.toast.woosh": {
+    "category": "ui",
+    "sounds": [
+     {
+        "name": "sounds/ui/toast/woosh",
+        "load_on_low_memory": false
+      }
+    ]
+  }
+}

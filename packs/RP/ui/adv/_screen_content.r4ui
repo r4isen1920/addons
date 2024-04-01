@@ -1,0 +1,2594 @@
+{
+  /* created by r4isen1920 | MIT License */
+
+  "namespace": "advancements_screen_content",
+
+  "advancement_items_index@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "story_tab@advancement_items_story_tab": {
+          "ignored": "(($var_title_text - 'story_tab:') = $var_title_text)"
+        }
+      },
+      {
+        "adventure_tab@advancement_vertical_scrollable": {
+          "$scrolling_content": "advancements_screen_content.advancement_items_adventure_tab",
+          "ignored": "(($var_title_text - 'adventure_tab:') = $var_title_text)"
+        }
+      },
+      {
+        "nether_tab@advancement_vertical_scrollable": {
+          "$scrolling_content": "advancements_screen_content.advancement_items_nether_tab",
+          "ignored": "(($var_title_text - 'nether_tab:') = $var_title_text)"
+        }
+      },
+      {
+        "the_end_tab@advancement_vertical_scrollable": {
+          "$scrolling_content": "advancements_screen_content.advancement_items_the_end_tab",
+          "ignored": "(($var_title_text - 'the_end_tab:') = $var_title_text)"
+        }
+      },
+      {
+        "husbandry_tab@advancement_vertical_scrollable": {
+          "$scrolling_content": "advancements_screen_content.advancement_items_husbandry_tab",
+          "ignored": "(($var_title_text - 'husbandry_tab:') = $var_title_text)"
+        }
+      },
+      {
+        "legacy_java_achievements_tab@advancement_vertical_scrollable": {
+          "$scrolling_content": "advancements_screen_content.legacy_java_achievements_tab",
+          "$scrolling_pane_offset": [ 0, 1 ],
+          "ignored": "(($var_title_text - 'legacy_tab:') = $var_title_text)"
+        }
+      }
+    ],
+    "ignored": "(not (('%.6s' * $var_title_text) = '_r4ui:'))"
+  },
+
+  "advancement_items_story_tab@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "offset": [ 0, -4 ],
+    "controls": [
+      {
+        "row_0@advancement_row": {
+          "controls": [
+            {
+              "root@advancement_item_base": {
+                "$unlock_condition": "(not (($var_title_text - 'root.1b;') = $var_title_text))",
+                "$container_type": "plain",
+                "$container_icon": 131072,
+                "$advancement_name": "advancements.story.root.title",
+                "$advancement_description": "advancements.story.root.description"
+              }
+            },
+            {
+              "mine_stone@advancement_item_base": {
+                "$unlock_condition": "(not (($var_title_text - 'mine_stone.1b;') = $var_title_text))",
+                "$container_type": "plain",
+                "$container_icon": "textures/items/wood_pickaxe",
+                "$advancement_name": "advancements.story.mine_stone.title",
+                "$advancement_description": "advancements.story.mine_stone.description"
+              }
+            },
+            {
+              "upgrade_tools@advancement_item_base": {
+                "$unlock_condition": "(not (($var_title_text - 'upgrade_tools.1b;') = $var_title_text))",
+                "$container_type": "plain",
+                "$container_icon": "textures/items/stone_pickaxe",
+                "$advancement_name": "advancements.story.upgrade_tools.title",
+                "$advancement_description": "advancements.story.upgrade_tools.description"
+              }
+            },
+            {
+              "smelt_iron@advancement_item_base": {
+                "$unlock_condition": "(not (($var_title_text - 'smelt_iron.1b;') = $var_title_text))",
+                "$container_type": "plain",
+                "$container_icon": "textures/items/iron_ingot",
+                "$advancement_name": "advancements.story.smelt_iron.title",
+                "$advancement_description": "advancements.story.smelt_iron.description"
+              }
+            },
+            {
+              "column_0@advancement_column": {
+                "$vertical_controls": [
+                  {
+                    "obtain_armor@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'obtain_armor.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/iron_chestplate",
+                      "$advancement_name": "advancements.story.obtain_armor.title",
+                      "$advancement_description": "advancements.story.obtain_armor.description"
+                    }
+                  },
+                  {
+                    "lava_bucket@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'lava_bucket.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/bucket_lava",
+                      "$advancement_name": "advancements.story.lava_bucket.title",
+                      "$advancement_description": "advancements.story.lava_bucket.description"
+                    }
+                  },
+                  { "column_padding@common.empty_panel": { "size": [ "100%sm", 12 ] } },
+                  {
+                    "iron_tools@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'iron_tools.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/iron_pickaxe",
+                      "$advancement_name": "advancements.story.iron_tools.title",
+                      "$advancement_description": "advancements.story.iron_tools.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "column_1@advancement_column": {
+                "$vertical_controls": [
+                  {
+                    "deflect_arrow@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'deflect_arrow.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/shield_item",
+                      "$advancement_name": "advancements.story.deflect_arrow.title",
+                      "$advancement_description": "advancements.story.deflect_arrow.description"
+                    }
+                  },
+                  {
+                    "form_obsidian@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'form_obsidian.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 3212264,
+                      "$advancement_name": "advancements.story.form_obsidian.title",
+                      "$advancement_description": "advancements.story.form_obsidian.description"
+                    }
+                  },
+                  { "column_padding@common.empty_panel": { "size": [ "100%sm", 12 ] } },
+                  {
+                    "mine_diamond@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'mine_diamond.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/diamond",
+                      "$advancement_name": "advancements.story.mine_diamond.title",
+                      "$advancement_description": "advancements.story.mine_diamond.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "column_2@advancement_column": {
+                "$vertical_offset": [ 0, 18 ],
+                "$vertical_controls": [
+                  {
+                    "enter_the_nether@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'enter_the_nether.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/flint_and_steel",
+                      "$advancement_name": "advancements.story.enter_the_nether.title",
+                      "$advancement_description": "advancements.story.enter_the_nether.description"
+                    }
+                  },
+                  {
+                    "shiny_gear@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'shiny_gear.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/diamond_chestplate",
+                      "$advancement_name": "advancements.story.shiny_gear.title",
+                      "$advancement_description": "advancements.story.shiny_gear.description"
+                    }
+                  },
+                  {
+                    "enchant_item@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'enchant_item.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 7602176,
+                      "$advancement_name": "advancements.story.enchant_item.title",
+                      "$advancement_description": "advancements.story.enchant_item.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "column_3@advancement_column": {
+                "$vertical_offset": [ 0, -6 ],
+                "$vertical_controls": [
+                  {
+                    "cure_zombie_villager@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'cure_zombie_villager.1b;') = $var_title_text))",
+                      "$container_type": "oval",
+                      "$container_icon": "textures/items/apple_golden",
+                      "$advancement_name": "advancements.story.cure_zombie_villager.title",
+                      "$advancement_description": "advancements.story.cure_zombie_villager.description"
+                    }
+                  },
+                  {
+                    "follow_ender_eye@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'follow_ender_eye.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/ender_eye",
+                      "$advancement_name": "advancements.story.follow_ender_eye.title",
+                      "$advancement_description": "advancements.story.follow_ender_eye.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "enter_the_end@advancement_item_base": {
+                "$item_offset": [ 0, 6 ],
+                "$unlock_condition": "(not (($var_title_text - 'enter_the_end.1b;') = $var_title_text))",
+                "$container_type": "plain",
+                "$container_icon": 7929856,
+                "$advancement_name": "advancements.story.enter_the_end.title",
+                "$advancement_description": "advancements.story.enter_the_end.description"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "lines@advancements_screen.lines_pre_rendered": {
+          "$line_renderer": "story"
+        }
+      }
+    ]
+  },
+
+  "advancement_items_adventure_tab@common.empty_panel": {
+    "size": [ "100%", "100%cm" ],
+    "$resolve_y_size": true,
+    "controls": [
+      {
+        "column_0@advancement_column": {
+          "$vertical_controls": [
+            {
+              "row_0@advancement_row": {
+                "controls": [
+                  {
+                    "padding@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "voluntary_exile@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'voluntary_exile.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/illager_banner",
+                      "$advancement_name": "advancements.adventure.voluntary_exile.title",
+                      "$advancement_description": "advancements.adventure.voluntary_exile.description"
+                    }
+                  },
+                  {
+                    "hero_of_the_village@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'hero_of_the_village.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/advancement/icons/illager_banner",
+                      "$advancement_name": "advancements.adventure.hero_of_the_village.title",
+                      "$advancement_description": "advancements.adventure.hero_of_the_village.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_1@advancement_row": {
+                "controls": [
+                  {
+                    "padding@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "spyglass_at_parrot@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'spyglass_at_parrot.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/spyglass",
+                      "$advancement_name": "advancements.adventure.spyglass_at_parrot.title",
+                      "$advancement_description": "advancements.adventure.spyglass_at_parrot.description"
+                    }
+                  },
+                  {
+                    "spyglass_at_ghast@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'spyglass_at_ghast.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/spyglass",
+                      "$advancement_name": "advancements.adventure.spyglass_at_ghast.title",
+                      "$advancement_description": "advancements.adventure.spyglass_at_ghast.description"
+                    }
+                  },
+                  {
+                    "spyglass_at_dragon@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'spyglass_at_dragon.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/spyglass",
+                      "$advancement_name": "advancements.adventure.spyglass_at_dragon.title",
+                      "$advancement_description": "advancements.adventure.spyglass_at_dragon.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_2@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "throw_trident@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'throw_trident.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/trident",
+                      "$advancement_name": "advancements.adventure.throw_trident.title",
+                      "$advancement_description": "advancements.adventure.throw_trident.description"
+                    }
+                  },
+                  {
+                    "very_very_frightening@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'very_very_frightening.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/trident",
+                      "$advancement_name": "advancements.adventure.very_very_frightening.title",
+                      "$advancement_description": "advancements.adventure.very_very_frightening.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_3@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "kill_mob_near_sculk_catalyst@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'kill_mob_near_sculk_catalyst.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/advancement/icons/sculk_catalyst",
+                      "$advancement_name": "advancements.adventure.kill_mob_near_sculk_catalyst.title",
+                      "$advancement_description": "advancements.adventure.kill_mob_near_sculk_catalyst.description"
+                    }
+                  },
+                  {
+                    "sniper_duel@advancement_item_base": {
+                      "$item_offset": [ 0, 12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'sniper_duel.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/arrow",
+                      "$advancement_name": "advancements.adventure.sniper_duel.title",
+                      "$advancement_description": "advancements.adventure.sniper_duel.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_4@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "kill_a_mob@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'kill_a_mob.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/iron_sword",
+                      "$advancement_name": "advancements.adventure.kill_a_mob.title",
+                      "$advancement_description": "advancements.adventure.kill_a_mob.description"
+                    }
+                  },
+                  {
+                    "shoot_arrow@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'shoot_arrow.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/bow_standby",
+                      "$advancement_name": "advancements.adventure.shoot_arrow.title",
+                      "$advancement_description": "advancements.adventure.shoot_arrow.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_5@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "kill_all_mobs@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'kill_all_mobs.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/diamond_sword",
+                      "$advancement_name": "advancements.adventure.kill_all_mobs.title",
+                      "$advancement_description": "advancements.adventure.kill_all_mobs.description"
+                    }
+                  },
+                  {
+                    "bullseye@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'bullseye.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/advancement/icons/target",
+                      "$advancement_name": "advancements.adventure.bullseye.title",
+                      "$advancement_description": "advancements.adventure.bullseye.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_6@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "totem_of_undying@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'totem_of_undying.1b;') = $var_title_text))",
+                      "$container_type": "oval",
+                      "$container_icon": "textures/items/totem",
+                      "$advancement_name": "advancements.adventure.totem_of_undying.title",
+                      "$advancement_description": "advancements.adventure.totem_of_undying.description"
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_7@advancement_row": {
+                "controls": [
+                  {
+                    "root@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'root.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/map_empty",
+                      "$advancement_name": "advancements.adventure.root.title",
+                      "$advancement_description": "advancements.adventure.root.description"
+                    }
+                  },
+                  {
+                    "trade@advancement_item_base": {
+                      "$item_offset": [ 0, 12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'trade.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/emerald",
+                      "$advancement_name": "advancements.adventure.trade.title",
+                      "$advancement_description": "advancements.adventure.trade.description"
+                    }
+                  },
+                  {
+                    "summon_iron_golem@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'summon_iron_golem.1b;') = $var_title_text))",
+                      "$container_type": "oval",
+                      "$container_icon": "textures/advancement/icons/carved_pumpkin",
+                      "$advancement_name": "advancements.adventure.summon_iron_golem.title",
+                      "$advancement_description": "advancements.adventure.summon_iron_golem.description"
+                    }
+                  },
+                  {
+                    "padding@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_8@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "trade_at_world_height@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'trade_at_world_height.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/emerald",
+                      "$advancement_name": "advancements.adventure.trade_at_world_height.title",
+                      "$advancement_description": "advancements.adventure.trade_at_world_height.description"
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_9@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "honey_block_slide@advancement_item_base": {
+                      "$item_offset": [ 0, -5 ],
+                      "$unlock_condition": "(not (($var_title_text - 'honey_block_slide.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/honey_block",
+                      "$advancement_name": "advancements.adventure.honey_block_slide.title",
+                      "$advancement_description": "advancements.adventure.honey_block_slide.description"
+                    }
+                  },
+                  {
+                    "two_birds_one_arrow@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'two_birds_one_arrow.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/crossbow_standby",
+                      "$advancement_name": "advancements.adventure.two_birds_one_arrow.title",
+                      "$advancement_description": "advancements.adventure.two_birds_one_arrow.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_10@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "ol_betsy@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'ol_betsy.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/crossbow_standby",
+                      "$advancement_name": "advancements.adventure.ol_betsy.title",
+                      "$advancement_description": "advancements.adventure.ol_betsy.description"
+                    }
+                  },
+                  {
+                    "whos_the_pillager_now@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'whos_the_pillager_now.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/crossbow_standby",
+                      "$advancement_name": "advancements.adventure.whos_the_pillager_now.title",
+                      "$advancement_description": "advancements.adventure.whos_the_pillager_now.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_12@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "lightning_rod_with_villager_no_fire@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'lightning_rod_with_villager_no_fire.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/lightning_rod",
+                      "$advancement_name": "advancements.adventure.lightning_rod_with_villager_no_fire.title",
+                      "$advancement_description": "advancements.adventure.lightning_rod_with_villager_no_fire.description"
+                    }
+                  },
+                  {
+                    "arbalistic@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'arbalistic.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/crossbow_standby",
+                      "$advancement_name": "advancements.adventure.arbalistic.title",
+                      "$advancement_description": "advancements.adventure.arbalistic.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_12@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "fall_from_world_height@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'fall_from_world_height.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/bucket_water",
+                      "$advancement_name": "advancements.adventure.fall_from_world_height.title",
+                      "$advancement_description": "advancements.adventure.fall_from_world_height.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_13@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "avoid_vibration@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'avoid_vibration.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/sculk_sensor",
+                      "$container_icon_animated": true,
+                      "$container_icon_uv_size": [ 300, 300 ],
+                      "$advancement_name": "advancements.adventure.avoid_vibration.title",
+                      "$advancement_description": "advancements.adventure.avoid_vibration.description"
+                    }
+                  },
+                  {
+                    "adventuring_time@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'adventuring_time.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/diamond_boots",
+                      "$advancement_name": "advancements.adventure.adventuring_time.title",
+                      "$advancement_description": "advancements.adventure.adventuring_time.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_14@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "sleep_in_bed@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'sleep_in_bed.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/red_bed",
+                      "$advancement_name": "advancements.adventure.sleep_in_bed.title",
+                      "$advancement_description": "advancements.adventure.sleep_in_bed.description"
+                    }
+                  },
+                  {
+                    "play_jukebox_in_meadows@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'play_jukebox_in_meadows.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 5505024,
+                      "$advancement_name": "advancements.adventure.play_jukebox_in_meadows.title",
+                      "$advancement_description": "advancements.adventure.play_jukebox_in_meadows.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_15@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "walk_on_powder_snow_with_leather_boots@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'walk_on_powder_snow_with_leather_boots.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/leather_boots",
+                      "$advancement_name": "advancements.adventure.walk_on_powder_snow_with_leather_boots.title",
+                      "$advancement_description": "advancements.adventure.walk_on_powder_snow_with_leather_boots.description"
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "lines@advancements_screen.lines_pre_rendered": {
+          "size": [ "100%", "100%sm" ],
+          "$line_renderer": "adventure"
+        }
+      }
+    ]
+  },
+
+  "advancement_items_nether_tab@common.empty_panel": {
+    "size": [ "100%", "100%cm" ],
+    "$resolve_y_size": true,
+    "controls": [
+      {
+        "column_0@advancement_column": {
+          "$vertical_controls": [
+            {
+              "row_0@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "return_to_sender@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'return_to_sender.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/fireball",
+                      "$advancement_name": "advancements.nether.return_to_sender.title",
+                      "$advancement_description": "advancements.nether.return_to_sender.description"
+                    }
+                  },
+                  {
+                    "uneasy_alliance@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'uneasy_alliance.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/ghast_tear",
+                      "$advancement_name": "advancements.nether.uneasy_alliance.title",
+                      "$advancement_description": "advancements.nether.uneasy_alliance.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_1@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "find_bastion@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'find_bastion.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/polished_blackstone_bricks",
+                      "$advancement_name": "advancements.nether.find_bastion.title",
+                      "$advancement_description": "advancements.nether.find_bastion.description"
+                    }
+                  },
+                  {
+                    "loot_bastion@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'loot_bastion.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 3538944,
+                      "$advancement_name": "advancements.nether.loot_bastion.title",
+                      "$advancement_description": "advancements.nether.loot_bastion.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_2@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "obtain_ancient_debris@advancement_item_base": {
+                      "$item_offset": [ 0, 12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'obtain_ancient_debris.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/ancient_debris",
+                      "$advancement_name": "advancements.nether.obtain_ancient_debris.title",
+                      "$advancement_description": "advancements.nether.obtain_ancient_debris.description"
+                    }
+                  },
+                  {
+                    "use_lodestone@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'use_lodestone.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/lodestone",
+                      "$advancement_name": "advancements.nether.use_lodestone.title",
+                      "$advancement_description": "advancements.nether.use_lodestone.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_3@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "netherite_armor@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'netherite_armor.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/netherite_chestplate",
+                      "$advancement_name": "advancements.nether.netherite_armor.title",
+                      "$advancement_description": "advancements.nether.netherite_armor.description"
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_4@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_4@advancement_row": {
+                "controls": [
+                  {
+                    "root@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'root.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 14090240,
+                      "$advancement_name": "advancements.nether.root.title",
+                      "$advancement_description": "advancements.nether.root.description"
+                    }
+                  },
+                  {
+                    "fast_travel@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'fast_travel.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/map_empty",
+                      "$advancement_name": "advancements.nether.fast_travel.title",
+                      "$advancement_description": "advancements.nether.fast_travel.description"
+                    }
+                  },
+                  {
+                    "get_wither_skull@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'get_wither_skull.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/wither_skeleton_skull",
+                      "$advancement_name": "advancements.nether.get_wither_skull.title",
+                      "$advancement_description": "advancements.nether.get_wither_skull.description"
+                    }
+                  },
+                  {
+                    "summon_wither@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'summon_wither.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/nether_star",
+                      "$container_icon_animated": true,
+                      "$container_icon_uv_size": [ 16, 16 ],
+                      "$advancement_name": "advancements.nether.summon_wither.title",
+                      "$advancement_description": "advancements.nether.summon_wither.description"
+                    }
+                  },
+                  {
+                    "create_beacon@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'create_beacon.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 9043968,
+                      "$advancement_name": "advancements.nether.create_beacon.title",
+                      "$advancement_description": "advancements.nether.create_beacon.description"
+                    }
+                  },
+                  {
+                    "create_full_beacon@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'create_full_beacon.1b;') = $var_title_text))",
+                      "$container_type": "oval",
+                      "$container_icon": 9043968,
+                      "$advancement_name": "advancements.nether.create_full_beacon.title",
+                      "$advancement_description": "advancements.nether.create_full_beacon.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_5@advancement_row": {
+                "controls": [
+                  {
+                    "padding@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "find_fortress@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'find_fortress.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 7340032,
+                      "$advancement_name": "advancements.nether.find_fortress.title",
+                      "$advancement_description": "advancements.nether.find_fortress.description"
+                    }
+                  },
+                  {
+                    "obtain_blaze_rod@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'obtain_blaze_rod.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/blaze_rod",
+                      "$advancement_name": "advancements.nether.obtain_blaze_rod.title",
+                      "$advancement_description": "advancements.nether.obtain_blaze_rod.description"
+                    }
+                  },
+                  {
+                    "brew_potion@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'brew_potion.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/potion_bottle_heal",
+                      "$advancement_name": "advancements.nether.brew_potion.title",
+                      "$advancement_description": "advancements.nether.brew_potion.description"
+                    }
+                  },
+                  {
+                    "all_potions@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'all_potions.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/bucket_milk",
+                      "$advancement_name": "advancements.nether.all_potions.title",
+                      "$advancement_description": "advancements.nether.all_potions.description"
+                    }
+                  },
+                  {
+                    "all_effects@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'all_effects.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/bucket_empty",
+                      "$advancement_name": "advancements.nether.all_effects.title",
+                      "$advancement_description": "advancements.nether.all_effects.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_6@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "obtain_crying_obsidian@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'obtain_crying_obsidian.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/crying_obsidian",
+                      "$advancement_name": "advancements.nether.obtain_crying_obsidian.title",
+                      "$advancement_description": "advancements.nether.obtain_crying_obsidian.description"
+                    }
+                  },
+                  {
+                    "charge_respawn_anchor@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'charge_respawn_anchor.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/respawn_anchor",
+                      "$advancement_name": "advancements.nether.charge_respawn_anchor.title",
+                      "$advancement_description": "advancements.nether.charge_respawn_anchor.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_7@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "distract_piglin@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'distract_piglin.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/gold_ingot",
+                      "$advancement_name": "advancements.nether.distract_piglin.title",
+                      "$advancement_description": "advancements.nether.distract_piglin.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_4@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_8@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "ride_strider_in_overworld_lava@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'ride_strider_in_overworld_lava.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/warped_fungus_on_a_stick",
+                      "$advancement_name": "advancements.nether.ride_strider_in_overworld_lava.title",
+                      "$advancement_description": "advancements.nether.ride_strider_in_overworld_lava.description"
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_4@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_9@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "ride_strider@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'ride_strider.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/warped_fungus_on_a_stick",
+                      "$advancement_name": "advancements.nether.ride_strider.title",
+                      "$advancement_description": "advancements.nether.ride_strider.description"
+                    }
+                  },
+                  {
+                    "explore_nether@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'explore_nether.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/netherite_boots",
+                      "$advancement_name": "advancements.nether.explore_nether.title",
+                      "$advancement_description": "advancements.nether.explore_nether.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "lines@advancements_screen.lines_pre_rendered": {
+          "size": [ "100%", "100%sm" ],
+          "$line_renderer": "nether"
+        }
+      }
+    ]
+  },
+
+  "advancement_items_the_end_tab@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "row_0@advancement_row": {
+          "controls": [
+            {
+              "root@advancement_item_base": {
+                "$unlock_condition": "(not (($var_title_text - 'root.1b;') = $var_title_text))",
+                "$container_type": "plain",
+                "$container_icon": 7929856,
+                "$advancement_name": "advancements.end.root.title",
+                "$advancement_description": "advancements.end.root.description"
+              }
+            },
+            {
+              "kill_dragon@advancement_item_base": {
+                "$unlock_condition": "(not (($var_title_text - 'kill_dragon.1b;') = $var_title_text))",
+                "$container_type": "plain",
+                "$container_icon": "textures/advancement/icons/dragon_head",
+                "$advancement_name": "advancements.end.kill_dragon.title",
+                "$advancement_description": "advancements.end.kill_dragon.description"
+              }
+            },
+            {
+              "column_0@advancement_column": {
+                "$vertical_controls": [
+                  {
+                    "dragon_egg@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'dragon_egg.1b;') = $var_title_text))",
+                      "$container_type": "oval",
+                      "$container_icon": 7995392,
+                      "$advancement_name": "advancements.end.dragon_egg.title",
+                      "$advancement_description": "advancements.end.dragon_egg.description"
+                    }
+                  },
+                  {
+                    "enter_end_gateway@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'enter_end_gateway.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/ender_pearl",
+                      "$advancement_name": "advancements.end.enter_end_gateway.title",
+                      "$advancement_description": "advancements.end.enter_end_gateway.description"
+                    }
+                  },
+                  {
+                    "respawn_dragon@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'respawn_dragon.1b;') = $var_title_text))",
+                      "$container_type": "oval",
+                      "$container_icon": "textures/items/end_crystal",
+                      "$advancement_name": "advancements.end.respawn_dragon.title",
+                      "$advancement_description": "advancements.end.respawn_dragon.description"
+                    }
+                  },
+                  {
+                    "dragon_breath@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'dragon_breath.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/dragons_breath",
+                      "$advancement_name": "advancements.end.dragon_breath.title",
+                      "$advancement_description": "advancements.end.dragon_breath.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "find_end_city@advancement_item_base": {
+                "$item_offset": [ 0, -12 ],
+                "$unlock_condition": "(not (($var_title_text - 'find_end_city.1b;') = $var_title_text))",
+                "$container_type": "plain",
+                "$container_icon": "textures/advancement/icons/purpur_block",
+                "$advancement_name": "advancements.end.find_end_city.title",
+                "$advancement_description": "advancements.end.find_end_city.description"
+              }
+            },
+            {
+              "column_1@advancement_column": {
+                "$vertical_offset": [ 0, -12 ],
+                "$vertical_controls": [
+                  {
+                    "elytra@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'elytra.1b;') = $var_title_text))",
+                      "$container_type": "oval",
+                      "$container_icon": "textures/items/elytra",
+                      "$advancement_name": "advancements.end.elytra.title",
+                      "$advancement_description": "advancements.end.elytra.description"
+                    }
+                  },
+                  {
+                    "levitate@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'levitate.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/shulker_shell",
+                      "$advancement_name": "advancements.end.levitate.title",
+                      "$advancement_description": "advancements.end.levitate.description"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "lines@advancements_screen.lines_pre_rendered": {
+          "size": [ "100%", "100%sm" ],
+          "$line_renderer": "end"
+        }
+      }
+    ]
+  },
+
+  "advancement_items_husbandry_tab@common.empty_panel": {
+    "size": [ "100%", "100%cm" ],
+    "$resolve_y_size": true,
+    "controls": [
+      {
+        "column_0@advancement_column": {
+          "$vertical_controls": [
+            {
+              "row_0@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "safely_harvest_honey@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'safely_harvest_honey.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/honey_bottle",
+                      "$advancement_name": "advancements.husbandry.safely_harvest_honey.title",
+                      "$advancement_description": "advancements.husbandry.safely_harvest_honey.description"
+                    }
+                  },
+                  {
+                    "wax_on@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'wax_on.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/honeycomb",
+                      "$advancement_name": "advancements.husbandry.wax_on.title",
+                      "$advancement_description": "advancements.husbandry.wax_on.description"
+                    }
+                  },
+                  {
+                    "wax_off@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'wax_off.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/stone_axe",
+                      "$advancement_name": "advancements.husbandry.wax_off.title",
+                      "$advancement_description": "advancements.husbandry.wax_off.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_1@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "breed_an_animal@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'breed_an_animal.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/wheat",
+                      "$advancement_name": "advancements.husbandry.breed_an_animal.title",
+                      "$advancement_description": "advancements.husbandry.breed_an_animal.description"
+                    }
+                  },
+                  {
+                    "bred_all_animals@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'bred_all_animals.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/carrot_golden",
+                      "$advancement_name": "advancements.husbandry.bred_all_animals.title",
+                      "$advancement_description": "advancements.husbandry.bred_all_animals.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_2@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "allay_deliver_item_to_player@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'allay_deliver_item_to_player.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/cookie",
+                      "$advancement_name": "advancements.husbandry.allay_deliver_item_to_player.title",
+                      "$advancement_description": "advancements.husbandry.allay_deliver_item_to_player.description"
+                    }
+                  },
+                  {
+                    "allay_deliver_cake_to_note_block@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'allay_deliver_cake_to_note_block.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": 1638400,
+                      "$advancement_name": "advancements.husbandry.allay_deliver_cake_to_note_block.title",
+                      "$advancement_description": "advancements.husbandry.allay_deliver_cake_to_note_block.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_3@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "ride_a_boat_with_a_goat@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'ride_a_boat_with_a_goat.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/boat_oak",
+                      "$advancement_name": "advancements.husbandry.ride_a_boat_with_a_goat.title",
+                      "$advancement_description": "advancements.husbandry.ride_a_boat_with_a_goat.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_4@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "tame_an_animal@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'tame_an_animal.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/bone",
+                      "$advancement_name": "advancements.husbandry.tame_an_animal.title",
+                      "$advancement_description": "advancements.husbandry.tame_an_animal.description"
+                    }
+                  },
+                  {
+                    "complete_catalogue@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'complete_catalogue.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/fish_raw",
+                      "$advancement_name": "advancements.husbandry.complete_catalogue.title",
+                      "$advancement_description": "advancements.husbandry.complete_catalogue.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_5@advancement_row": {
+                "controls": [
+                  {
+                    "root@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'root.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 11141120,
+                      "$advancement_name": "advancements.husbandry.root.title",
+                      "$advancement_description": "advancements.husbandry.root.description"
+                    }
+                  },
+                  {
+                    "make_a_sign_glow@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'make_a_sign_glow.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/dye_powder_glow",
+                      "$advancement_name": "advancements.husbandry.make_a_sign_glow.title",
+                      "$advancement_description": "advancements.husbandry.make_a_sign_glow.description"
+                    }
+                  },
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_6@advancement_row": {
+                "controls": [
+                  {
+                    "padding@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "fishy_business@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'fishy_business.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/fishing_rod_uncast",
+                      "$advancement_name": "advancements.husbandry.fishy_business.title",
+                      "$advancement_description": "advancements.husbandry.fishy_business.description"
+                    }
+                  },
+                  {
+                    "tactical_fishing@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'tactical_fishing.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/bucket_pufferfish",
+                      "$advancement_name": "advancements.husbandry.tactical_fishing.title",
+                      "$advancement_description": "advancements.husbandry.tactical_fishing.description"
+                    }
+                  },
+                  {
+                    "axolotl_in_a_bucket@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'axolotl_in_a_bucket.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/bucket_axolotl",
+                      "$advancement_name": "advancements.husbandry.axolotl_in_a_bucket.title",
+                      "$advancement_description": "advancements.husbandry.axolotl_in_a_bucket.description"
+                    }
+                  },
+                  {
+                    "kill_axolotl_target@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'kill_axolotl_target.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/bucket_tropical",
+                      "$advancement_name": "advancements.husbandry.kill_axolotl_target.title",
+                      "$advancement_description": "advancements.husbandry.kill_axolotl_target.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_7@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "silk_touch_nest@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'silk_touch_nest.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/bee_nest",
+                      "$advancement_name": "advancements.husbandry.silk_touch_nest.title",
+                      "$advancement_description": "advancements.husbandry.silk_touch_nest.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_8@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "tadpole_in_a_bucket@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'tadpole_in_a_bucket.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/bucket_tadpole",
+                      "$advancement_name": "advancements.husbandry.tadpole_in_a_bucket.title",
+                      "$advancement_description": "advancements.husbandry.tadpole_in_a_bucket.description"
+                    }
+                  },
+                  {
+                    "leash_all_frog_variants@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'leash_all_frog_variants.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/lead",
+                      "$advancement_name": "advancements.husbandry.leash_all_frog_variants.title",
+                      "$advancement_description": "advancements.husbandry.leash_all_frog_variants.description"
+                    }
+                  },
+                  {
+                    "froglights@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'froglights.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/advancement/icons/pearlescent_froglight",
+                      "$advancement_name": "advancements.husbandry.froglights.title",
+                      "$advancement_description": "advancements.husbandry.froglights.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_9@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "balanced_diet@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'balanced_diet.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/apple",
+                      "$advancement_name": "advancements.husbandry.balanced_diet.title",
+                      "$advancement_description": "advancements.husbandry.balanced_diet.description"
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_3@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_10@advancement_row": {
+                "controls": [
+                  {
+                    "padding_0@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "plant_seed@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'plant_seed.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/wheat",
+                      "$advancement_name": "advancements.husbandry.plant_seed.title",
+                      "$advancement_description": "advancements.husbandry.plant_seed.description"
+                    }
+                  },
+                  {
+                    "obtain_netherite_hoe@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'obtain_netherite_hoe.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/netherite_hoe",
+                      "$advancement_name": "advancements.husbandry.obtain_netherite_hoe.title",
+                      "$advancement_description": "advancements.husbandry.obtain_netherite_hoe.description"
+                    }
+                  },
+                  {
+                    "padding_1@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  },
+                  {
+                    "padding_2@advancement_item_base": {
+                      "$unlock_condition": false,
+                      "$padding_only": true
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "lines@advancements_screen.lines_pre_rendered": {
+          "size": [ "100%", "100%sm" ],
+          "$line_renderer": "husbandry"
+        }
+      }
+    ]
+  },
+
+  "legacy_java_achievements_tab@common.empty_panel": {
+    "size": [ "100%", "100%cm" ],
+    "offset": [ -12, 0 ],
+    "$resolve_y_size": true,
+    "controls": [
+      {
+        "column_0@advancement_column": {
+          "$vertical_controls": [
+            {
+              "row_0@advancement_row": {
+                "controls": [
+                  {
+                    "openInventory@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'openInventory.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/book_normal",
+                      "$advancement_name": "achievements.openInventory.title",
+                      "$advancement_description": "achievements.openInventory.description"
+                    }
+                  },
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "bakeCake@advancement_item_base": {
+                      "$item_offset": [ 0, 12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'bakeCake.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 6029312,
+                      "$advancement_name": "achievements.bakeCake.title",
+                      "$advancement_description": "achievements.bakeCake.description"
+                    }
+                  },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } }
+                ]
+              }
+            },
+            {
+              "row_1@advancement_row": {
+                "controls": [
+                  {
+                    "mineWood@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'mineWood.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 1114112,
+                      "$advancement_name": "achievements.mineWood.title",
+                      "$advancement_description": "achievements.mineWood.description"
+                    }
+                  },
+                  {
+                    "buildHoe@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'buildHoe.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/wood_hoe",
+                      "$advancement_name": "achievements.buildHoe.title",
+                      "$advancement_description": "achievements.buildHoe.description"
+                    }
+                  },
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } }
+                ]
+              }
+            },
+            {
+              "row_2@advancement_row": {
+                "controls": [
+                  {
+                    "buildWorkBench@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'buildWorkBench.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 3801088,
+                      "$advancement_name": "achievements.buildWorkBench.title",
+                      "$advancement_description": "achievements.buildWorkBench.description"
+                    }
+                  },
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "makeBread@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'makeBread.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/bread",
+                      "$advancement_name": "achievements.makeBread.title",
+                      "$advancement_description": "achievements.makeBread.description"
+                    }
+                  },
+                  {
+                    "breedCow@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'breedCow.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/wheat",
+                      "$advancement_name": "achievements.breedCow.title",
+                      "$advancement_description": "achievements.breedCow.description"
+                    }
+                  },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } }
+                ]
+              }
+            },
+            {
+              "row_3@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "buildSword@advancement_item_base": {
+                      "$item_offset": [ 0, 6 ],
+                      "$unlock_condition": "(not (($var_title_text - 'buildSword.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/wood_sword",
+                      "$advancement_name": "achievements.buildSword.title",
+                      "$advancement_description": "achievements.buildSword.description"
+                    }
+                  },
+                  {
+                    "killCow@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'killCow.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/leather",
+                      "$advancement_name": "achievements.killCow.title",
+                      "$advancement_description": "achievements.killCow.description"
+                    }
+                  },
+                  {
+                    "flyPig@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'flyPig.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/saddle",
+                      "$advancement_name": "achievements.flyPig.title",
+                      "$advancement_description": "achievements.flyPig.description"
+                    }
+                  },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } }
+                ]
+              }
+            },
+            {
+              "row_4@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "killEnemy@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'killEnemy.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/iron_sword",
+                      "$advancement_name": "achievements.killEnemy.title",
+                      "$advancement_description": "achievements.killEnemy.description"
+                    }
+                  },
+                  {
+                    "snipeSkeleton@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'snipeSkeleton.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/arrow",
+                      "$advancement_name": "achievements.snipeSkeleton.title",
+                      "$advancement_description": "achievements.snipeSkeleton.description"
+                    }
+                  },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } }
+                ]
+              }
+            },
+            {
+              "row_5@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "buildBetterPickaxe@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'buildBetterPickaxe.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/stone_pickaxe",
+                      "$advancement_name": "achievements.buildBetterPickaxe.title",
+                      "$advancement_description": "achievements.buildBetterPickaxe.description"
+                    }
+                  },
+                  {
+                    "overpowered@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'overpowered.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/apple_golden",
+                      "$advancement_name": "achievements.overpowered.title",
+                      "$advancement_description": "achievements.overpowered.description"
+                    }
+                  },
+                  {
+                    "onARail@advancement_item_base": {
+                      "$item_offset": [ 0, 12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'onARail.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": 4325376,
+                      "$advancement_name": "achievements.onARail.title",
+                      "$advancement_description": "achievements.onARail.description"
+                    }
+                  },
+                  {
+                    "diamondsToYou@advancement_item_base": {
+                      "$item_offset": [ 0, 12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'diamondsToYou.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/diamond",
+                      "$advancement_name": "achievements.diamondsToYou.title",
+                      "$advancement_description": "achievements.diamondsToYou.description"
+                    }
+                  },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } }
+                ]
+              }
+            },
+            {
+              "row_6@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "buildPickaxe@advancement_item_base": {
+                      "$item_offset": [ 0, -6 ],
+                      "$unlock_condition": "(not (($var_title_text - 'buildPickaxe.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/wood_pickaxe",
+                      "$advancement_name": "achievements.buildPickaxe.title",
+                      "$advancement_description": "achievements.buildPickaxe.description"
+                    }
+                  },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "acquireIron@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'acquireIron.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/iron_ingot",
+                      "$advancement_name": "achievements.acquireIron.title",
+                      "$advancement_description": "achievements.acquireIron.description"
+                    }
+                  },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "overkill@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'overkill.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/netherite_sword",
+                      "$advancement_name": "achievements.overkill.title",
+                      "$advancement_description": "achievements.overkill.description"
+                    }
+                  },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } }
+                ]
+              }
+            },
+            {
+              "row_7@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "buildFurnace@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'buildFurnace.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 3997696,
+                      "$advancement_name": "achievements.buildFurnace.title",
+                      "$advancement_description": "achievements.buildFurnace.description"
+                    }
+                  },
+                  {
+                    "cookFish@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'cookFish.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/fish_raw",
+                      "$advancement_name": "achievements.cookFish.title",
+                      "$advancement_description": "achievements.cookFish.description"
+                    }
+                  },
+                  {
+                    "diamonds@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'diamonds.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/diamond",
+                      "$advancement_name": "achievements.diamonds.title",
+                      "$advancement_description": "achievements.diamonds.description"
+                    }
+                  },
+                  {
+                    "enchantments@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'enchantments.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 7602176,
+                      "$advancement_name": "achievements.enchantments.title",
+                      "$advancement_description": "achievements.enchantments.description"
+                    }
+                  },
+                  {
+                    "bookcase@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'bookcase.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": 3080192,
+                      "$advancement_name": "achievements.bookcase.title",
+                      "$advancement_description": "achievements.bookcase.description"
+                    }
+                  },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } }
+                ]
+              }
+            },
+            {
+              "row_8@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "ghast@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'ghast.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/fireball",
+                      "$advancement_name": "achievements.ghast.title",
+                      "$advancement_description": "achievements.ghast.description"
+                    }
+                  },
+                  {
+                    "ghastOverworld@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'ghastOverworld.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/ghast_tear",
+                      "$advancement_name": "achievements.ghastOverworld.title",
+                      "$advancement_description": "achievements.ghastOverworld.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_9@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "portal@advancement_item_base": {
+                      "$item_offset": [ 0, -6 ],
+                      "$unlock_condition": "(not (($var_title_text - 'portal.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/flint_and_steel",
+                      "$advancement_name": "achievements.portal.title",
+                      "$advancement_description": "achievements.portal.description"
+                    }
+                  },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "potion@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'potion.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/potion_bottle_heal",
+                      "$advancement_name": "achievements.potion.title",
+                      "$advancement_description": "achievements.potion.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_10@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "blazeRod@advancement_item_base": {
+                      "$item_offset": [ 0, -12 ],
+                      "$unlock_condition": "(not (($var_title_text - 'blazeRod.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/items/blaze_rod",
+                      "$advancement_name": "achievements.blazeRod.title",
+                      "$advancement_description": "achievements.blazeRod.description"
+                    }
+                  },
+                  {
+                    "theEnd@advancement_item_base": {
+                      "$unlock_condition": "(not (($var_title_text - 'theEnd.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": 7929856,
+                      "$advancement_name": "achievements.theEnd.title",
+                      "$advancement_description": "achievements.theEnd.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_11@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "exploreAllBiomes@advancement_item_base": {
+                      "$item_offset": [ 12, 0 ],
+                      "$unlock_condition": "(not (($var_title_text - 'exploreAllBiomes.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/items/diamond_boots",
+                      "$advancement_name": "achievements.exploreAllBiomes.title",
+                      "$advancement_description": "achievements.exploreAllBiomes.description"
+                    }
+                  },
+                  {
+                    "theEnd2@advancement_item_base": {
+                      "$item_offset": [ 12, 0 ],
+                      "$unlock_condition": "(not (($var_title_text - 'theEnd2.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": "textures/advancement/icons/dragon_head",
+                      "$advancement_name": "achievements.theEnd2.title",
+                      "$advancement_description": "achievements.theEnd2.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_12@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_6@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "spawnWither@advancement_item_base": {
+                      "$item_offset": [ 12, 0 ],
+                      "$unlock_condition": "(not (($var_title_text - 'spawnWither.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/wither_skeleton_skull",
+                      "$advancement_name": "achievements.spawnWither.title",
+                      "$advancement_description": "achievements.spawnWither.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_12@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_6@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "killWither@advancement_item_base": {
+                      "$item_offset": [ 12, 0 ],
+                      "$unlock_condition": "(not (($var_title_text - 'killWither.1b;') = $var_title_text))",
+                      "$container_type": "plain",
+                      "$container_icon": "textures/advancement/icons/nether_star",
+                      "$container_icon_animated": true,
+                      "$container_icon_uv_size": [ 16, 16 ],
+                      "$advancement_name": "achievements.killWither.title",
+                      "$advancement_description": "achievements.killWither.description"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_12@advancement_row": {
+                "controls": [
+                  { "padding_0@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_1@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_2@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_3@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_4@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_5@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  { "padding_6@advancement_item_base": { "$unlock_condition": false, "$padding_only": true } },
+                  {
+                    "fullBeacon@advancement_item_base": {
+                      "$item_offset": [ 12, 0 ],
+                      "$unlock_condition": "(not (($var_title_text - 'fullBeacon.1b;') = $var_title_text))",
+                      "$container_type": "fancy",
+                      "$container_icon": 9043968,
+                      "$advancement_name": "achievements.fullBeacon.title",
+                      "$advancement_description": "achievements.fullBeacon.description"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "lines@advancements_screen.lines_pre_rendered": {
+          "size": [ "100%", "100%sm" ],
+          "$line_renderer": "legacy"
+        }
+      },
+      {
+        "window_bg@advancements_screen.advancements_screen_window_scrollable_bg": {
+          "offset": [ 12, 0 ],
+          "$category_window_bg": "legacy"
+        }
+      }
+    ]
+  },
+
+  "advancement_column@common.empty_panel": {
+    "size": "$set_size",
+
+    "$resolve_y_size|default": false,
+    "$set_size|default": [ "100%c", "100%" ],
+    "$vertical_offset|default": [ 0, 0 ],
+    "$vertical_controls|default": "common.empty_panel",
+    "$padding_type": "vertical",
+
+    "controls": [
+      {
+        "vertical_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ "100%cm", "100%c" ],
+          "offset": "$vertical_offset",
+          "controls": "$vertical_controls"
+        }
+      }
+    ],
+    "variables": {
+      "requires": "$resolve_y_size",
+      "$set_size": [ "100%cm", "100%c" ]
+    }
+  },
+  "advancement_row": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": "$set_size",
+
+    "$resolve_y_size|default": false,
+    "$set_size|default": [ "100%c", "100%" ],
+    "variables": {
+      "requires": "$resolve_y_size",
+      "$set_size": [ "100%c", "100%cm" ]
+    }
+  },
+
+  "advancement_vertical_scrollable": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "layer": 10,
+    "controls": [
+      {
+        "scrollable_panel@advancements_scroll_custom.scrolling_panel": {
+          "$scroll_box_image_control": "advancements_scroll_custom.scroll_box_active",
+          "$scroll_track_image_control": "common.container_scrollbar_track",
+          "$scroll_track_offset": [ 0, 0 ],
+
+          "$scroll_bar_left_padding_size": [ 0, 0 ],
+          "$scroll_bar_right_padding_size": [ 0, 0 ],
+
+          "$scroll_size": [ 10, "100%" ],
+          "$scroll_view_port_size": [ "100%", "100%" ],
+
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$scrolling_pane_offset": [ 0, 0 ],
+
+          "size": [ "100%", "100%" ],
+          "offset": [ 0, 0 ],
+          "layer": 10
+        }
+      }
+    ]
+  },
+
+  "advancement_item_base@common.empty_panel": {
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": "$set_size",
+
+    "$padding_type|default": "horizontal",
+    "$padding_only|default": false,
+    "$item_offset|default": [ 0, 0 ],
+    "$line_renderer|default": "end",
+
+    "controls": [
+      {
+        "vertical_top_padding@common.empty_panel": {
+          "size": [ "100%sm", 1 ],
+          "ignored": "(not ($padding_type = 'vertical'))"
+        }
+      },
+      {
+        "advancement_item_control@common.empty_panel": {
+          "size": [ "22px", "22px" ],
+          "controls": [
+            {
+              "advancement_item@advancements_screen.advancement_item": {
+                "offset": "$item_offset",
+                "ignored": "$padding_only"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "variables": [
+      {
+        "requires": "($padding_type = 'horizontal')",
+        "$set_size": [ "100%c + 4px", "100%" ]
+      },
+      {
+        "requires": "($padding_type = 'vertical')",
+        "$set_size": [ "100%cm + 4px", "100%c + 1px" ]
+      },
+      {
+        "requires": "$unlock_condition",
+        "$container_status": "obtained"
+      }
+    ]
+  }
+}

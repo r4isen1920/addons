@@ -1,0 +1,10 @@
+{
+  /* created by r4isen1920 | MIT License */
+
+  "main_panel_no_buttons/title_label": {
+    "$title_anchor|default": "top_middle",
+    "anchor_from": "$title_anchor",
+    "anchor_to": "$title_anchor"
+  }
+
+}

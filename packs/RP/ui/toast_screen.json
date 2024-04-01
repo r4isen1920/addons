@@ -1,0 +1,34 @@
+{
+  /* created by r4isen1920 | MIT License */
+
+  "game_tip_label": {
+    "color": [ 0, 0, 0 ]
+  },
+
+  "recipe_unlocked_popup": {
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [ 160, 32 ],
+    "texture": "textures/advancement/gui/recipe_border",
+    "anims": [
+      "@advancements_toast.toast_animation_offset"
+    ]
+  },
+  "recipe_unlocked_popup/input_panel/label_panel/horizontal_padding_1": {
+    "size": [ 3.75, 9 ]
+  },
+
+  "recipe_unlocked_pocket_popup": {
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [ 160, 32 ],
+    "texture": "textures/advancement/gui/recipe_border",
+    "anims": [
+      "@advancements_toast.toast_animation_offset"
+    ]
+  },
+  "recipe_unlocked_pocket_popup/input_panel/label_panel/horizontal_padding_1": {
+    "size": [ 5, 9 ]
+  }
+
+}

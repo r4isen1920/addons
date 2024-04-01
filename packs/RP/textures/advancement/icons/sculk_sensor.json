@@ -1,0 +1,162 @@
+{ "frames": [
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_0.gif",
+    "frame": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_1.gif",
+    "frame": { "x": 0, "y": 300, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_2.gif",
+    "frame": { "x": 0, "y": 600, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_3.gif",
+    "frame": { "x": 0, "y": 900, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_4.gif",
+    "frame": { "x": 0, "y": 1200, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_5.gif",
+    "frame": { "x": 0, "y": 1500, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_6.gif",
+    "frame": { "x": 0, "y": 1800, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_7.gif",
+    "frame": { "x": 0, "y": 2100, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_8.gif",
+    "frame": { "x": 0, "y": 2400, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_9.gif",
+    "frame": { "x": 0, "y": 2700, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_10.gif",
+    "frame": { "x": 0, "y": 3000, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_11.gif",
+    "frame": { "x": 0, "y": 3300, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_12.gif",
+    "frame": { "x": 0, "y": 3600, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_13.gif",
+    "frame": { "x": 0, "y": 3900, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_14.gif",
+    "frame": { "x": 0, "y": 4200, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   },
+   {
+    "filename": "Inactive_Sculk_Sensor_JE1_15.gif",
+    "frame": { "x": 0, "y": 4500, "w": 300, "h": 300 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 300, "h": 300 },
+    "sourceSize": { "w": 300, "h": 300 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.40-x64",
+  "image": "Inactive_Sculk_Sensor_JE1.png",
+  "format": "I8",
+  "size": { "w": 300, "h": 4800 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}
