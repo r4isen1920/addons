@@ -1,0 +1,197 @@
+{
+  /* created by r4isen1920 | MIT License */
+
+  "hud_title_text": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_type": "global",
+            "binding_name": "#hud_title_text_string",
+            "binding_name_override": "#text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "((#text - '_r4ui:') = #text)",
+            "target_property_name": "#custom_gui_visible"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(not #custom_gui_visible and not ('%.6s' * #text = '_r4ui:'))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+
+  "chat_grid_item/chat_background": {
+    "size": [ "100%", "100%cm" ],
+    "alpha": 0.0,
+    "anims": [],
+    "controls": [
+      {
+        "chat_background_controlled": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.7,
+          "size": [ "100%", "100%c" ],
+          "anims": [ "@hud.anim_chat_bg_wait" ],
+          "controls": [
+            {
+              "chat_text@chat_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 2, 0 ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#chat_text",
+        "binding_name_override": "#text",
+        "binding_collection_name": "chat_text_grid"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#text = '') or ('%.6s' * #text = '_r4ui:'))",
+        "target_property_name": "#propagateAlpha"
+      }
+    ]
+  },
+
+  "r4isen_custom_toast_ui": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [ "100%cm", "100%c" ],
+    "layer": 1,
+    "controls": [
+      {
+        "toast_0@advancements_toast.achievement_get_toast": {
+          "$toast_template_type": "toast_0"  
+        }
+      },
+      {
+        "toast_1@advancements_toast.game_tip_toast": {
+          "$toast_template_type": "toast_1"  
+        }
+      }
+    ]
+  },
+  "r4isen_custom_advancements_ui@common.empty_panel": {
+    "size": [ "237px", "110px" ],
+    "offset": [ 0, 7 ],
+    "$title_text|default": " ",
+    "$subtitle_text|default": " ",
+    "$actionbar_text|default": " ",
+    "$var_title_text": "$title_text",
+    "$var_subtitle_text": "$subtitle_text",
+    "$var_actionbar_text": "$actionbar_text",
+    "clips_children": true,
+    "controls": [
+      { "panel_control@advancements_screen_content.advancement_items_index": {} }
+    ]
+  },
+
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name": "#hud_visible"
+        }
+      },
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_type": "global",
+            "binding_name": "#hud_visible"
+          },
+          {
+            "binding_type": "global",
+            "binding_name": "#hud_title_text_string"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "((#hud_title_text_string - '_r4ui:') = #hud_title_text_string)",
+            "target_property_name": "#not_showing_custom_hud"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#hud_visible and #not_showing_custom_hud)",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+
+  "root_panel_bg@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+
+    "controls": [
+      {
+        "r4isen_custom_toast_ui": {
+          "type": "panel",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [ 160, "100%c" ],
+          "max_size": [ 160, "50%" ],
+          /* Offset for recipe toasts */
+          "offset": [ 0, 32 ],
+
+          "controls": [
+            {
+              "toast_stack": {
+                "type": "stack_panel",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "factory": {
+                  "name": "chat_item_factory",
+                  "max_children_size": 12,
+                  "control_ids": {
+                    "chat_item": "modified_item@hud.r4isen_custom_toast_ui"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "r4isen_custom_advancements_ui": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+              "hud_title_text": "controlled_element@hud.r4isen_custom_advancements_ui"
+            }
+          }
+        }
+      }
+    ]
+  },
+
+  "hud_screen@common.base_screen": {
+    "$screen_bg_content": "hud.root_panel_bg",
+    "$background_animations": [],
+    "$use_loading_bars": false,
+
+    "cache_screen": true,
+    "low_frequency_rendering": false,
+    "screen_draws_last": true,
+    "render_only_when_topmost": true,
+    "always_accepts_input": true
+  }
+
+}

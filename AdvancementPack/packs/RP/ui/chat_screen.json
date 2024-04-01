@@ -1,0 +1,41 @@
+{
+  /* created by r4isen1920 | MIT License */
+
+  "messages_text": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name": "#chat_visible",
+          "binding_name_override": "#visible"
+        }
+      },
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_type": "global",
+            "binding_name": "#chat_visible"
+          },
+          {
+            "binding_type": "global",
+            "binding_name": "#text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "('%.6s' * #text = '_r4ui:')",
+            "target_property_name": "#custom_text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#chat_visible and not #custom_text)",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  }
+
+}

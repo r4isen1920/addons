@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "xp:hammer"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "minecraft:crafting_table",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "adv:log_book",
+      "count": 1
+    }
+  }
+}

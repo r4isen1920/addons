@@ -1,0 +1,28 @@
+{
+  /* created by r4isen1920 | MIT License */
+
+  "focus_border": {
+    "$show_hover_content|default": false,
+    "$hover_content|default": "common.empty_panel",
+    "$hover_content_anchor|default": "center",
+    "propagate_alpha": false,
+    "controls": [
+      {
+        "hover_content@common.empty_panel": {
+          "anchor_from": "$hover_content_anchor",
+          "anchor_to": "$hover_content_anchor",
+          "size": [ "100%", "100%" ],
+          "ignored": "(not $show_hover_content)",
+          "controls": [
+            {
+              "content@$hover_content": {
+                "visible": "($hover_state or $pressed_state)"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+
+}

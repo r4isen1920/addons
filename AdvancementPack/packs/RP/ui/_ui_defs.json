@@ -1,0 +1,11 @@
+{
+  /* created by r4isen1920 | MIT License */
+
+  "ui_defs": [
+    "ui/adv/_screen.r4ui",
+    "ui/adv/_screen_content.r4ui",
+    "ui/adv/_scroll_custom.r4ui",
+    "ui/adv/_toast.r4ui"
+  ]
+
+}

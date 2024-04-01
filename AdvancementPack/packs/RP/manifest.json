@@ -1,0 +1,27 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "§c§l[EX]§r Adds Java advancements into your game. Created by r4isen1920.",
+    "name": "§7[v4.1]§r AdvancementPack [RP]",
+    "uuid": "bf56fc83-952e-4289-a65d-81a22f7cd975",
+    "version": [ 4, 1, 0 ],
+    "min_engine_version": [ 1, 20, 60 ]
+  },
+  "modules": [
+    {
+      "description": "Created by r4isen. Do not distribute unfairly. ",
+      "type": "resources",
+      "uuid": "7a9b040d-f449-4c7f-bfd8-6db3931479e4",
+      "version": [ 1, 0, 0 ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "6724f956-7d1b-4c90-bc51-f4c86f41b083",
+      "version": [ 4, 1, 0 ]
+    }
+  ],
+	"metadata": {
+		"authors": [ "r4isen1920" ]
+	}
+}

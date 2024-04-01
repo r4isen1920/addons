@@ -1,0 +1,965 @@
+{
+  /* created by r4isen1920 | MIT License */
+
+  "namespace": "advancements_screen",
+
+  "anim_uv_asesprite": {
+    "anim_type": "aseprite_flip_book",
+    "initial_uv": [ 0, 0 ]
+  },
+
+  "no_content_label": {
+    "type": "label",
+    "size": [ "default", "default" ],
+    "max_size": [ "100% - 16px", "default" ],
+    "shadow": false,
+    "color": "$f_color_format",
+    "layer": 20
+  },
+
+  "advancements_screen_content@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "category_tabs_panel@category_tab_stack": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, -80 ]
+        }
+      },
+      {
+        "window_panel@common.empty_panel": {
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "empty@advancements_screen.advancements_screen_window_bg_control": {
+                "$window_bg_control": "empty",
+                "$visible_binding": "(#dialogtext = '_r4ui:empty')"
+              }
+            },
+
+            {
+              "tab_story@advancements_screen.advancements_screen_window_bg_control": {
+                "$text_name": "advancements.story.root.title",
+                "$window_bg_control": "advancements_story",
+                "$visible_binding": "(#dialogtext = '_r4ui:story_tab')"
+              }
+            },
+            {
+              "tab_adventure@advancements_screen.advancements_screen_window_bg_control": {
+                "$text_name": "advancements.adventure.root.title",
+                "$window_bg_control": "advancements_adventure",
+                "$visible_binding": "(#dialogtext = '_r4ui:adventure_tab')"
+              }
+            },
+            {
+              "tab_nether@advancements_screen.advancements_screen_window_bg_control": {
+                "$text_name": "advancements.nether.root.title",
+                "$window_bg_control": "advancements_nether",
+                "$visible_binding": "(#dialogtext = '_r4ui:nether_tab')"
+              }
+            },
+            {
+              "tab_the_end@advancements_screen.advancements_screen_window_bg_control": {
+                "$text_name": "advancements.end.root.title",
+                "$window_bg_control": "advancements_the_end",
+                "$visible_binding": "(#dialogtext = '_r4ui:the_end_tab')"
+              }
+            },
+            {
+              "tab_husbandry@advancements_screen.advancements_screen_window_bg_control": {
+                "$text_name": "advancements.husbandry.root.title",
+                "$window_bg_control": "advancements_husbandry",
+                "$visible_binding": "(#dialogtext = '_r4ui:husbandry_tab')"
+              }
+            },
+            {
+              "tab_legacy_achievements@advancements_screen.advancements_screen_window_bg_control": {
+                "$text_name": "gui.achievements",
+                "$window_bg_control": "legacy_achievements",
+                "$visible_binding": "(#dialogtext = '_r4ui:legacy_tab')"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "translucent_background": {
+          "type": "image",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ "100% + 180px", "100% + 200px" ],
+          "texture": "textures/ui/White",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.7,
+          "allow_clipping": false,
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "category_tab_stack": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "collection_name": "student_buttons_collection",
+    "size": [ "100%c", "100%cm" ],
+    "controls": [
+      { "tab_0@advancements_screen.category_tabs": { "collection_index": 0 } },
+      { "tab_1@advancements_screen.category_tabs": { "collection_index": 1 } },
+      { "tab_2@advancements_screen.category_tabs": { "collection_index": 2 } },
+      { "tab_3@advancements_screen.category_tabs": { "collection_index": 3 } },
+      { "tab_4@advancements_screen.category_tabs": { "collection_index": 4 } },
+      { "tab_5@advancements_screen.category_tabs": { "collection_index": 5 } },
+      {
+        "tab_padding@common.empty_panel": {
+          "size": [ 86, 0 ]
+        }
+      }
+    ]
+  },
+
+  "category_tabs": {
+    "type": "panel",
+    "size": [ "100%cm", "100%cm" ],
+    "controls": [
+      {
+        "story_tab@common.empty_panel": {
+          "size": [ "100%cm", "100%cm" ],
+          "controls": [
+            {
+              "control_button@advancements_screen.tab_button_selection_control": {
+                "$tab_button_texture_pos": "left",
+                "$tab_button_texture": "Top",
+                "$button_content_size": [ "100%cm", "100%cm" ],
+                "$visible_binding": "(#dialogtext = '_r4ui:story_tab')"
+              }
+            },
+            {
+              "tab_icon@advancements_screen.category_tab_icon": {
+                "$category_tab_icon": 131072
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "#student_button_text",
+              "binding_collection_name": "student_buttons_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#student_button_text = 'tab.story')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "adventure_tab@common.empty_panel": {
+          "size": [ "100%cm", "100%cm" ],
+          "controls": [
+            {
+              "control_button@advancements_screen.tab_button_selection_control": {
+                "$tab_button_texture_pos": "middle",
+                "$tab_button_texture": "Top",
+                "$button_content_size": [ "100%cm", "100%cm" ],
+                "$visible_binding": "(#dialogtext = '_r4ui:adventure_tab')"
+              }
+            },
+            {
+              "tab_icon@advancements_screen.category_tab_icon": {
+                "$category_tab_icon": "textures/items/map_empty"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "#student_button_text",
+              "binding_collection_name": "student_buttons_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#student_button_text = 'tab.adventure')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "nether_tab@common.empty_panel": {
+          "size": [ "100%cm", "100%cm" ],
+          "controls": [
+            {
+              "control_button@advancements_screen.tab_button_selection_control": {
+                "$tab_button_texture_pos": "middle",
+                "$tab_button_texture": "Top",
+                "$button_content_size": [ "100%cm", "100%cm" ],
+                "$visible_binding": "(#dialogtext = '_r4ui:nether_tab')"
+              }
+            },
+            {
+              "tab_icon@advancements_screen.category_tab_icon": {
+                "$category_tab_icon": 5701632
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "#student_button_text",
+              "binding_collection_name": "student_buttons_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#student_button_text = 'tab.nether')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "the_end_tab@common.empty_panel": {
+          "size": [ "100%cm", "100%cm" ],
+          "controls": [
+            {
+              "control_button@advancements_screen.tab_button_selection_control": {
+                "$tab_button_texture_pos": "middle",
+                "$tab_button_texture": "Top",
+                "$button_content_size": [ "100%cm", "100%cm" ],
+                "$visible_binding": "(#dialogtext = '_r4ui:the_end_tab')"
+              }
+            },
+            {
+              "tab_icon@advancements_screen.category_tab_icon": {
+                "$category_tab_icon": 7929856
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "#student_button_text",
+              "binding_collection_name": "student_buttons_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#student_button_text = 'tab.the_end')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "husbandry_tab@common.empty_panel": {
+          "size": [ "100%cm", "100%cm" ],
+          "controls": [
+            {
+              "control_button@advancements_screen.tab_button_selection_control": {
+                "$tab_button_texture_pos": "middle",
+                "$tab_button_texture": "Top",
+                "$button_content_size": [ "100%cm", "100%cm" ],
+                "$visible_binding": "(#dialogtext = '_r4ui:husbandry_tab')"
+              }
+            },
+            {
+              "tab_icon@advancements_screen.category_tab_icon": {
+                "$category_tab_icon": 11141120
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "#student_button_text",
+              "binding_collection_name": "student_buttons_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#student_button_text = 'tab.husbandry')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "legacy_achievements_tab@common.empty_panel": {
+          "size": [ "100%cm", "100%cm" ],
+          "controls": [
+            {
+              "control_button@advancements_screen.tab_button_selection_control": {
+                "$tab_button_texture_pos": "middle",
+                "$tab_button_texture": "Top",
+                "$button_content_size": [ "100%cm", "100%cm" ],
+                "$visible_binding": "(#dialogtext = '_r4ui:legacy_tab')"
+              }
+            },
+            {
+              "tab_icon@advancements_screen.category_tab_icon": {
+                "$category_tab_icon": "textures/items/book_normal"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "#student_button_text",
+              "binding_collection_name": "student_buttons_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#student_button_text = 'tab.legacy')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "category_tab_icon@common.empty_panel": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "custom_image_path": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "$category_tab_icon",
+          "layer": 200,
+          "ignored": "(not ($category_tab_icon > 'a'))"
+        }
+      },
+      {
+        "render_item_aux": {
+          "type": "custom",
+          "renderer": "inventory_item_renderer",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ "100%", "100%" ],
+          "property_bag": { 
+            "#item_id_aux": "$category_tab_icon" 
+          },
+          "layer": 200,
+          "ignored": "(not ($category_tab_icon > 0))"
+        }
+      }
+    ]
+  },
+
+  "tab_button_selection_control@common.empty_panel": {
+    "size": [ 28, 31 ],
+    "controls": [
+      {
+        "unselected@advancements_screen.tab_button_control": {
+          "$is_tab_selected": false,
+          "layer": 14
+        }
+      },
+      {
+        "selected@advancements_screen.tab_button_control": {
+          "$is_tab_selected": true,
+          "layer": 16,
+          "bindings": [
+            {
+              "binding_name": "#dialogtext",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "$visible_binding",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "tab_button_control@common.empty_panel": {
+    "size": [ 28, 31 ],
+
+    "$tab_button_texture_pos|default": "middle",
+    "$tab_button_texture|default": "Top",
+    "$is_tab_selected|default": false,
+
+    "variables": [
+      {
+        "requires": "(($tab_button_texture_pos = 'left') and not $is_tab_selected)",
+        "$default_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'BackLeftMost')",
+        "$hover_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'BackLeftMostHover')",
+        "$pressed_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'FrontLeftMost')"
+      },
+      {
+        "requires": "(($tab_button_texture_pos = 'middle') and not $is_tab_selected)",
+        "$default_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'Back')",
+        "$hover_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'BackHover')",
+        "$pressed_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'Front')"
+      },
+      {
+        "requires": "(($tab_button_texture_pos = 'right') and not $is_tab_selected)",
+        "$default_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'BackRightMost')",
+        "$hover_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'BackRightMostHover')",
+        "$pressed_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'FrontRightMost')"
+      },
+
+      {
+        "requires": "(($tab_button_texture_pos = 'left') and $is_tab_selected)",
+        "$default_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'FrontLeftMost')",
+        "$hover_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'FrontLeftMostHover')",
+        "$pressed_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'FrontLeftMost')"
+      },
+      {
+        "requires": "(($tab_button_texture_pos = 'middle') and $is_tab_selected)",
+        "$default_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'Front')",
+        "$hover_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'FrontHover')",
+        "$pressed_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'Front')"
+      },
+      {
+        "requires": "(($tab_button_texture_pos = 'right') and $is_tab_selected)",
+        "$default_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'FrontRightMost')",
+        "$hover_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'FrontRightMostHover')",
+        "$pressed_button_texture": "('textures/ui/Tab' + $tab_button_texture + 'FrontRightMost')"
+      }     
+    ],
+    "controls": [
+      {
+        "button@common_buttons.light_text_button": {
+          "$border_alpha": 0.0,
+
+          "$show_hover_content": true,
+          "$hover_content": "advancements_screen.tab_button_hover_control",
+          "$hover_content_anchor": "center",
+
+          "$button_type_panel": "common.empty_panel",
+          "$pressed_button_name": "button.student_button",
+
+          "size": [ "100%", "100%" ],
+          "layer": 10,
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "student_buttons_collection",
+              "binding_collection_prefix": "student_buttons"
+            }
+          ],
+          "button_mappings": [
+            {
+              "ignored": "$is_tab_selected",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "pressed"
+            },
+            {
+              "ignored": "$is_tab_selected",
+              "from_button_id": "button.menu_select",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "pressed"
+            },
+            {
+              "ignored": "$is_tab_selected",
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "focused"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "tab_button_hover_control@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "$hover_offset": [ 22, -8 ],
+    "controls": [
+      { "tab_story@advancements_screen.tab_button_hover_text": { "$hover_text": "advancements.story.root.title", "$visible_binding": "(#student_button_text = 'tab.story')" } },
+      { "tab_adventure@advancements_screen.tab_button_hover_text": { "$hover_text": "advancements.adventure.root.title", "$visible_binding": "(#student_button_text = 'tab.adventure')" } },
+      { "tab_nether@advancements_screen.tab_button_hover_text": { "$hover_text": "advancements.nether.root.title", "$visible_binding": "(#student_button_text = 'tab.nether')" } },
+      { "tab_the_end@advancements_screen.tab_button_hover_text": { "$hover_text": "advancements.end.root.title", "$visible_binding": "(#student_button_text = 'tab.the_end')" } },
+      { "tab_husbandry@advancements_screen.tab_button_hover_text": { "$hover_text": "advancements.husbandry.root.title", "$visible_binding": "(#student_button_text = 'tab.husbandry')" } },
+      { "tab_legacy@advancements_screen.tab_button_hover_text": { "$hover_text": "gui.achievements", "$visible_binding": "(#student_button_text = 'tab.legacy')" } }
+    ]
+  },
+
+  "tab_button_hover_text@common.empty_panel": {
+    "size": "$hover_size",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 150,
+
+    "$hover_size|default": [ "100%", "100%" ],
+    "$hover_offset|default": [ 0, 0 ],
+    "$hover_text|default": "This is a hover.",
+    "$hover_text_color|default": "$f_color_format",
+
+    "controls": [
+      {
+        "hover_text_image": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%c + 8px", "100%c + 5px" ],
+          "offset": "$hover_offset",
+          "texture": "textures/ui/purpleBorder",
+          "layer": 151,
+          "allow_clipping": false,
+          "controls": [
+            {
+              "hover_text_label": {
+                "type": "label",
+                "size": [ "default", "default" ],
+                "max_size": [ "125px", "default" ],
+                "offset": [ 0, -0.5 ],
+                "text": "$hover_text",
+                "text_alignment": "left",
+                "color": "$hover_text_color",
+                "localize": true,
+                "layer": 152
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#student_button_text",
+        "binding_collection_name": "student_buttons_collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$visible_binding",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "advancements_story_window_bg@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "category_bg@advancements_screen_window_bg": { "$category_window_bg": "stone" } },
+      { "vignette@advancements_screen.advancements_screen_window_vignette": {} }
+    ]
+  },
+  "advancements_adventure_window_bg@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "category_bg@advancements_screen_window_bg": { "$category_window_bg": "adventure" } },
+      { "vignette@advancements_screen.advancements_screen_window_vignette_with_scroll_padding": {} }
+    ]
+  },
+  "advancements_nether_window_bg@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "category_bg@advancements_screen_window_bg": { "$category_window_bg": "nether" } },
+      { "vignette@advancements_screen.advancements_screen_window_vignette_with_scroll_padding": {} }
+    ]
+  },
+  "advancements_the_end_window_bg@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "category_bg@advancements_screen_window_bg": { "$category_window_bg": "end" } },
+      { "vignette@advancements_screen.advancements_screen_window_vignette": {} }
+    ]
+  },
+  "advancements_husbandry_window_bg@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "category_bg@advancements_screen_window_bg": { "$category_window_bg": "husbandry" } },
+      { "vignette@advancements_screen.advancements_screen_window_vignette_with_scroll_padding": {} }
+    ]
+  },
+  "legacy_achievements_window_bg@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "vignette@advancements_screen.advancements_screen_window_vignette_with_scroll_padding": {} }
+    ]
+  },
+
+  "empty_window_bg@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "sad_face_label_text@advancements_screen.no_content_label": {
+          "text": "_r4ui:ancements.empty",
+          "localize": true
+        } 
+      },
+      {
+        "sad_face_label_icon@advancements_screen.no_content_label": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, "-10%" ],
+          "text": ":("
+        }
+      },
+      {
+        "black_background": {
+          "type": "image",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ "100%", "100%" ],
+          "texture": "textures/ui/White",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "layer": 10
+        }
+      }
+    ]
+  },
+
+  "advancements_screen_window_bg": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "('textures/advancement/gui/bg/' + $category_window_bg)",
+    "tiled": true,
+    "tiled_scale": [ 1, 1 ],
+    "layer": 3
+  },
+  "advancements_screen_window_scrollable_bg": {
+    "type": "image",
+    "size": [ "100% ", "100%sm" ],
+    "offset": [ 0, 2 ],
+    "texture": "('textures/advancement/gui/bg/' + $category_window_bg)",
+    "layer": 3
+  },
+
+  "advancements_screen_window_vignette": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/advancement/gui/window_vignette",
+    "layer": 10
+  },
+  "advancements_screen_window_vignette_with_scroll_padding@advancements_screen_window_vignette": {
+    "size": [ "100% - 9px", "100%" ],
+    "offset": [ -4.5, 0 ]
+  },
+
+  "advancements_screen_window_bg_control@common.empty_panel": {
+    "size": [ "100%cm", "100%cm" ],
+    "$window_bg_control|default": "advancements_story",
+    "controls": [
+      {
+        "window_controlled@advancements_screen_window": {
+          "$child_control": "('advancements_screen.' + $window_bg_control + '_window_bg')"
+        }
+      },
+      {
+        "advancements_screen_window_close_button@npc_interact.close_button_holder": {
+          "offset": [ -1, 21 ],
+          "$close_button_to_button_id": "button.menu_exit"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#dialogtext",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$visible_binding",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "advancements_screen_window@common_dialogs.main_panel_no_buttons": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ 252, 140 ],
+    "offset": "$set_offset",
+    "clips_children": true,
+    "layer": "$set_layer",
+
+    "$set_offset|default": [ 0, 0 ],
+    "$set_layer|default": 3,
+
+    "$show_close_button": false,
+    "$title_anchor": "top_left",
+    "$title_offset": [ "4% - 3px", 9 ],
+    "$text_name|default": "_r4ui:advancements",
+    "$dialog_background_texture": "textures/ui/Banners"
+  },
+
+  "advancement_item_icon@common.empty_panel": {
+    "size": [ 16, 16 ],
+
+    "controls": [
+      {
+        "custom_image_path@common.empty_panel": {
+          "size": [ "100%", "100%" ],
+          "ignored": "(not ($container_icon > 'a'))",
+
+          "$container_icon_animated|default": false,
+
+          "controls": [
+            {
+              "static": {
+                "type": "image",
+                "size": [ "100%", "100%" ],
+                "texture": "$container_icon",
+                "keep_ratio": true,
+                "layer": 150,
+                "ignored": "$container_icon_animated"
+              }
+            },
+            {
+              "animated": {
+                "type": "image",
+                "size": [ "100%", "100%" ],
+                "texture": "$container_icon",
+                "uv": "@advancements_screen.anim_uv_asesprite",
+                "uv_size": "$container_icon_uv_size",
+                "keep_ratio": true,
+                "layer": 150,
+                "ignored": "(not $container_icon_animated)"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "render_item_aux": {
+          "type": "custom",
+          "renderer": "inventory_item_renderer",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ "100%", "100%" ],
+          "property_bag": {
+            "#item_id_aux": "$container_icon" 
+          },
+          "layer": 150,
+          "ignored": "(not ($container_icon > 0))"
+        }
+      }
+    ]
+  },
+
+  "advancement_item@common.empty_panel": {
+    "size": [ 22, 22 ],
+    "layer": 21,
+
+    "$container_status|default": "unobtained",
+    "$container_type|default": "plain",
+    "$container_icon|default": "textures/advancement/none",
+    "$advancement_name|default": "name",
+    "$advancement_description|default": "description",
+
+    "controls": [
+      {
+        "container_image": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "$container_image_type",
+          "layer": 22,
+          "controls": [
+            {
+              "container_icon@advancements_screen.advancement_item_icon": {
+              }
+            },
+            {
+              "advancement_icon_container_hover@common_buttons.light_text_button": {
+                "$border_alpha": 0.0,
+                "$default_button_texture": "textures/advancement/none",
+                "$hover_button_texture": "textures/advancement/none",
+                "$pressed_button_texture": "textures/advancement/none",
+
+                "$show_hover_content": true,
+                "$hover_content": "advancements_screen.advancement_item_hovered_control",
+                "$hover_content_anchor": "left_middle",
+
+                "$button_type_panel": "common.empty_panel",
+                "$pressed_button_name": "unset",
+
+                "sound_volume": 0.0,
+
+                "size": [ "100%", "100%" ],
+                "layer": 150,
+                "bindings": []
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "variables": [
+      {
+        "requires": "($container_status = 'obtained')",
+        "$container_image_type": "('textures/advancement/icons/_' + $container_type + '-completed')",
+        "$container_image_hover": "textures/advancement/gui/yellow_border"
+      },
+      {
+        "requires": "($container_status = 'unobtained')",
+        "$container_image_type": "('textures/advancement/icons/_' + $container_type)",
+        "$container_image_hover": "textures/advancement/gui/blue_border"
+      }
+    ]
+  },
+
+  "advancement_item_hovered_control@common.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "advancement_item_hovered@advancement_item_hovered": {
+          "allow_clipping": false
+        }
+      },
+      {
+        "hover_bg": {
+          "type": "image",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ "500px", "500px" ],
+          "texture": "textures/ui/White",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.225,
+          "layer": 10
+        }
+      }
+    ]
+  },
+
+  "advancement_item_hovered": {
+    "type": "image",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%cm", "100%c" ],
+    "offset": [ -4, 2 ],
+    "texture": "textures/advancement/gui/grey_border",
+    "layer": 151,
+    "controls": [
+      {
+        "advancement_header_and_description_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%cm", "100%c" ],
+          "layer": 151,
+          "controls": [
+            {
+              "top_panel_hover": {
+                "type": "image",
+                "size": [ "100%c", 18 ],
+                "texture": "$container_image_hover",
+                "layer": 152,
+                "controls": [
+                  {
+                    "advancement_icon_and_name": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%c + 8px", "100%" ],
+                      "offset": [ 0, -2 ],
+                      "layer": 153,
+                      "controls": [
+                        { "left_indent_padding@common.empty_panel": { "size": [ 4, 1 ] } },
+                        {
+                          "advancement_icon_hovered": {
+                            "type": "image",
+                            "size": [ "22px", "22px" ],
+
+                            "texture": "$container_image_type",
+                            "layer": 154,
+                            "controls": [
+                              {
+                                "container_icon_centerer@common.empty_panel": {
+                                  "size": [ "100%", "100%" ],
+                                  "controls": [
+                                    {
+                                      "container_icon@advancements_screen.advancement_item_icon": {
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        { "separator_padding@common.empty_panel": { "size": [ 2, 1 ] } },
+                        {
+                          "advancement_name_centerer@common.empty_panel": {
+                            "size": [ "100%c", "100%" ],
+                            "controls": [
+                              {
+                                "advancement_name": {
+                                  "type": "label",
+                                  "size": [ "default", "default" ],
+                                  "offset": [ 0, 2 ],
+                                  "text": "$advancement_name",
+                                  "shadow": true,
+                                  "layer": 154
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            { "separator_padding@common.empty_panel": { "size": [ "100%sm", 0.5 ] } },
+            {
+              "bottom_panel_hover@common.empty_panel": {
+                "size": [ "100%sm", "100%c + 6px" ],
+                "layer": 119,
+                "controls": [
+                  {
+                    "advancement_description_label": {
+                      "type": "label",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "size": [ "default", "default" ],
+                      "max_size": [ "100% - 12px", "default" ],
+                      "offset": [ 6, 0 ],
+                      "text": "$advancement_description",
+                      "text_alignment": "left",
+                      "color": "$advancement_description_color",
+                      "layer": 120,
+                      "variables": [
+                        {
+                          "requires": "(not ($container_type = 'fancy'))",
+                          "$advancement_description_color": "$a_color_format"
+                        },
+                        {
+                          "requires": "($container_type = 'fancy')",
+                          "$advancement_description_color": "$5_color_format"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "line_outline": {
+    "type": "image",
+    "texture": "textures/advancement/gui/line_outline",
+    "allow_clipping": false,
+    "layer": 30,
+    "controls": [
+      {
+        "line_fill": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "textures/advancement/gui/line_fill",
+          "layer": 31
+        }
+      }
+    ]
+  },
+
+  /* For now, we will pre-render lines. I wouldn't want to put any more burden on the JSON UI. */
+  "lines_pre_rendered": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "('textures/advancement/gui/lines/' + $line_renderer)",
+    "layer": 20
+  }
+}

@@ -1,0 +1,100 @@
+
+--
+
+TO-DO:
+
+  - add functionality for [Log Book] item
+
+  - add new advancements/achievement
+  - identifier starts from the last one, doesn't have to be re-ordered
+  - gui completion checker will only happen ONCE they use [Log Book] item, and not every tab switch
+
+  - legacy java achievements user interface needed.
+
+  - do advancements GUI for the remaining tabs
+  - re-use check functions to send unlocked advancements to the GUI
+  - add "progress bars" for in-progress advancements
+  - apply triggers for new advancements + hopefully all other remaining advancements
+
+  - unsure if interactions such as scroll bars and hoverable buttons work the same way on elements rendered under the HUD screen -> update:
+    > sure does. it works! `always_accepts_input` must be true. only works when mouse is present and can directly scroll through the scrollbox.
+    > other HUD elements needs to be dynamically hidden as well. check shanewolf38's findings on how to achieve this
+    > scroll panel can be scrolled using other input methods without having to have the scroll bar be visible.
+
+  - npc interact will render the "default" values; the hud will render the "current" values
+    > "default" values contains the lines, as well as advancements on unobtained states
+    > "current" values will be rendered on top of the "default" state and will be fetched and carried onto UI using $title_text
+
+  # the game is acting weird and does this "says" texts
+
+  - do UI window connection with HUD and NPC INTERACT namespaces
+
+  - add new UI that lists all advancements and achievements like java
+
+  - convert all old title and actionbar texts triggers to chat
+  - find a way to hide certain chat strings from `chat_screen.json`
+  - add woosh in sound effect (play only when in high memory), and then a woosh out sound effect after it that is triggered automatically [connect the two sounds together in audacity | interval :: 5.5s]
+
+  ( changelog for version 4.0)
+
+  [ New Advancements ]
+    - Added new advancements from Caves and Cliffs, the Wild Update and Trails & Tales Update:
+      - Birthday Song
+      - Bukkit Bukkit
+      - Careful Restoration
+      - Caves & Cliffs
+      - Crafting a New Look
+      - Glow and Behold!
+      - It Spreads
+      - Little Sniffs
+      - Planting the Past
+      - Respecting the Remnants
+      - Smells Interesting
+      - Smithing with Style
+      - Surge Protector
+      - Sneak 100
+      - Sound of Music
+      - Star Trader
+      - The Power of Books
+      - Wax Off
+      - Wax On
+      - When the Squad Hops into Town
+      - With Our Powers Combined!
+      - You've Got a Friend in Me
+    - Ported even more Java advancements to be unlockable:
+      - A Terrible Fortress
+      - Beaconator
+      - Bullseye
+      - Country Lode, Take Me Home
+      - Enchanter
+      - Feels Like Home
+      - Not Quite "Nine" Lives
+      - Overkill
+      - Remote Getaway
+      - The City at the End of the Game
+      - The Parrots and the Bats
+      - Those Were the Days
+      - Two by Two
+      - War Pigs
+      - What a Deal!
+
+  [ Technical Changes ]
+    - Add support for versions 1.20.30 and above
+    - The add-on logic has entirely been re-written into scripts:
+      - It can now support and will now work with other add-ons
+      - Allowed for even more advancements to be unlockable
+      - Should perform more efficiently
+    - Advancements are now modular, and you can be able to add your own advancements!
+      - You need to have an idea with JavaScript and developing Minecraft add-ons using Script API.
+
+  [ User Interface ]
+    - Added Advancement UI similar to Java:
+      - You can now view your unlocked or in progress advancements using the new user interface!
+      - Legacy Java achievements are also accessible through this menu.
+      - You can use the [Log Book] item to open up this menu.
+    - Toast pop-up is no longer discarded upon riding an entity.
+    - Toast pop-up animation easing now more matches with that of Java.
+    - Toast pop-up now supports multiple instances at the same time.
+    - Toast pop-up no longer has unintended behaviors when rendering texts of different languages.
+    - Removed custom "How to Play" section.
+    - Recipe unlocking pop-up now matches with that of Java.

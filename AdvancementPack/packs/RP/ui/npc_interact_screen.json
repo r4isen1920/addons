@@ -1,0 +1,59 @@
+{
+  /* created by r4isen1920 | MIT License */
+
+  "binding_control_template": {
+    "type": "panel",
+    "controls": "$target_control",
+    "bindings": [
+      {
+        "binding_name": "#dialogtext",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$visible_binding",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "npc_screen_render_index": {
+    "type": "panel",
+    "controls": [
+      {
+        "advancements_screen@npc_interact.binding_control_template": {
+          "$visible_binding": "((#dialogtext = '_r4ui:story_tab') or (#dialogtext = '_r4ui:adventure_tab') or (#dialogtext = '_r4ui:nether_tab') or (#dialogtext = '_r4ui:the_end_tab') or (#dialogtext = '_r4ui:husbandry_tab') or (#dialogtext = '_r4ui:legacy_tab') or (#dialogtext = '_r4ui:empty'))",
+          "$target_control": [ { "advancements_screen@advancements_screen.advancements_screen_content": {} } ]
+        }
+      },
+      {
+        "npc_screen_contents@npc_interact.binding_control_template": {
+          "$visible_binding": "(not ((#dialogtext = '_r4ui:story_tab') or (#dialogtext = '_r4ui:adventure_tab') or (#dialogtext = '_r4ui:nether_tab') or (#dialogtext = '_r4ui:the_end_tab') or (#dialogtext = '_r4ui:husbandry_tab') or (#dialogtext = '_r4ui:legacy_tab') or (#dialogtext = '_r4ui:empty')))",
+          "$target_control": [ { "npc_screen_contents@npc_interact.npc_screen_contents": {} } ]
+        }
+      }
+    ]
+  },
+
+  "npc_screen@common.base_screen": {
+    "$screen_content": "npc_interact.npc_screen_render_index",
+    "$screen_animations": [],
+
+    "cache_screen": true,
+    "close_on_player_hurt": false,
+    "low_frequency_rendering": true,
+    "is_showing_menu": true,
+    "render_game_behind": true,
+    "force_render_below": true,
+    "screen_draws_last": false,
+
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.menu_continue",
+        "mapping_type": "global"
+      }
+    ]
+  }
+
+}

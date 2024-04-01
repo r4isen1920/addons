@@ -1,0 +1,101 @@
+{
+  "format_version": "1.14",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+
+      {
+        "scene_tag": "_r4ui:empty",
+        "npc_name": "system",
+        "text": "_r4ui:empty",
+        "buttons": [],
+        "on_close_commands": [ "/title @initiator title _clear_" ]
+      },
+
+      {
+        "scene_tag": "_r4ui:story_tab",
+        "npc_name": "system",
+        "text": "_r4ui:story_tab",
+        "buttons": [
+          { "name": "tab.story", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen story" ] },
+          { "name": "tab.adventure", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen adventure" ] },
+          { "name": "tab.nether", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen nether" ] },
+          { "name": "tab.the_end", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen end" ] },
+          { "name": "tab.husbandry", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen husbandry" ] },
+          { "name": "tab.legacy", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen achievements" ] }
+        ],
+        "on_close_commands": [ "/title @initiator[tag=!has_screen_opened] title _clear_", "/tag @initiator remove has_screen_opened" ]
+      },
+      {
+        "scene_tag": "_r4ui:adventure_tab",
+        "npc_name": "system",
+        "text": "_r4ui:adventure_tab",
+        "buttons": [
+          { "name": "tab.story", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen story" ] },
+          { "name": "tab.adventure", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen adventure" ] },
+          { "name": "tab.nether", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen nether" ] },
+          { "name": "tab.the_end", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen end" ] },
+          { "name": "tab.husbandry", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen husbandry" ] },
+          { "name": "tab.legacy", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen achievements" ] }
+        ],
+        "on_close_commands": [ "/title @initiator[tag=!has_screen_opened] title _clear_", "/tag @initiator remove has_screen_opened" ]
+      },
+      {
+        "scene_tag": "_r4ui:nether_tab",
+        "npc_name": "system",
+        "text": "_r4ui:nether_tab",
+        "buttons": [
+          { "name": "tab.story", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen story" ] },
+          { "name": "tab.adventure", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen adventure" ] },
+          { "name": "tab.nether", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen nether" ] },
+          { "name": "tab.the_end", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen end" ] },
+          { "name": "tab.husbandry", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen husbandry" ] },
+          { "name": "tab.legacy", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen achievements" ] }
+        ],
+        "on_close_commands": [ "/title @initiator[tag=!has_screen_opened] title _clear_", "/tag @initiator remove has_screen_opened" ]
+      },
+      {
+        "scene_tag": "_r4ui:end_tab",
+        "npc_name": "system",
+        "text": "_r4ui:the_end_tab",
+        "buttons": [
+          { "name": "tab.story", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen story" ] },
+          { "name": "tab.adventure", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen adventure" ] },
+          { "name": "tab.nether", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen nether" ] },
+          { "name": "tab.the_end", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen end" ] },
+          { "name": "tab.husbandry", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen husbandry" ] },
+          { "name": "tab.legacy", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen achievements" ] }
+        ],
+        "on_close_commands": [ "/title @initiator[tag=!has_screen_opened] title _clear_", "/tag @initiator remove has_screen_opened" ]
+      },
+      {
+        "scene_tag": "_r4ui:husbandry_tab",
+        "npc_name": "system",
+        "text": "_r4ui:husbandry_tab",
+        "buttons": [
+          { "name": "tab.story", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen story" ] },
+          { "name": "tab.adventure", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen adventure" ] },
+          { "name": "tab.nether", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen nether" ] },
+          { "name": "tab.the_end", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen end" ] },
+          { "name": "tab.husbandry", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen husbandry" ] },
+          { "name": "tab.legacy", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen achievements" ] }
+        ],
+        "on_close_commands": [ "/title @initiator[tag=!has_screen_opened] title _clear_", "/tag @initiator remove has_screen_opened" ]
+      },
+      {
+        "scene_tag": "_r4ui:achievements_tab",
+        "npc_name": "system",
+        "text": "_r4ui:legacy_tab",
+        "buttons": [
+          { "name": "tab.story", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen story" ] },
+          { "name": "tab.adventure", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen adventure" ] },
+          { "name": "tab.nether", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen nether" ] },
+          { "name": "tab.the_end", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen end" ] },
+          { "name": "tab.husbandry", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen husbandry" ] },
+          { "name": "tab.legacy", "commands": [ "/tag @initiator add has_screen_opened", "/execute as @initiator run scriptevent adv:open_screen achievements" ] }
+        ],
+        "on_close_commands": [ "/title @initiator[tag=!has_screen_opened] title _clear_", "/tag @initiator remove has_screen_opened" ]
+      }
+
+    ]
+  }
+}
