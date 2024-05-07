@@ -10,3 +10,6 @@
 [submodule "WAILA"]
 	path = WAILA
 	url = https://github.com/r4isen1920/WAILA.git
+[submodule "Baubles"]
+	path = Baubles
+	url = https://github.com/r4isen1920/Baubles
